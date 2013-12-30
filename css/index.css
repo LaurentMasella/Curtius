@@ -185,15 +185,15 @@ transition: all .4s ease-in-out; }
 #zoom_container .landmarks .lable div { width: 100px; padding: 4px; }   
 #zoom_container .landmarks .mark .text { padding: 2px 6px; background-color: #000; }       
 
-.lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; }
+.lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; font-family: 'RobotoBold'; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; }
 .lifiPoint:hover { background: #646464; cursor: pointer; }
-.currentLifiPoint .lifiPoint { background: #777; border: 5px solid #ad0a0a; }
-.nextLifiPoint .lifiPoint { animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; }
+.currentLifiPoint .lifiPoint { background: #f78b16; border: 5px solid #FDC857; }
+.nextLifiPoint .lifiPoint { background: #83DA00; animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; }
 
 .manIcon { width: 56px; height: 108px; background: url('../img/manIcon.png') no-repeat 0 0; }
 #legendBlock1 p { margin: 5px 0 15px 0; font-size: 20px; text-transform: uppercase; }
 
-#levels { float: left; margin: 5px 0 0 20px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 1px solid #9bd3c3; }
+#levels { float: left; margin: 5px 0 0 20px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; border: 3px solid #9bd3c3; }
 .level { float: left; width: 60px; height: 60px; line-height: 54px; font-size: 20px; color: #fff; text-align: center; background: #000; -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; -ms-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out; opacity: 0.5; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); }
 .level:hover { opacity: 1; cursor: pointer; }
 #level1 { font-family: 'playfair'; background: #0ca4cc; -webkit-border-top-left-radius: 5px;
