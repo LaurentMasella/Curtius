@@ -1,0 +1,189 @@
+/* ================================================================================ */
+/* === GLOBAL ===================================================================== */
+/* ================================================================================ */
+
+* { -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */ }
+
+html { width: 1280px; height: 800px; }
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+    width: 1280px;
+}
+
+@keyframes fade {
+    from { opacity: 0.7; }
+    50% { opacity: 0.5; }
+    to { opacity: 0.7; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 0.7; }
+    50% { opacity: 0.5; }
+    to { opacity: 0.7; }
+}
+
+@keyframes fade2 {
+    from { opacity: 1; }
+    50% { opacity: 0.4; }
+    to { opacity: 1; }
+}
+ 
+@-webkit-keyframes fade2 {
+    from { opacity: 1; }
+    50% { opacity: 0.4; }
+    to { opacity: 1; }
+}
+ 
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+.slideBG { position: absolute; top: 0; left: 0; width: 1280px; height: 800px; }
+
+.clear { width: 0; height: 0; clear: both; }
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto-regular-webfont.eot');
+    src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoBold';
+    src: url('../fonts/roboto-bold-webfont.eot');
+    src: url('../fonts/roboto-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff'),
+         url('../fonts/roboto-bold-webfont.ttf') format('truetype'),
+         url('../fonts/roboto-bold-webfont.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'robotoCondlight';
+    src: url('../fonts/robotocondensed-light-webfont.eot');
+    src: url('../fonts/robotocondensed-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotocondensed-light-webfont.woff') format('woff'),
+         url('../fonts/robotocondensed-light-webfont.ttf') format('truetype'),
+         url('../fonts/robotocondensed-light-webfont.svg#roboto_condensedlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'playfair';
+    src: url('../fonts/playfairdisplay-regular-webfont.eot');
+    src: url('../fonts/playfairdisplay-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/playfairdisplay-regular-webfont.woff') format('woff'),
+         url('../fonts/playfairdisplay-regular-webfont.ttf') format('truetype'),
+         url('../fonts/playfairdisplay-regular-webfont.svg#playfair_displayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ================================================================================ */
+/* === SPLASH SCREEN ============================================================== */
+/* ================================================================================ */
+
+#logoBlackSquare { position: absolute; top: 232px; left: 375px; width: 530px; height: 340px; background: #000; opacity: 0.6; }
+#logo { position: absolute; top: 317px; left: 473px; width: 335px; height: 170px; background: url('../img/logo.png') center center no-repeat; opacity: 1; }
+#launchBlackSquare { position: absolute; top: 600px; left: 375px; width: 530px; height: 70px; background: #000; opacity: 0.6; }
+#launch { display: block; position: absolute; top: 600px; left: 375px; width: 530px; height: 70px; line-height: 70px; font-family: 'robotoCondLight', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 30px; color: #fff; text-align: center; text-decoration: none; }
+.pink { color: #f1008b; }
+
+/* ================================================================================ */
+/* === LANGUES ==================================================================== */
+/* ================================================================================ */
+
+#logoSmall { position: absolute; top: 115px; left: 540px; width: 201px; height: 102px; background: url('../img/logoSmall.png') no-repeat;}
+#chooseLang { position: absolute; top: 250px; left: 0; width: 1280px; font-family: 'roboto', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 26px; color: #fff; text-align: center; }
+#chooseSquares,
+#langs { position: absolute; top: 335px; left: 440px; }
+#chooseSquares .chooseSquare { width: 400px; height: 57px; margin-bottom: 40px; background: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; opacity: 0.2; -webkit-transition: opacity .4s ease-in; -moz-transition: opacity .4s ease-in; -o-transition: opacity .4s ease-in; transition: opacity .4s ease-in; }
+#langs .lang { display: block; width: 285px; height: 57px; line-height: 57px; margin-bottom: 40px; padding-left: 115px; font-family: 'playfair', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 24px; color: #efefff; text-decoration: none; text-transform: uppercase; z-index: 3000; }
+#langs #fr { background: url('../img/flagFR.png') no-repeat 30px center; }
+#langs #eng { background: url('../img/flagENG.png') no-repeat 30px center; }
+#langs #ned { background: url('../img/flagNED.png') no-repeat 30px center; }
+#langs #deu { background: url('../img/flagDEU.png') no-repeat 30px center; }
+
+/* ================================================================================ */
+/* === VISITS  ==================================================================== */
+/* ================================================================================ */
+
+#chooseVisit { position: absolute; top: 250px; left: 0; width: 1280px; font-family: 'roboto', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 26px; color: #fff; text-align: center; }
+#visits { position: absolute; top: 335px; left: 440px; }
+#visits .visit { display: block; width: 285px; height: 57px; line-height: 57px; margin-bottom: 40px; padding-left: 115px; font-family: 'playfair', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 24px; color: #efefff; text-decoration: none; text-transform: uppercase; }
+#visits #free { background: url('../img/visitFree.png') no-repeat 30px center; }
+#visits #fast { background: url('../img/visitFast.png') no-repeat 30px center; }
+#visits #per { background: url('../img/visitPer.png') no-repeat 30px center; }
+#visits #scol { background: url('../img/visitScol.png') no-repeat 30px center; }
+
+#backBtn { display: block; position: fixed; top: 330px; left: 0; width: 71px; height: 143px; background: url('../img/backBtn.png') no-repeat; opacity: 0.8; -webkit-transition: opacity .4s ease-in; -moz-transition: opacity .4s ease-in; -o-transition: opacity .4s ease-in; transition: opacity .4s ease-in; }
+#backBtn:hover { opacity: 1; }
+
+/* ================================================================================ */
+/* === PLAN ======================================================================= */
+/* ================================================================================ */
+
+#floorHeadBand { position: fixed; top: 0; left: 0; width: 1280px; height: 20px; background: #9bd3c3; z-index: 1000000; -moz-transition: all .4s ease-in-out;
+-ms-transition: all .8s ease-in-out;
+-o-transition: all .8s ease-in-out;
+transition: all .8s ease-in-out; }
+#planLegend { position: absolute; top: 640px; left: 0; width: 1280px; height: 160px; font-size: 16px; color: #e9e9e9; background: url('../img/planLegendBG.png') repeat; z-index: 3000; font-family: 'roboto'; }
+
+.legendBlock { float: left; width: 200px; height: 160px; }
+#legendBlock1 { width: 230px; }
+#legendBlock2 { width: 230px; margin-left: 10px; }
+#legendBlock3 { width: 230px; }
+#legendBlock4 { width: 230px; }
+#legendBlock5 { width: 190px; }
+#legendBlock6 { width: 160px; text-align: center; text-transform: uppercase; }
+#legendBlock2 div,
+#legendBlock3 div,
+#legendBlock4 div,
+#legendBlock5 div { width: 150px; height: 80px; line-height: 80px; padding-left: 70px; background: url('../img/flagFR.png') no-repeat 10px center; text-align: left; }
+#legendBlock3 div#legend3 { height: 60px; padding-top: 20px; line-height: normal; }
+#localize { width: 90px; height: 90px; margin: 20px 0 0 35px; background: #cbcbcb url('../img/target.png') no-repeat center center; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear;
+-moz-transition: all .4s ease-in-out;
+-ms-transition: all .4s ease-in-out;
+-o-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out; }
+#localize:hover { background-color: #e7e7e7; background-size: 60px; cursor: pointer; }
+#legendBlock6 p { margin: 0; margin-top: 8px; }
+
+.smooth_zoom_preloader { background-image: url('../img/preloader.gif'); }   
+.smooth_zoom_icons { background-image: url('../img/icons.png'); }
+#zoom_container { width: 1280px; height: 780px; overflow: hidden; border: none; }   
+#zoom_container .landmarks { position: absolute; top: 0; left: 0 ; font-family: 'Helvetica', 'Arial', 'Verdana'; font-size: 12px; color: #fff; z-index: 10; }
+#zoom_container .landmarks .item { display: none; position:absolute; text-align:center; }   
+#zoom_container .landmarks .lable div { width: 100px; padding: 4px; }   
+#zoom_container .landmarks .mark .text { padding: 2px 6px; background-color: #000; }       
+
+.lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; }
+.lifiPoint:hover { background: #646464; cursor: pointer; }
+.currentLifiPoint .lifiPoint { background: #777; border: 5px solid #ad0a0a; }
+.nextLifiPoint .lifiPoint { animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; }
+
+.manIcon { width: 56px; height: 108px; background: url('../img/manIcon.png') no-repeat 0 0; }
+#legendBlock1 p { margin: 15px 0; font-size: 20px; text-transform: uppercase; }
+
+.level { float: left; width: 60px; height: 60px; line-height: 54px; font-size: 20px; color: #fff; text-align: center; background: #000; -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; -ms-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); opacity: 0.5; }
+.level:hover { opacity: 1; cursor: pointer; }
+#level1 { margin: 0 5px 0 20px; font-family: 'playfair'; background: #0ca4cc; }
+#level2 { font-size: 26px; font-family: 'playfair'; background: #9bd3c3; }
+#level3 { margin: 0 5px; font-size: 26px; font-family: 'playfair'; background: #e9af60; }
+.levelSelected { opacity: 1; }

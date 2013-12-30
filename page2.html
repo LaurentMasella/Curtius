@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Curtius</title>
+    </head>
+    <body>
+        <img class="slideBG" id="slide3BG" src="img/slide_3_BG.jpg" alt=""/>
+        <div id="logoSmall"></div>
+        <div id="chooseVisit">Choisissez votre visite</div>
+        <div id="chooseSquares">
+            <div class="chooseSquare" id="chooseSquare1"></div>
+            <div class="chooseSquare" id="chooseSquare2"></div>
+            <div class="chooseSquare" id="chooseSquare3"></div>
+            <div class="chooseSquare" id="chooseSquare4"></div>
+        </div>
+        <div id="visits">
+            <a class="visit" id="free" href="map.html" title="">Visite libre</a>
+            <a class="visit" id="fast" href="map.html" title="">Visite rapide</a>
+            <a class="visit" id="per" href="map.html" title="">Visite par période</a>
+            <a class="visit" id="scol" href="map.html" title="">Visite scolaire</a>
+        </div>
+        <a id="backBtn" href="page1.html" title=""></a>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

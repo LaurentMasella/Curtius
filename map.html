@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Curtius</title>	</head>
+	<body>
+
+		<div style="width: 1280px; text-align:center">
+			<div id="floorHeadBand"></div>
+			<div id="zoom_container" src="img/NIVEAU1.png">
+
+				<div class="landmarks" data-show-at-zoom="200" data-allow-drag="true">		
+				</div>
+			</div>
+			<div id="planLegend">
+				<div class="legendBlock" id="legendBlock1">
+					<p>Choix du niveau</p>
+					<div class="level" id="level1" href="img/NIVEAU1.png">RDC</div>
+					<div class="level levelSelected" id="level2" href="img/NIVEAU1.png">1</div>
+					<div class="level" id="level3" href="img/NIVEAU1.png">2</div>
+					<div class="clear"></div>
+				</div>
+				<div class="legendBlock" id="legendBlock2">
+					<div id="legend1">Votre localisation</div>
+					<div id="legend2">Sens de la visite</div>
+				</div>
+				<div class="legendBlock" id="legendBlock3">
+					<div id="legend3">Emplacement des oeuvres</div>
+					<div id="legend4">Oeuvres visitées</div>
+				</div>
+				<div class="legendBlock" id="legendBlock4">
+					<div id="legend5">Toilettes</div>
+					<div id="legend6">Vestiaires</div>
+				</div>
+				<div class="legendBlock" id="legendBlock5">
+					<div id="legend7">Escaliers</div>
+					<div id="legend8">Ascenseurs</div>
+				</div>
+				<div class="legendBlock" id="legendBlock6">
+					<div id="localize"></div>
+					<p>Localiser</p>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script src="js/jquery.smoothZoom.min.js"></script>
+		<script src="js/index.js"></script>
+		<script type="text/javascript">
+            app.initialize();
+        </script>
+	</body>
+
+</html>
