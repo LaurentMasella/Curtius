@@ -210,3 +210,27 @@ border-bottom-left-radius: 5px; }
 border-top-right-radius: 5px;
 border-bottom-right-radius: 5px; }
 .levelSelected { opacity: 1; }
+
+/* ================================================================================ */
+/* === LIFI EXPLANATION =========================================================== */
+/* ================================================================================ */
+
+#lifiLeft { float: left; width: 600px; height: 800px; font-family: 'roboto';font-size: 20px; color: #404040; background: #dfdfdf; }
+#lifiLeft p { margin: 0; }
+#lifiLeft #lifiLogo { width: 127px; height: 66px; background: url('../img/logoSmall.png') no-repeat; background-size: 66px; }
+#lifiLeft #lifiTitle { margin: 70px 0 0 60px; font-family: 'robotoBold'; font-size: 32px; color: #252525; text-transform: uppercase; }
+#lifiLeft #lifiSubtitle { margin: 0 0 30px 60px; font-family: 'robotoBold'; font-size: 26px; color: #000; text-transform: uppercase; } 
+#lifiLeft #lifiTxt1 { margin: 20px 0 40px 60px; }
+#lifiLeft #lifiTxt2,
+#lifiLeft #lifiTxt3 { margin: 20px 0 20px 60px; }
+#lifiLeft #lifiStep1, 
+#lifiLeft #lifiStep2 { margin-left: 60px; font-family: 'robotoBold'; font-size: 24px; color: #ad0d69; }
+
+#lifiLeft #lifiStep1 span, 
+#lifiLeft #lifiStep2 span { display: inline-block; width: 35px; height: 35px; line-height: 33px; color: #fff; text-align: center; background: #ad0d69; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; }
+
+#lifiRight { position: relative; float: left; width: 680px; height: 800px; background: #c0c0c0; }
+#lifiRight #lifiImg { width: 680px; height: 800px; background: url('../img/lifiExplain.png') 0 0 no-repeat; }
+#lifiRight #lifiNext { display: block; position: absolute; bottom: 50px; left: 130px; width: 420px; height: 50px; line-height: 50px; font-size: 28px; font-family: 'robotoCondlight'; color: #fff; text-transform: uppercase; text-align: center; text-decoration: none; background: #ad0d69 url('../img/arrowRight.png') 390px center no-repeat; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; -webkit-transition: all .4s ease-in; -moz-transition: all .4s ease-in; -o-transition: all .4s ease-in; transition: all .4s ease-in; }
+#lifiRight #lifiNext:hover { background-color: #d83693; cursor: pointer; }
+
