@@ -203,7 +203,6 @@ transition: all .4s ease-in-out; }
 border-top-left-radius: 5px;
 border-bottom-left-radius: 5px; }
 #level2 { font-size: 26px; font-family: 'playfair'; background: #9bd3c3; }
-<<<<<<< HEAD
 #level3 { font-size: 26px; font-family: 'playfair'; background: #e9af60; -webkit-border-top-right-radius: 5px;
 -webkit-border-bottom-right-radius: 5px;
 -moz-border-radius-topright: 5px;
