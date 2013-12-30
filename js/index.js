@@ -318,7 +318,7 @@ function addingClicksFeatures() {
 
 };
   
-
+/*
 jQuery(function($){
     populateMap1();
     displayingMap();
@@ -326,7 +326,7 @@ jQuery(function($){
     addingClicksFeatures();
     window.setTimeout(localize, 250);
 });
-
+*/
 /*
 function displayWorkOfArt() {
     $.getJSON('data.json', function(jd) {
@@ -419,3 +419,7 @@ elemToBeGenerated += "<ul>";
         elemToBeGenerated += "<li>" + val.Oeuvre[0].SousOeuvres[0].Enfant.DU.Descriptif + "</li>";
         elemToBeGenerated += "<li>" + val.Oeuvre[0].SousOeuvres[0].Enfant.DU.Legende + "</li>";
 */
+
+
+
+
