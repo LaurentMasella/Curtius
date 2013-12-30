@@ -203,6 +203,7 @@ transition: all .4s ease-in-out; }
 border-top-left-radius: 5px;
 border-bottom-left-radius: 5px; }
 #level2 { font-size: 26px; font-family: 'playfair'; background: #9bd3c3; }
+<<<<<<< HEAD
 #level3 { font-size: 26px; font-family: 'playfair'; background: #e9af60; -webkit-border-top-right-radius: 5px;
 -webkit-border-bottom-right-radius: 5px;
 -moz-border-radius-topright: 5px;
@@ -233,4 +234,28 @@ border-bottom-right-radius: 5px; }
 #lifiRight #lifiImg { width: 680px; height: 800px; background: url('../img/lifiExplain.png') 0 0 no-repeat; }
 #lifiRight #lifiNext { display: block; position: absolute; bottom: 50px; left: 130px; width: 420px; height: 50px; line-height: 50px; font-size: 28px; font-family: 'robotoCondlight'; color: #fff; text-transform: uppercase; text-align: center; text-decoration: none; background: #ad0d69 url('../img/arrowRight.png') 390px center no-repeat; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; -webkit-transition: all .4s ease-in; -moz-transition: all .4s ease-in; -o-transition: all .4s ease-in; transition: all .4s ease-in; }
 #lifiRight #lifiNext:hover { background-color: #d83693; cursor: pointer; }
+#level3 { margin: 0 5px; font-size: 26px; font-family: 'playfair'; background: #e9af60; }
+.levelSelected { opacity: 1; }
+
+
+body {
+    background-color: #000000;
+}
+
+.content {
+    -webkit-transition: all ease-in-out 1000ms;
+}
+
+#load {
+    display: none;
+    position: absolute;
+    left: 577px;
+    top: 200px;
+    background: url(../img/perso-2.gif) #FFFFFF;
+    background-size: 125px 134px;
+    width: 125px;
+    height: 134px;
+    text-indent: -9999em;
+}
+
 
