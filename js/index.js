@@ -230,7 +230,7 @@ var localize = function () {
 
 function displayingMap() {
     $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-        image_url: 'img/NIVEAU1.png',       
+        image_url: 'img/NIVEAU1+440.png',       
         responsive: false,
         responsive_maintain_ratio: true,
         max_WIDTH: '',
@@ -256,12 +256,13 @@ function addingClicksFeatures() {
         window.setTimeout(localize, 250);
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#0ca4cc');   
+        $('#floorHeadBand').css('background-color','#0ca4cc'); 
+        $('#levels').css('border-color','#0ca4cc');  
     });
 
     $('#level2').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1.png'
+            image_url: 'img/NIVEAU1+440.png'
         }); 
         $('.landmarks').empty();
         populateMap2();
@@ -270,12 +271,13 @@ function addingClicksFeatures() {
         window.setTimeout(localize, 250);
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#9bd3c3'); 
+        $('#floorHeadBand').css('background-color','#9bd3c3');
+        $('#levels').css('border-color','#9bd3c3'); 
     });
 
     $('#level3').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1.png'
+            image_url: 'img/NIVEAU1+440.png'
         }); 
         $('.landmarks').empty();
         populateMap3();
@@ -285,6 +287,7 @@ function addingClicksFeatures() {
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
         $('#floorHeadBand').css('background-color','#e9af60'); 
+        $('#levels').css('border-color','#e9af60');
     });
 
     $('#localize').mousedown(function() {
