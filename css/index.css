@@ -189,45 +189,9 @@ transition: all .4s ease-in-out; }
 .levelSelected { opacity: 1; }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
     background-color: #000000;
 }
-
-
-
 
 .content {
     -webkit-transition: all ease-in-out 1000ms;
@@ -236,11 +200,12 @@ body {
 #load {
     display: none;
     position: absolute;
-    left: 10px;
-    top: 10px;
-    background: url(../img/ajax-loader.gif) #FFFFFF;
-    width: 43px;
-    height: 11px;
+    left: 577px;
+    top: 200px;
+    background: url(../img/perso-2.gif) #FFFFFF;
+    background-size: 125px 134px;
+    width: 125px;
+    height: 134px;
     text-indent: -9999em;
 }
 

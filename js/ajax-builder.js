@@ -13,7 +13,6 @@ var s,
 			// kick things off			
 			s = this.settings;
 			this.bindUIActions();
-			console.log(s);
 		
 		},
 
@@ -27,14 +26,13 @@ var s,
 		},
 
 		changingCasualLinksToAjax: function(numToGet) {
-			console.log(numToGet);
+
 			//	Which element?
 			var whichOne = numToGet;
 			//	What is its href?
 			var currentTarget = whichOne.href;
 			//	What is its ID?
 			var currentId = whichOne.id;
-			console.log(currentId);
 								  
 			var toLoad = $(whichOne).attr('href')+' .content';
 			$('.content').hide('fast',loadContent);
