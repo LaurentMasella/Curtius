@@ -9,9 +9,8 @@ temps à se charger et que localize ne fonctionne plus, chercher "localize"
 TODO :
 ------
 
-- Mettre l'image à la bonne taille
 - Avoir les bonnes images de chaque étage
-- Faire la css de la légende et des Bubbles
+- Faire la css des bulles
 
 
 - rendre la mark bonhomme fonctionnelle
@@ -78,14 +77,12 @@ var app = {
 
 // Déclenchement des effets hover ----------------------------------------------------
 
-$( document ).ready(function() {
-
-$('#fr, #free').hover(function() { $('#chooseSquare1').css('opacity','0.4'); }, function() { $('#chooseSquare1').css('opacity','0.2'); });
-$('#eng, #fast').hover(function() { $('#chooseSquare2').css('opacity','0.4'); }, function() { $('#chooseSquare2').css('opacity','0.2'); });
-$('#ned, #per').hover(function() { $('#chooseSquare3').css('opacity','0.4'); }, function() { $('#chooseSquare3').css('opacity','0.2'); });
-$('#deu, #scol').hover(function() { $('#chooseSquare4').css('opacity','0.4'); }, function() { $('#chooseSquare4').css('opacity','0.2'); });
-
-});
+function startPagesHoverEffect() {
+    $('#fr, #free').hover(function() { $('#chooseSquare1').css('opacity','0.4'); }, function() { $('#chooseSquare1').css('opacity','0.2'); });
+    $('#eng, #fast').hover(function() { $('#chooseSquare2').css('opacity','0.4'); }, function() { $('#chooseSquare2').css('opacity','0.2'); });
+    $('#ned, #per').hover(function() { $('#chooseSquare3').css('opacity','0.4'); }, function() { $('#chooseSquare3').css('opacity','0.2'); });
+    $('#deu, #scol').hover(function() { $('#chooseSquare4').css('opacity','0.4'); }, function() { $('#chooseSquare4').css('opacity','0.2'); });
+};
 
 /* ================================================================================ */
 /* === MAP ======================================================================== */
