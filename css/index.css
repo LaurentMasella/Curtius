@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     width: 1280px;
+    background-color: #000000;    
 }
 
 @keyframes fade {
@@ -187,11 +188,6 @@ transition: all .4s ease-in-out; }
 #level2 { font-size: 26px; font-family: 'playfair'; background: #9bd3c3; }
 #level3 { margin: 0 5px; font-size: 26px; font-family: 'playfair'; background: #e9af60; }
 .levelSelected { opacity: 1; }
-
-
-body {
-    background-color: #000000;
-}
 
 .content {
     -webkit-transition: all ease-in-out 1000ms;
