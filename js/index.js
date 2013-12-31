@@ -9,9 +9,8 @@ temps à se charger et que localize ne fonctionne plus, chercher "localize"
 TODO :
 ------
 
-- Mettre l'image à la bonne taille
 - Avoir les bonnes images de chaque étage
-- Faire la css de la légende et des Bubbles
+- Faire la css des bulles
 
 
 - rendre la mark bonhomme fonctionnelle
@@ -78,14 +77,12 @@ var app = {
 
 // Déclenchement des effets hover ----------------------------------------------------
 
-$( document ).ready(function() {
-
-$('#fr, #free').hover(function() { $('#chooseSquare1').css('opacity','0.4'); }, function() { $('#chooseSquare1').css('opacity','0.2'); });
-$('#eng, #fast').hover(function() { $('#chooseSquare2').css('opacity','0.4'); }, function() { $('#chooseSquare2').css('opacity','0.2'); });
-$('#ned, #per').hover(function() { $('#chooseSquare3').css('opacity','0.4'); }, function() { $('#chooseSquare3').css('opacity','0.2'); });
-$('#deu, #scol').hover(function() { $('#chooseSquare4').css('opacity','0.4'); }, function() { $('#chooseSquare4').css('opacity','0.2'); });
-
-});
+function startPagesHoverEffect() {
+    $('#fr, #free').hover(function() { $('#chooseSquare1').css('opacity','0.4'); }, function() { $('#chooseSquare1').css('opacity','0.2'); });
+    $('#eng, #fast').hover(function() { $('#chooseSquare2').css('opacity','0.4'); }, function() { $('#chooseSquare2').css('opacity','0.2'); });
+    $('#ned, #per').hover(function() { $('#chooseSquare3').css('opacity','0.4'); }, function() { $('#chooseSquare3').css('opacity','0.2'); });
+    $('#deu, #scol').hover(function() { $('#chooseSquare4').css('opacity','0.4'); }, function() { $('#chooseSquare4').css('opacity','0.2'); });
+};
 
 /* ================================================================================ */
 /* === MAP ======================================================================== */
@@ -230,7 +227,7 @@ var localize = function () {
 
 function displayingMap() {
     $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-        image_url: 'img/NIVEAU1.png',       
+        image_url: 'img/NIVEAU1+440.png',       
         responsive: false,
         responsive_maintain_ratio: true,
         max_WIDTH: '',
@@ -256,12 +253,13 @@ function addingClicksFeatures() {
         window.setTimeout(localize, 250);
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#0ca4cc');   
+        $('#floorHeadBand').css('background-color','#0ca4cc'); 
+        $('#levels').css('border-color','#0ca4cc');  
     });
 
     $('#level2').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1.png'
+            image_url: 'img/NIVEAU1+440.png'
         }); 
         $('.landmarks').empty();
         populateMap2();
@@ -270,12 +268,13 @@ function addingClicksFeatures() {
         window.setTimeout(localize, 250);
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#9bd3c3'); 
+        $('#floorHeadBand').css('background-color','#9bd3c3');
+        $('#levels').css('border-color','#9bd3c3'); 
     });
 
     $('#level3').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1.png'
+            image_url: 'img/NIVEAU1+440.png'
         }); 
         $('.landmarks').empty();
         populateMap3();
@@ -285,6 +284,7 @@ function addingClicksFeatures() {
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
         $('#floorHeadBand').css('background-color','#e9af60'); 
+        $('#levels').css('border-color','#e9af60');
     });
 
     $('#localize').mousedown(function() {

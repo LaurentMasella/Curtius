@@ -140,54 +140,107 @@ body {
 /* === PLAN ======================================================================= */
 /* ================================================================================ */
 
-#floorHeadBand { position: fixed; top: 0; left: 0; width: 1280px; height: 20px; background: #9bd3c3; z-index: 1000000; -moz-transition: all .4s ease-in-out;
+#floorHeadBand { width: 1280px; height: 10px; background: #9bd3c3; z-index: 1000000; -moz-transition: all .4s ease-in-out;
 -ms-transition: all .8s ease-in-out;
 -o-transition: all .8s ease-in-out;
 transition: all .8s ease-in-out; }
-#planLegend { position: absolute; top: 640px; left: 0; width: 1280px; height: 160px; font-size: 16px; color: #e9e9e9; background: url('../img/planLegendBG.png') repeat; z-index: 3000; font-family: 'roboto'; }
+#planLegend { position: absolute; top: 631px; left: 0; width: 1280px; height: 170px; font-size: 16px; color: #e9e9e9; background: url('../img/planLegendBG.png') repeat; z-index: 3000; font-family: 'roboto'; }
 
 .legendBlock { float: left; width: 200px; height: 160px; }
-#legendBlock1 { width: 230px; }
+#legendBlock1 { width: 228px;  height: 140px; margin-top: 10px; border-right: 1px solid #5e5e5e; }
 #legendBlock2 { width: 230px; margin-left: 10px; }
 #legendBlock3 { width: 230px; }
 #legendBlock4 { width: 230px; }
 #legendBlock5 { width: 190px; }
-#legendBlock6 { width: 160px; text-align: center; text-transform: uppercase; }
+#legendBlock6 { width: 158px; height: 140px; margin-top: 10px; text-align: center; text-transform: uppercase; border-left: 1px solid #5e5e5e; }
 #legendBlock2 div,
 #legendBlock3 div,
 #legendBlock4 div,
-#legendBlock5 div { width: 150px; height: 80px; line-height: 80px; padding-left: 70px; background: url('../img/flagFR.png') no-repeat 10px center; text-align: left; }
+#legendBlock5 div { position: relative; width: 150px; height: 80px; line-height: 80px; padding-left: 70px; text-align: left; }
+#legendBlock2 .mapIcon,
+#legendBlock3 .mapIcon,
+#legendBlock4 .mapIcon,
+#legendBlock5 .mapIcon { position: absolute; top: 15px; left: 10px; width: 51px; height: 50px; background: url('../img/mapIcons.png') 0 0 no-repeat; }
+#legend1 .mapIcon { height: 58px; background-position: 0 0; }
+#legend2 .mapIcon { top: 33px; left: 5px; height: 50px; background-position: 0 -358px; }
+#legend3 .mapIcon { height: 50px; background-position: 0 -58px; }
+#legend4 .mapIcon { height: 50px; background-position: 0 -108px; }
+#legend5 .mapIcon { height: 50px; background-position: 0 -158px; }
+#legend6 .mapIcon { height: 50px; background-position: 0 -208px; }
+#legend7 .mapIcon { height: 50px; background-position: 0 -258px; }
+#legend8 .mapIcon { height: 50px; background-position: 0 -308px; }
 #legendBlock3 div#legend3 { height: 60px; padding-top: 20px; line-height: normal; }
-#localize { width: 90px; height: 90px; margin: 20px 0 0 35px; background: #cbcbcb url('../img/target.png') no-repeat center center; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear;
+#localize { width: 85px; height: 85px; margin: 10px 0 0 35px; background: #5e5e5e url('../img/localize.png') no-repeat center center; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, -webkit-transition: all .4s linear;
 -moz-transition: all .4s ease-in-out;
 -ms-transition: all .4s ease-in-out;
 -o-transition: all .4s ease-in-out;
 transition: all .4s ease-in-out; }
-#localize:hover { background-color: #e7e7e7; background-size: 60px; cursor: pointer; }
+#localize:hover { background-color: #7e7e7e; background-size: 70px; cursor: pointer; }
 #legendBlock6 p { margin: 0; margin-top: 8px; }
 
 .smooth_zoom_preloader { background-image: url('../img/preloader.gif'); }   
 .smooth_zoom_icons { background-image: url('../img/icons.png'); }
-#zoom_container { width: 1280px; height: 780px; overflow: hidden; border: none; }   
+#zoom_container { width: 1280px; height: 800px; overflow: hidden; border: none; }   
 #zoom_container .landmarks { position: absolute; top: 0; left: 0 ; font-family: 'Helvetica', 'Arial', 'Verdana'; font-size: 12px; color: #fff; z-index: 10; }
 #zoom_container .landmarks .item { display: none; position:absolute; text-align:center; }   
 #zoom_container .landmarks .lable div { width: 100px; padding: 4px; }   
 #zoom_container .landmarks .mark .text { padding: 2px 6px; background-color: #000; }       
 
-.lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; }
+.lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; font-family: 'RobotoBold'; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; }
 .lifiPoint:hover { background: #646464; cursor: pointer; }
-.currentLifiPoint .lifiPoint { background: #777; border: 5px solid #ad0a0a; }
-.nextLifiPoint .lifiPoint { animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; }
+.currentLifiPoint .lifiPoint { background: #f78b16; border: 5px solid #FDC857; }
+.nextLifiPoint .lifiPoint { background: #83DA00; animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; }
 
 .manIcon { width: 56px; height: 108px; background: url('../img/manIcon.png') no-repeat 0 0; }
-#legendBlock1 p { margin: 15px 0; font-size: 20px; text-transform: uppercase; }
+#legendBlock1 p { margin: 5px 0 15px 0; font-size: 20px; text-transform: uppercase; }
 
-.level { float: left; width: 60px; height: 60px; line-height: 54px; font-size: 20px; color: #fff; text-align: center; background: #000; -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; -ms-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out; -webkit-border-radius: 5px; -o-border-radius: 5px; -ms-border-radius: 5px; border-radius: 5px; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); opacity: 0.5; }
+#levels { float: left; margin: 5px 0 0 20px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; border: 3px solid #9bd3c3; }
+.level { float: left; width: 60px; height: 60px; line-height: 54px; font-size: 20px; color: #fff; text-align: center; background: #000; -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; -ms-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out; opacity: 0.5; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); }
 .level:hover { opacity: 1; cursor: pointer; }
-#level1 { margin: 0 5px 0 20px; font-family: 'playfair'; background: #0ca4cc; }
+#level1 { font-family: 'playfair'; background: #0ca4cc; -webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px; }
 #level2 { font-size: 26px; font-family: 'playfair'; background: #9bd3c3; }
-#level3 { margin: 0 5px; font-size: 26px; font-family: 'playfair'; background: #e9af60; }
+#level3 { font-size: 26px; font-family: 'playfair'; background: #e9af60; -webkit-border-top-right-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+-moz-border-radius-topright: 5px;
+-moz-border-radius-bottomright: 5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px; }
 .levelSelected { opacity: 1; }
+
+
+
+/* ================================================================================ */
+/* === LIFI EXPLANATION =========================================================== */
+/* ================================================================================ */
+
+#lifiLeft { float: left; width: 600px; height: 800px; font-family: 'roboto';font-size: 20px; color: #404040; background: url('../img/lifiTextureLeft.png') repeat; }
+#lifiLeft p { margin: 0; }
+#lifiLeft #lifiLogo { width: 127px; height: 66px; margin: 15px 0 0 15px; background-size: 127px !IMPORTANT; background: url('../img/logoSmallBlack.png') no-repeat; }
+#lifiLeft #lifiTitle { margin: 70px 0 0 60px; font-family: 'robotoBold'; font-size: 32px; color: #252525; text-transform: uppercase; }
+#lifiLeft #lifiSubtitle { margin: 0 0 30px 60px; font-family: 'robotoBold'; font-size: 26px; color: #000; text-transform: uppercase; } 
+#lifiLeft #lifiTxt1 { margin: 20px 0 40px 60px; }
+#lifiLeft #lifiTxt2,
+#lifiLeft #lifiTxt3 { margin: 20px 0 20px 60px; }
+#lifiLeft #lifiStep1, 
+#lifiLeft #lifiStep2 { margin-left: 60px; font-family: 'robotoBold'; font-size: 24px; color: #ad0d69; }
+
+#lifiLeft #lifiStep1 span, 
+#lifiLeft #lifiStep2 span { display: inline-block; width: 35px; height: 35px; line-height: 33px; color: #fff; text-align: center; background: #ad0d69; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; }
+
+#lifiRight { position: relative; float: left; width: 680px; height: 800px; background: url('../img/lifiTextureRight.png') repeat; }
+#lifiRight #lifiImg { width: 680px; height: 800px; background: url('../img/lifiExplain.png') 0 0 no-repeat; }
+#lifiRight #lifiNext { display: block; position: absolute; bottom: 50px; left: 130px; width: 420px; height: 50px; line-height: 50px; font-size: 28px; font-family: 'robotoCondlight'; color: #fff; text-transform: uppercase; text-align: center; text-decoration: none; background: #ad0d69 url('../img/arrowRight.png') 390px center no-repeat; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; -webkit-transition: all .4s ease-in; -moz-transition: all .4s ease-in; -o-transition: all .4s ease-in; transition: all .4s ease-in; }
+#lifiRight #lifiNext:hover { background-color: #d83693; cursor: pointer; }
+
+body {
+    background-color: #000000;
+}
+
 
 .content {
     -webkit-transition: all ease-in-out 1000ms;

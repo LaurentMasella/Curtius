@@ -125,6 +125,9 @@ var s,
 						    addingClicksFeatures();
 						    window.setTimeout(localize, 250);					
 						}
+						if(whichOne.href.indexOf('page1.html') != -1 || whichOne.href.indexOf('page2.html') != -1) {
+						   startPagesHoverEffect();
+						}
 						parsingLinks.init();
 					}
 				, 50);
