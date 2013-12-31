@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     width: 1280px;
+    background-color: #000000;    
 }
 
 @keyframes fade {
@@ -47,7 +48,7 @@ body {
     -webkit-animation: fade 3000ms infinite;
 }
 
-.slideBG { position: absolute; top: 0; left: 0; width: 1280px; height: 800px; }
+.slideBG {/* position: absolute; top: 0; left: 0; width: 1280px; height: 800px; */}
 
 .clear { width: 0; height: 0; clear: both; }
 
@@ -109,12 +110,30 @@ body {
 /* === LANGUES ==================================================================== */
 /* ================================================================================ */
 
-#logoSmall { position: absolute; top: 115px; left: 540px; width: 201px; height: 102px; background: url('../img/logoSmall.png') no-repeat;}
-#chooseLang { position: absolute; top: 250px; left: 0; width: 1280px; font-family: 'roboto', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 26px; color: #fff; text-align: center; }
-#chooseSquares,
-#langs { position: absolute; top: 335px; left: 440px; }
-#chooseSquares .chooseSquare { width: 400px; height: 57px; margin-bottom: 40px; background: #fff; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; opacity: 0.2; -webkit-transition: opacity .4s ease-in; -moz-transition: opacity .4s ease-in; -o-transition: opacity .4s ease-in; transition: opacity .4s ease-in; }
-#langs .lang { display: block; width: 285px; height: 57px; line-height: 57px; margin-bottom: 40px; padding-left: 115px; font-family: 'playfair', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 24px; color: #efefff; text-decoration: none; text-transform: uppercase; z-index: 3000; }
+.page1 {
+    background: url('../img/slide_2_BG.jpg') top left no-repeat;
+    width: 1280px;
+    height: 800px;
+    text-align: center;
+}
+
+.page2 {
+    background: url('../img/slide_3_BG.jpg') top left no-repeat;
+    width: 1280px;
+    height: 800px;
+    text-align: center;
+}
+
+
+
+
+
+#logoSmall { display: inline-block; text-align: center; margin-top: 25px; width: 201px; height: 102px; background: url('../img/logoSmall.png') no-repeat;}
+#chooseLang { margin-top: 30px; font-family: 'roboto', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 26px; color: #fff; text-align: center; }
+#chooseSquares,#langs { margin-top: 30px; text-align: center}
+.chooseSquare { width: 400px; height: 57px; margin-bottom: 40px; background: rgba(255,255,255,0.2); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-transition: background .4s ease-in; -moz-transition: background .4s ease-in; -o-transition: background .4s ease-in; transition: background .4s ease-in; display: inline-block; }
+.chooseSquare:hover {background: rgba(255,255,255,0.6);-webkit-transition: background .4s ease-in; -moz-transition: background .4s ease-in; -o-transition: background .4s ease-in; transition: background .4s ease-in; }
+#langs .lang { display: block; width: 285px; height: 57px; line-height: 57px; margin-bottom: 40px; padding-left: 35px; font-family: 'playfair', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 24px; color: #efefff; text-decoration: none; text-transform: uppercase; z-index: 3000; }
 #langs #fr { background: url('../img/flagFR.png') no-repeat 30px center; }
 #langs #eng { background: url('../img/flagENG.png') no-repeat 30px center; }
 #langs #ned { background: url('../img/flagNED.png') no-repeat 30px center; }
@@ -124,9 +143,17 @@ body {
 /* === VISITS  ==================================================================== */
 /* ================================================================================ */
 
-#chooseVisit { position: absolute; top: 250px; left: 0; width: 1280px; font-family: 'roboto', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 26px; color: #fff; text-align: center; }
-#visits { position: absolute; top: 335px; left: 440px; }
-#visits .visit { display: block; width: 285px; height: 57px; line-height: 57px; margin-bottom: 40px; padding-left: 115px; font-family: 'playfair', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 24px; color: #efefff; text-decoration: none; text-transform: uppercase; }
+.page2 #chooseSquares {
+    margin-top: 30px;
+}
+
+.page2 .chooseSquare {
+    text-align: center;
+}
+
+#chooseVisit { margin-top: 30px; left: 0; width: 1280px; font-family: 'roboto', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 26px; color: #fff; text-align: center; }
+/*#visits { position: absolute; top: 335px; left: 440px; }*/
+.visit { display: block; width: 285px; height: 57px; line-height: 57px; margin-bottom: 40px; font-family: 'playfair', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 24px; color: #efefff; text-decoration: none; text-transform: uppercase; margin-left: auto; margin-right: auto}
 #visits #free { background: url('../img/visitFree.png') no-repeat 30px center; }
 #visits #fast { background: url('../img/visitFast.png') no-repeat 30px center; }
 #visits #per { background: url('../img/visitPer.png') no-repeat 30px center; }
@@ -211,6 +238,8 @@ border-top-right-radius: 5px;
 border-bottom-right-radius: 5px; }
 .levelSelected { opacity: 1; }
 
+
+
 /* ================================================================================ */
 /* === LIFI EXPLANATION =========================================================== */
 /* ================================================================================ */
@@ -238,8 +267,10 @@ body {
     background-color: #000000;
 }
 
+
 .content {
     -webkit-transition: all ease-in-out 1000ms;
+    -webkit-transform: transform3d(0,0,0);    
 }
 
 #load {
@@ -289,5 +320,22 @@ transition: all .4s ease-in-out; }
 
 
 
+.contentIsHiddenOnLeft {
+    margin-left: -100%;
+    -webkit-transition: all ease-in-out 500ms;
+    -webkit-transform: transform3d(0,0,0);
+}
+
+.contentIsHiddenOnRight {
+    margin-left: 100%;
+    -webkit-transition: all ease-in-out 500ms;
+    -webkit-transform: transform3d(0,0,0);
+}
+
+.contentIsCentered {
+    margin-left: 0;
+    -webkit-transition: all ease-in-out 500ms;
+    -webkit-transform: transform3d(0,0,0);
+}
 
 

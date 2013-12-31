@@ -1,3 +1,42 @@
+
+window.addEventListener("popstate", function(e) {
+    var toLoad = location.pathname + ' .content';
+	$('.content').hide('fast',loadContent);
+	$('#load').remove();
+	$('#wrapper').append('<span id="load">LOADING...</span>');
+	$('#load').fadeIn('normal');
+	//	Set the new value of the URL bar	
+	history.pushState(null, null, location.pathname);
+	
+	function loadContent() {
+		$('#wrapper').load(toLoad,'',showNewContent());
+	}
+
+	function showNewContent() {
+		$('.content').show('normal',hideLoader());
+	}
+
+	function hideLoader() {
+
+		$('#load').fadeOut('normal');
+
+		window.setTimeout(
+			function(){
+
+				if(location.pathname.indexOf('map.html') != -1) {
+				    populateMap1();
+				    displayingMap();
+				    window.setTimeout(addingSpotLights, 100);
+				    addingClicksFeatures();
+				    window.setTimeout(localize, 250);					
+				}
+				parsingLinks.init();
+			}
+		, 50);
+
+	}
+});
+
 var s, 
 	parsingLinks = {
 
@@ -35,18 +74,24 @@ var s,
 			var currentId = whichOne.id;
 								  
 			var toLoad = $(whichOne).attr('href')+' .content';
-			$('.content').hide('fast',loadContent);
+			$('.content').removeClass("contentIsHiddenOnRight");
+			$('.content').removeClass("contentIsCentered");
+			$('.content').addClass("contentIsHiddenOnLeft");
+
+			window.setTimeout(function(){$('.content').hide('fast',loadContent)},500);
+
 			$('#load').remove();
 			$('#wrapper').append('<span id="load">LOADING...</span>');
 			$('#load').fadeIn('normal');
 			//	Set the new value of the URL bar	
-			window.location.hash = $(whichOne).attr('href').substr(0,$(whichOne).attr('href').length-5);
+			history.pushState(null, null, whichOne.href);
 			
 			function loadContent() {
-				$('#wrapper').load(toLoad,'',showNewContent());
+				$('#wrapper').load(toLoad,function() {console.log( "Load was performed." );showNewContent()});
 			}
 
 			function showNewContent() {
+				window.setTimeout(function(){$('.content').addClass('contentIsCentered')},100);
 				$('.content').show('normal',hideLoader());
 			}
 
