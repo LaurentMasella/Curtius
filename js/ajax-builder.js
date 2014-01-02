@@ -83,8 +83,6 @@ var s,
 			$('#load').remove();
 			$('#wrapper').append('<span id="load">LOADING...</span>');
 			$('#load').fadeIn('normal');
-			//	Set the new value of the URL bar	
-			history.pushState(null, null, whichOne.href);
 			
 			function loadContent() {
 				$('#wrapper').load(toLoad,function() {console.log( "Load was performed." );showNewContent()});
@@ -93,6 +91,9 @@ var s,
 			function showNewContent() {
 				window.setTimeout(function(){$('.content').addClass('contentIsCentered')},100);
 				$('.content').show('normal',hideLoader());
+
+				//	Set the new value of the URL bar	
+				history.pushState(null, null, whichOne.href);
 			}
 
 			function hideLoader() {

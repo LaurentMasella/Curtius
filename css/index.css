@@ -263,11 +263,6 @@ border-bottom-right-radius: 5px; }
 #lifiRight #lifiNext { display: block; position: absolute; bottom: 50px; left: 130px; width: 420px; height: 50px; line-height: 50px; font-size: 28px; font-family: 'robotoCondlight'; color: #fff; text-transform: uppercase; text-align: center; text-decoration: none; background: #ad0d69 url('../img/arrowRight.png') 390px center no-repeat; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; -webkit-transition: all .4s ease-in; -moz-transition: all .4s ease-in; -o-transition: all .4s ease-in; transition: all .4s ease-in; }
 #lifiRight #lifiNext:hover { background-color: #d83693; cursor: pointer; }
 
-body {
-    background-color: #000000;
-}
-
-
 .content {
     -webkit-transition: all ease-in-out 1000ms;
     -webkit-transform: transform3d(0,0,0);    
@@ -278,7 +273,7 @@ body {
     position: absolute;
     left: 577px;
     top: 200px;
-    background: url(../img/perso-2.gif) #FFFFFF;
+    background: url(../img/perso-2.gif);
     background-size: 125px 134px;
     width: 125px;
     height: 134px;
