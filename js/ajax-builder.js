@@ -1,5 +1,5 @@
 
-window.addEventListener("popstate", function(e) {
+window.addEventListener("popstate", function() {
     var toLoad = location.pathname + ' .content';
 	$('.content').hide('fast',loadContent);
 	$('#load').remove();
@@ -85,7 +85,7 @@ var s,
 			$('#load').fadeIn('normal');
 			
 			function loadContent() {
-				$('#wrapper').load(toLoad,function() {console.log( "Load was performed." );showNewContent()});
+				$('#wrapper').load(toLoad,function() {showNewContent()});
 			}
 
 			function showNewContent() {
