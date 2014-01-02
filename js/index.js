@@ -72,19 +72,6 @@ var app = {
 };
 
 /* ================================================================================ */
-/* === LANGUES / VISITES ========================================================== */
-/* ================================================================================ */
-
-// Déclenchement des effets hover ----------------------------------------------------
-
-function startPagesHoverEffect() {
-    $('#fr, #free').hover(function() { $('#chooseSquare1').css('opacity','0.4'); }, function() { $('#chooseSquare1').css('opacity','0.2'); });
-    $('#eng, #fast').hover(function() { $('#chooseSquare2').css('opacity','0.4'); }, function() { $('#chooseSquare2').css('opacity','0.2'); });
-    $('#ned, #per').hover(function() { $('#chooseSquare3').css('opacity','0.4'); }, function() { $('#chooseSquare3').css('opacity','0.2'); });
-    $('#deu, #scol').hover(function() { $('#chooseSquare4').css('opacity','0.4'); }, function() { $('#chooseSquare4').css('opacity','0.2'); });
-};
-
-/* ================================================================================ */
 /* === MAP ======================================================================== */
 /* ================================================================================ */
 
@@ -319,15 +306,6 @@ function addingClicksFeatures() {
 };
   
 /*
-jQuery(function($){
-    populateMap1();
-    displayingMap();
-    window.setTimeout(addingSpotLights, 100);
-    addingClicksFeatures();
-    window.setTimeout(localize, 250);
-});
-*/
-/*
 function displayWorkOfArt() {
     $.getJSON('data.json', function(jd) {
         console.log(
@@ -420,6 +398,213 @@ elemToBeGenerated += "<ul>";
         elemToBeGenerated += "<li>" + val.Oeuvre[0].SousOeuvres[0].Enfant.DU.Legende + "</li>";
 */
 
+/* ================================================================================ */
+/* === ARTWORK VIEW =============================================================== */
+/* ================================================================================ */
+
+// Couleur des SVG
+function bidule(){ 
+    $(document).find('path').attr({'stroke':'#000','fill':'#000'});
+};
+window.setTimeout(bidule, 100);
+
+// --- BOUTON DETAIL ------------------------------------ //
+
+$('.si-icon-hamburger-cross').mousedown(function() {
+    if($(this).hasClass('si-icon-unselected')){
+        // Bouton noir
+        $(this).find('path').attr('stroke','#fff');
+        $('#detailButton').css('background-color','#000');
+        $('#detailButton').css('color','#fff');
+        $(this).removeClass('si-icon-unselected');
+        $(this).addClass('si-icon-selected');
+        // Fenêtres à droite
+        $('#artworkZoom').removeClass('goLeft');
+        $('#artworkZoom').addClass('goRight');
+        $('#artworkDetail').removeClass('goLeft').css('opacity','1');
+        $('#artworkDetail').addClass('goRight');
+        // Autre bouton blanc
+        // Autre fenêtre à gauche
+        if($('.si-icon-hamburger-cross2').hasClass('si-icon-selected')){
+            console.log('bingo');
+            $('.si-icon-hamburger-cross2').click();
+            $('.si-icon-hamburger-cross2').mousedown();
+            $('.si-icon-hamburger-cross2').find('path').attr('stroke','#000');
+            $('#linkedArtworksButton').css('background-color','#fff');
+            $('#linkedArtworksButton').css('color','#000');
+            $('#artworkLinks').removeClass('goRight').css('opacity','0');;
+            $('#artworkLinks').addClass('goLeft');
+            $('#artworkZoom').removeClass('goLeft');
+            $('#artworkZoom').addClass('goRight');
+        }
+    }
+    else {
+        // Bouton blanc
+        $(this).find('path').attr('stroke','#000');
+        $('#detailButton').css('background-color','#fff');
+        $('#detailButton').css('color','#000');
+        $(this).removeClass('si-icon-selected');
+        $(this).addClass('si-icon-unselected');
+        // Fenêtres à gauche
+        $('#artworkZoom').removeClass('goRight');
+        $('#artworkZoom').addClass('goLeft');
+        $('#artworkDetail').removeClass('goRight').css('opacity','0');
+        $('#artworkDetail').addClass('goLeft');
+    };
+    
+});
+
+// --- BOUTON OEUVRES LIEES ------------------------------------ //
+
+$('.si-icon-hamburger-cross2').mousedown(function() {
+    if($(this).hasClass('si-icon-unselected')){
+        // Bouton noir
+        $(this).find('path').attr('stroke','#fff');
+        $('#linkedArtworksButton').css('background-color','#000');
+        $('#linkedArtworksButton').css('color','#fff');
+        $(this).removeClass('si-icon-unselected');
+        $(this).addClass('si-icon-selected');
+        // Fenêtre à droite
+        $('#artworkZoom').removeClass('goLeft');
+        $('#artworkZoom').addClass('goRight');
+        $('#artworkLinks').removeClass('goLeft').css('opacity','1');
+        $('#artworkLinks').addClass('goRight');
+        // Autre bouton blanc
+        // Autre fenêtre à gauche
+        if($('.si-icon-hamburger-cross').hasClass('si-icon-selected')){
+            $('.si-icon-hamburger-cross').click();
+            $('.si-icon-hamburger-cross').mousedown();
+            $('.si-icon-hamburger-cross').find('path').attr('stroke','#000');
+            $('#detailButton').css('background-color','#fff');
+            $('#detailButton').css('color','#000');
+            $('#artworkDetail').removeClass('goRight').css('opacity','0');;
+            $('#artworkDetail').addClass('goLeft');
+            $('#artworkZoom').removeClass('goLeft');
+            $('#artworkZoom').addClass('goRight');
+        }
+    }
+    else {
+        // Bouton blanc
+        $(this).find('path').attr('stroke','#000');
+        $('#linkedArtworksButton').css('background-color','#fff');
+        $('#linkedArtworksButton').css('color','#000');
+        $(this).removeClass('si-icon-selected');
+        $(this).addClass('si-icon-unselected');
+        // Fenêtres à gauche
+        $('#artworkZoom').removeClass('goRight');
+        $('#artworkZoom').addClass('goLeft');
+        $('#artworkLinks').removeClass('goRight').css('opacity','0');
+        $('#artworkLinks').addClass('goLeft');
+    };
+    
+});
+
+// --- ZOOM IMAGE ------------------------------------ //
+
+function displayingArtImage() {
+    $('#artworkZoom').smoothZoom({ 
+        image_url: 'img/NIVEAU1+440.png',
+        width: 400,
+        responsive: false,
+        responsive_maintain_ratio: true,
+        max_WIDTH: '',
+        max_HEIGHT: '',
+        zoom_BUTTONS_SHOW: false,
+        pan_BUTTONS_SHOW: false,
+        zoom_MAX:'150',
+        initial_ZOOM: '0',
+        border_SIZE: 0,
+    }); 
+};
+
+window.setTimeout(
+    function(){
+
+        if(location.pathname.indexOf('oeuvres.html') != -1) {
+            displayingArtImage();                   
+        }
+    }
+, 50);
+
+$('#zoomLauncher').mousedown(function() {
+    var opacityCheck = $('#artworkLinks').css('opacity');
+    var opacityCheck2 = $('#artworkDetail').css('opacity');
+    if( opacityCheck == '1' || opacityCheck2 == '1' ){
+        $('#artworkZoom').css('left','-480px');
+    }
+    else{
+        $('#artworkZoom').css('left','-80px');
+    }
+    $('#artworkZoom').css({'width':'+=600px','height':'+=100px','top':'-=50px'});
+    $('#artworkLinks').css('opacity','0');
+    $('#artworkDetail').css('opacity','0');
+    $('#artworkLeft').css('opacity','0');
+    $('#zoomBack').css('display','block');
+    $('#planButton').css('display','none');    
+    $(this).css('display','none');
+    $('.si-icon-maximize-rotate').click();
+    $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
+            image_url: 'img/NIVEAU1+440.png',
+            width: 1000,
+        responsive: false,
+        responsive_maintain_ratio: true,
+        max_WIDTH: '',
+        max_HEIGHT: '',
+        zoom_BUTTONS_SHOW: false,
+        pan_BUTTONS_SHOW: false,
+        zoom_MAX:'150',
+        initial_ZOOM: '0',
+        border_SIZE: 0,
+        }); 
+});
+
+$('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
+    if($('.si-icon-hamburger-cross').hasClass('si-icon-selected')){
+        $('#artworkDetail').css('opacity','1');
+    }
+    if($('.si-icon-hamburger-cross2').hasClass('si-icon-selected')){
+        $('#artworkLinks').css('opacity','1');
+    }
+    $('#artworkLeft').css('opacity','1');
+    $('#artworkZoom').css({'width':'-=600px','height':'-=100px','top':'+=50px','left':'215px'});
+    $('#zoomBack').css('display','none');
+    $('#planButton').css('display','block');
+    $('#zoomLauncher').css('display','block');
+    $('.si-icon-maximize-rotate').click();
+    $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
+        image_url: 'img/NIVEAU1+440.png',
+        width: 400,
+        responsive: false,
+        responsive_maintain_ratio: true,
+        max_WIDTH: '',
+        max_HEIGHT: '',
+        zoom_BUTTONS_SHOW: false,
+        pan_BUTTONS_SHOW: false,
+        zoom_MAX:'150',
+        initial_ZOOM: '0',
+        border_SIZE: 0,
+        });
+});
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*
+jQuery(function($){
+    populateMap1();
+    displayingMap();
+    window.setTimeout(addingSpotLights, 100);
+    addingClicksFeatures();
+    window.setTimeout(localize, 250);
+});
+*/
 
