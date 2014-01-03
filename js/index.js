@@ -419,8 +419,8 @@ $('.si-icon-hamburger-cross').mousedown(function() {
         $(this).removeClass('si-icon-unselected');
         $(this).addClass('si-icon-selected');
         // Fenêtres à droite
-        $('#artworkZoom').removeClass('goLeft');
-        $('#artworkZoom').addClass('goRight');
+        $('#artworkZoomHolder').removeClass('goLeft');
+        $('#artworkZoomHolder').addClass('goRight');
         $('#artworkDetail').removeClass('goLeft').css('opacity','1');
         $('#artworkDetail').addClass('goRight');
         // Autre bouton blanc
@@ -434,8 +434,8 @@ $('.si-icon-hamburger-cross').mousedown(function() {
             $('#linkedArtworksButton').css('color','#000');
             $('#artworkLinks').removeClass('goRight').css('opacity','0');;
             $('#artworkLinks').addClass('goLeft');
-            $('#artworkZoom').removeClass('goLeft');
-            $('#artworkZoom').addClass('goRight');
+            $('#artworkZoomHolder').removeClass('goLeft');
+            $('#artworkZoomHolder').addClass('goRight');
         }
     }
     else {
@@ -446,8 +446,8 @@ $('.si-icon-hamburger-cross').mousedown(function() {
         $(this).removeClass('si-icon-selected');
         $(this).addClass('si-icon-unselected');
         // Fenêtres à gauche
-        $('#artworkZoom').removeClass('goRight');
-        $('#artworkZoom').addClass('goLeft');
+        $('#artworkZoomHolder').removeClass('goRight');
+        $('#artworkZoomHolder').addClass('goLeft');
         $('#artworkDetail').removeClass('goRight').css('opacity','0');
         $('#artworkDetail').addClass('goLeft');
     };
@@ -465,8 +465,8 @@ $('.si-icon-hamburger-cross2').mousedown(function() {
         $(this).removeClass('si-icon-unselected');
         $(this).addClass('si-icon-selected');
         // Fenêtre à droite
-        $('#artworkZoom').removeClass('goLeft');
-        $('#artworkZoom').addClass('goRight');
+        $('#artworkZoomHolder').removeClass('goLeft');
+        $('#artworkZoomHolder').addClass('goRight');
         $('#artworkLinks').removeClass('goLeft').css('opacity','1');
         $('#artworkLinks').addClass('goRight');
         // Autre bouton blanc
@@ -479,8 +479,8 @@ $('.si-icon-hamburger-cross2').mousedown(function() {
             $('#detailButton').css('color','#000');
             $('#artworkDetail').removeClass('goRight').css('opacity','0');;
             $('#artworkDetail').addClass('goLeft');
-            $('#artworkZoom').removeClass('goLeft');
-            $('#artworkZoom').addClass('goRight');
+            $('#artworkZoomHolder').removeClass('goLeft');
+            $('#artworkZoomHolder').addClass('goRight');
         }
     }
     else {
@@ -491,8 +491,8 @@ $('.si-icon-hamburger-cross2').mousedown(function() {
         $(this).removeClass('si-icon-selected');
         $(this).addClass('si-icon-unselected');
         // Fenêtres à gauche
-        $('#artworkZoom').removeClass('goRight');
-        $('#artworkZoom').addClass('goLeft');
+        $('#artworkZoomHolder').removeClass('goRight');
+        $('#artworkZoomHolder').addClass('goLeft');
         $('#artworkLinks').removeClass('goRight').css('opacity','0');
         $('#artworkLinks').addClass('goLeft');
     };
@@ -530,12 +530,13 @@ $('#zoomLauncher').mousedown(function() {
     var opacityCheck = $('#artworkLinks').css('opacity');
     var opacityCheck2 = $('#artworkDetail').css('opacity');
     if( opacityCheck == '1' || opacityCheck2 == '1' ){
-        $('#artworkZoom').css('left','-480px');
+        $('#artworkZoomHolder').css('left','-250px');
     }
     else{
-        $('#artworkZoom').css('left','-80px');
+        $('#artworkZoomHolder').css('left','140px');
     }
-    $('#artworkZoom').css({'width':'+=600px','height':'+=100px','top':'-=50px'});
+    $('#artworkZoomHolder').css({'width':'+=600px','height':'+=100px','top':'-=50px'});
+    $('#artworkZoom').css({'width':'+=600px','height':'+=100px'});
     $('#artworkLinks').css('opacity','0');
     $('#artworkDetail').css('opacity','0');
     $('#artworkLeft').css('opacity','0');
@@ -544,8 +545,9 @@ $('#zoomLauncher').mousedown(function() {
     $(this).css('display','none');
     $('.si-icon-maximize-rotate').click();
     $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1+440.png',
-            width: 1000,
+        image_url: 'img/NIVEAU1+440.png',
+        width: 1000,
+        height: 625,
         responsive: false,
         responsive_maintain_ratio: true,
         max_WIDTH: '',
@@ -566,7 +568,8 @@ $('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
         $('#artworkLinks').css('opacity','1');
     }
     $('#artworkLeft').css('opacity','1');
-    $('#artworkZoom').css({'width':'-=600px','height':'-=100px','top':'+=50px','left':'215px'});
+    $('#artworkZoomHolder').css({'width':'-=600px','height':'-=100px','top':'+=50px','left':'440px'});
+    $('#artworkZoom').css({'width':'-=600px','height':'-=100px'});
     $('#zoomBack').css('display','none');
     $('#planButton').css('display','block');
     $('#zoomLauncher').css('display','block');
@@ -574,6 +577,7 @@ $('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
     $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
         image_url: 'img/NIVEAU1+440.png',
         width: 400,
+        height: 525,
         responsive: false,
         responsive_maintain_ratio: true,
         max_WIDTH: '',

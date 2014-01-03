@@ -328,19 +328,23 @@ transition: all .4s ease-in-out; z-index: 2000; }
 transition: all .3s ease-in-out; -webkit-box-shadow: -5px 0 8px 1px #DBDBDB;
 box-shadow: -5px 0 8px 1px #DBDBDB; }
 
-#artworkView #artworkZoom { position: fixed; top: 90px; left: 215px; width: 400px; height: 525px; background: #000; -moz-transition: all .3s ease-in-out;
+#artworkView #artworkZoomHolder { position: fixed; top: 190px; left: 440px; width: 400px; height: 525px; background: #fff; -moz-transition: all .3s ease-in-out;
 -ms-transition: all .3s ease-in-out;
 -o-transition: all .3s ease-in-out;
 transition: all .3s ease-in-out; -webkit-box-shadow: 0 9px 8px -4px #a2a2a2;
 box-shadow: 0 9px 8px -4px #a2a2a2; }
-#zoomLauncher { position: absolute; top: 0; left: 0; width: 400px; height: 525px; opacity: 0.7; z-index: 1000000; }
-#artworkView #artworkZoom #resize { position: absolute;  bottom: 10px; right: 10px; width: 50px; height: 50px; background: #676767; opacity: 0.7; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, -webkit-transition: all .4s linear;
+#artworkView #artworkZoomHolder #artworkZoom { width: 400px; height: 525px; background: #fff; -moz-transition: all .3s ease-in-out;
+-ms-transition: all .3s ease-in-out;
+-o-transition: all .3s ease-in-out;
+transition: all .3s ease-in-out; }
+#artworkView #artworkZoomHolder #zoomLauncher { position: absolute; top: 0; left: 0; width: 400px; height: 525px; opacity: 0.7; z-index: 1000000; }
+#artworkView #artworkZoomHolder #resize { position: absolute;  bottom: 10px; right: 10px; width: 50px; height: 50px; background: #676767; opacity: 0.7; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, -webkit-transition: all .4s linear;
 -moz-transition: all .4s ease-in-out;
 -ms-transition: all .4s ease-in-out;
 -o-transition: all .4s ease-in-out;
 transition: all .4s ease-in-out; z-index: 1000; }
-#artworkView #artworkZoom #resize:hover { opacity: 1; cursor: pointer; }
-#resize svg { width: 40px; height: 40px; margin: 5px; }
+#artworkView #artworkZoomHolder #resize:hover { opacity: 1; cursor: pointer; }
+#artworkView #artworkZoomHolder #resize svg { width: 40px; height: 40px; margin: 5px; }
 
 .goLeftZoom { -webkit-transform:translate(0,0); }
 .goRightZoom { -webkit-transform:translate(-400px,0); }
