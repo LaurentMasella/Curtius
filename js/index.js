@@ -12,22 +12,10 @@ TODO :
 - Avoir les bonnes images de chaque étage
 - Faire la css des bulles
 
-
-- rendre la mark bonhomme fonctionnelle
-- Ajouter des classes sur les bornes visitées.
-
-
 - comment afficher les infos de la borne lifi ?
-
 - Faire dépendre les tableaux de Bubbles du type de visite choisie
-
-
-
-
-
-- Si la bulle cliquée à l'id Lampe[i] alors j'affiche la page contenant les infos de [i]
+--> Si la bulle cliquée à l'id Lampe[i] alors j'affiche la page contenant les infos de [i]
 avec 'i' de 0 à tableau json length et i++
-
 
 */
 
@@ -77,99 +65,107 @@ var app = {
 
 // Tableaux de coordonnées -----------------------------------------------------------
 
+var coordRDC = [];
+
 var coord1 = [];
-coord1[ 0 ] = "0,0";
-coord1[ 1 ] = "469,547";
-coord1[ 2 ] = "230,732";
-coord1[ 3 ] = "398,657";
-coord1[ 4 ] = "464,659";
-coord1[ 5 ] = "295,793";
-coord1[ 6 ] = "295,858";
-coord1[ 7 ] = "223,956";
-coord1[ 8 ] = "296,1017";
-coord1[ 9 ] = "296,1085";
-coord1[ 10 ] = "231,1130";
-coord1[ 11 ] = "438,1277";
-coord1[ 12 ] = "278,1392";
-coord1[ 13 ] = "776,469";
-coord1[ 14 ] = "878,577";
-coord1[ 15 ] = "941,568";
-coord1[ 16 ] = "1081,527";
-coord1[ 17 ] = "1150,538";
-coord1[ 18 ] = "1469,369";
-coord1[ 19 ] = "1530,343";
-coord1[ 20 ] = "1596,354";
-coord1[ 21 ] = "1674,381";
-coord1[ 22 ] = "1735,290";
-coord1[ 23 ] = "1340,591";
-coord1[ 24 ] = "1342,656";
-coord1[ 25 ] = "1287,746";
-coord1[ 26 ] = "1341,833";
-coord1[ 27 ] = "1478,846";
-coord1[ 28 ] = "1552,846";
-coord1[ 29 ] = "1374,942";
-coord1[ 30 ] = "1442,924";
-coord1[ 31 ] = "1509,924";
-coord1[ 32 ] = "1797,912";
-coord1[ 33 ] = "1797,987";
-coord1[ 34 ] = "1409,1009";
+coord1[ 1 ] = "448,493";
+coord1[ 2 ] = "241,669";
+coord1[ 3 ] = "406,641";
+coord1[ 4 ] = "470,641";
+coord1[ 5 ] = "271,751";
+coord1[ 6 ] = "273,817";
+coord1[ 7 ] = "225,926";
+coord1[ 8 ] = "319,969";
+coord1[ 9 ] = "319,1038";
+coord1[ 10 ] = "252,1057";
+coord1[ 11 ] = "473,1259";
+coord1[ 12 ] = "271,1351";
+coord1[ 13 ] = "737,452";
+coord1[ 14 ] = "890,548";
+coord1[ 15 ] = "960,539";
+coord1[ 16 ] = "1086,515";
+coord1[ 17 ] = "1146,539";
+coord1[ 18 ] = "1376,366";
+coord1[ 19 ] = "1444,347";
+coord1[ 20 ] = "1512,343";
+coord1[ 21 ] = "1585,366";
+coord1[ 22 ] = "1657,283";
+coord1[ 23 ] = "1302,604";
+coord1[ 24 ] = "1308,664";
+coord1[ 25 ] = "1273,753";
+coord1[ 26 ] = "1313,814";
+coord1[ 27 ] = "1444,836";
+coord1[ 28 ] = "1514,836";
+coord1[ 29 ] = "1350,909";
+coord1[ 30 ] = "1414,911";
+coord1[ 31 ] = "1474,912";
+coord1[ 32 ] = "1727,897";
+coord1[ 33 ] = "1727,963";
+coord1[ 34 ] = "1320,968";
 
 var coord2 = [];
-coord2[ 0 ] = "0,0";
-coord2[ 1 ] = "469,547";
-coord2[ 2 ] = "230,732";
-coord2[ 3 ] = "398,657";
-coord2[ 4 ] = "464,659";
-coord2[ 5 ] = "295,793";
-coord2[ 6 ] = "295,858";
-coord2[ 7 ] = "223,956";
-coord2[ 8 ] = "296,1017";
-coord2[ 9 ] = "296,1085";
-coord2[ 10 ] = "231,1130";
-coord2[ 11 ] = "438,1277";
-coord2[ 12 ] = "278,1392";
-coord2[ 13 ] = "776,469";
-coord2[ 14 ] = "878,577";
-coord2[ 15 ] = "941,568";
-coord2[ 16 ] = "1081,527";
-coord2[ 17 ] = "1150,538";
-coord2[ 18 ] = "1469,369";
-coord2[ 19 ] = "1530,343";
-coord2[ 20 ] = "1596,354";
-coord2[ 21 ] = "1674,381";
-coord2[ 22 ] = "1735,290";
-
-var coord3 = [];
-coord3[ 0 ] = "1340,591";
-coord3[ 1 ] = "1342,656";
-coord3[ 2 ] = "1287,746";
-coord3[ 3 ] = "1341,833";
-coord3[ 4 ] = "1478,846";
-coord3[ 5 ] = "1552,846";
-coord3[ 6 ] = "1374,942";
-coord3[ 7 ] = "1442,924";
-coord3[ 8 ] = "1509,924";
-coord3[ 9 ] = "1797,912";
-coord3[ 10 ] = "1797,987";
-coord3[ 11 ] = "1409,1009";
+coord2[ 1 ] = "268,461";
+coord2[ 2 ] = "321,500";
+coord2[ 3 ] = "382,494";
+coord2[ 4 ] = "497,486";
+coord2[ 5 ] = "442,529";
+coord2[ 6 ] = "237,582";
+coord2[ 7 ] = "387,626";
+coord2[ 8 ] = "436,588";
+coord2[ 9 ] = "477,631";
+coord2[ 10 ] = "264,1230";
+coord2[ 11 ] = "269,1383";
+coord2[ 12 ] = "471,1454";
+coord2[ 13 ] = "753,486";
+coord2[ 14 ] = "876,543";
+coord2[ 15 ] = "927,388";
+coord2[ 16 ] = "929,475";
+coord2[ 17 ] = "974,430";
+coord2[ 18 ] = "1002,490";
+coord2[ 19 ] = "1070,408";
+coord2[ 20 ] = "1153,463";
+coord2[ 21 ] = "1263,324";
+coord2[ 22 ] = "1310,282";
+coord2[ 23 ] = "1366,261";
+coord2[ 24 ] = "1402,354";
+coord2[ 25 ] = "1441,255";
+coord2[ 26 ] = "1558,242";
+coord2[ 27 ] = "1598,351";
+coord2[ 28 ] = "1391,433";
+coord2[ 29 ] = "1338,508";
+coord2[ 30 ] = "1344,623";
+coord2[ 31 ] = "1358,697";
+coord2[ 32 ] = "1358,758";
+coord2[ 33 ] = "1362,818";
+coord2[ 34 ] = "1366,880";
+coord2[ 35 ] = "1375,945";
+coord2[ 36 ] = "1440,941";
+coord2[ 37 ] = "1537,829";
+coord2[ 38 ] = "1532,915";
+coord2[ 39 ] = "1734,789";
+coord2[ 40 ] = "1780,834";
+coord2[ 41 ] = "1696,980";
+coord2[ 42 ] = "1760,978";
 
 // Ajout des Bulles sur la map -------------------------------------------------------
 
+function populateMapRDC() {
+    for (var i = 0; i < coordRDC.length; i++) {
+        $('.landmarks').append('<div class="item mark"data-position="'+coordRDC[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+    }
+};
+
 function populateMap1() {
     for (var i = 0; i < coord1.length; i++) {
-        $('.landmarks').append('<div class="item mark"data-position="'+coord1[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+        floor1Num = i+parseInt(coordRDC.length);
+        $('.landmarks').append('<div class="item mark" data-position="'+coord1[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
     }
 };
 
 function populateMap2() {
     for (var i = 0; i < coord2.length; i++) {
-        $('.landmarks').append('<div class="item mark" data-position="'+coord2[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
-    }
-};
-
-function populateMap3() {
-    for (var i = 0; i < coord3.length; i++) {
-        $('.landmarks').append('<div class="item mark" data-position="'+coord3[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+        floor2Num = i+parseInt(coordRDC.length)+parseInt(coord1.length)-1;
+        $('.landmarks').append('<div class="item mark" data-position="'+coord2[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
     }
 };
 
@@ -182,20 +178,12 @@ function addingSpotLights() {
     var randomnumber=Math.floor(Math.random()*(markcount+1));
     $(".landmarks .mark:nth-child("+randomnumber+")").addClass("currentLifiPoint");
     $('.currentLifiPoint').css('z-index','10000000000000');
+    $('.currentLifiPoint').prevAll('.mark').addClass('visitedLifiPoint');
     // -----------------------------------------------------------------------------------------
-
-    $('.mark').first().addClass('manIcon');
-    $('.manIcon').removeClass('mark');
 
     // Position de la dernière biorne consultée (.currentLifiPoint)
     position= ($('.currentLifiPoint').attr('data-position'));
     positionArray= position.split(',');
-
-    // Position de l'icone Visiteur'
-    iconXPos = parseInt(positionArray[0])+parseInt(30);
-    iconYPos = parseInt(positionArray[1])-parseInt(80);
-    iconPosition = [iconXPos,iconYPos];
-    $('.manIcon').attr('data-position', iconPosition);
 
     // Position de la dernière borne consultée (.currentLifiPoint)
     $('.currentLifiPoint').next().addClass('nextLifiPoint');
@@ -231,13 +219,16 @@ function addingClicksFeatures() {
 
     $('#level1').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU0.jpg'
+            image_url: 'img/NIVEAU1+440.png',
+            zoom_MAX:'150'
         }); 
         $('.landmarks').empty();
-        populateMap1();
-        $('#zoom_container').smoothZoom('refreshAllLandmarks');
-        window.setTimeout(addingSpotLights, 100);
-        window.setTimeout(localize, 250);
+        if(coordRDC.length){
+            populateMapRDC();
+            $('#zoom_container').smoothZoom('refreshAllLandmarks');
+            window.setTimeout(addingSpotLights, 100);
+            window.setTimeout(localize, 250);
+        }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
         $('#floorHeadBand').css('background-color','#0ca4cc'); 
@@ -246,13 +237,16 @@ function addingClicksFeatures() {
 
     $('#level2').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1-copy.jpg'
+            image_url: 'img/NIVEAU1+440.png',
+            zoom_MAX:'150'
         }); 
         $('.landmarks').empty();
-        populateMap2();
-        $('#zoom_container').smoothZoom('refreshAllLandmarks');
-        window.setTimeout(addingSpotLights, 100);
-        window.setTimeout(localize, 250);
+        if(coord1.length){
+            populateMap1();
+            $('#zoom_container').smoothZoom('refreshAllLandmarks');
+            window.setTimeout(addingSpotLights, 100);
+            window.setTimeout(localize, 250);
+        }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
         $('#floorHeadBand').css('background-color','#9bd3c3');
@@ -261,13 +255,16 @@ function addingClicksFeatures() {
 
     $('#level3').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU2.jpg'
+            image_url: 'img/NIVEAU1+440.png',
+            zoom_MAX:'150'
         }); 
         $('.landmarks').empty();
-        populateMap3();
-        $('#zoom_container').smoothZoom('refreshAllLandmarks');
-        window.setTimeout(addingSpotLights, 100);
-        window.setTimeout(localize, 250);
+        if(coord2.length){
+            populateMap2();
+            $('#zoom_container').smoothZoom('refreshAllLandmarks');
+            window.setTimeout(addingSpotLights, 100);
+            window.setTimeout(localize, 250);
+        }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
         $('#floorHeadBand').css('background-color','#e9af60'); 

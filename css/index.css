@@ -123,10 +123,6 @@ body {
     text-align: center;
 }
 
-
-
-
-
 #logoSmall { display: inline-block; text-align: center; margin-top: 25px; width: 201px; height: 102px; background: url('../img/logoSmall.png') no-repeat;}
 #chooseLang { margin-top: 30px; font-family: 'roboto', 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif; font-size: 26px; color: #fff; text-align: center; }
 #chooseSquares,#langs { margin-top: 30px; text-align: center}
@@ -211,12 +207,12 @@ transition: all .4s ease-in-out; }
 #zoom_container .landmarks .lable div { width: 100px; padding: 4px; }   
 #zoom_container .landmarks .mark .text { padding: 2px 6px; background-color: #000; }       
 
-.lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; font-family: 'RobotoBold'; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; }
+.lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; font-family: 'RobotoBold'; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; opacity: 0.8; }
 .lifiPoint:hover { background: #646464; cursor: pointer; }
-.currentLifiPoint .lifiPoint { background: #f78b16; border: 5px solid #FDC857; }
-.nextLifiPoint .lifiPoint { background: #83DA00; animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; }
+.currentLifiPoint .lifiPoint { width: 56px; height: 108px; background: url('../img/manIcon.png') no-repeat 0 0; font-size: 0; color: transparent; border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; border-radius: 0; box-shadow: 0 0 0 transparent; }
+.nextLifiPoint .lifiPoint { background: #f1008b; animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; border: 2px solid #fff; }
+.visitedLifiPoint .lifiPoint { background-color: #4863d4; }
 
-.manIcon { width: 56px; height: 108px; background: url('../img/manIcon.png') no-repeat 0 0; }
 #legendBlock1 p { margin: 5px 0 15px 0; font-size: 20px; text-transform: uppercase; }
 
 #levels { float: left; margin: 5px 0 0 20px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; border: 3px solid #9bd3c3; }
