@@ -231,7 +231,7 @@ function addingClicksFeatures() {
 
     $('#level1').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1+pastilles.png'
+            image_url: 'img/NIVEAU0.jpg'
         }); 
         $('.landmarks').empty();
         populateMap1();
@@ -246,7 +246,7 @@ function addingClicksFeatures() {
 
     $('#level2').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1+440.png'
+            image_url: 'img/NIVEAU1-copy.jpg'
         }); 
         $('.landmarks').empty();
         populateMap2();
@@ -261,7 +261,7 @@ function addingClicksFeatures() {
 
     $('#level3').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1+440.png'
+            image_url: 'img/NIVEAU2.jpg'
         }); 
         $('.landmarks').empty();
         populateMap3();
@@ -404,12 +404,14 @@ elemToBeGenerated += "<ul>";
 
 // Couleur des SVG
 function bidule(){ 
-    $(document).find('path').attr({'stroke':'#000','fill':'#000'});
+    $('#artworkLeft').find('path').attr({'stroke':'#000','fill':'#000'});
+    $('#resize').find('path').attr({'stroke':'#fff','fill':'#fff'});
 };
 window.setTimeout(bidule, 100);
 
 // --- BOUTON DETAIL ------------------------------------ //
 
+/*
 $('.si-icon-hamburger-cross').mousedown(function() {
     if($(this).hasClass('si-icon-unselected')){
         // Bouton noir
@@ -426,7 +428,6 @@ $('.si-icon-hamburger-cross').mousedown(function() {
         // Autre bouton blanc
         // Autre fenêtre à gauche
         if($('.si-icon-hamburger-cross2').hasClass('si-icon-selected')){
-            console.log('bingo');
             $('.si-icon-hamburger-cross2').click();
             $('.si-icon-hamburger-cross2').mousedown();
             $('.si-icon-hamburger-cross2').find('path').attr('stroke','#000');
@@ -498,12 +499,110 @@ $('.si-icon-hamburger-cross2').mousedown(function() {
     };
     
 });
+*/
+
+// --- BOUTON DETAIL ------------------------------------ //
+
+$('#detailButton').mousedown(function() {
+    $('.si-icon-hamburger-cross').click();
+    if($('.si-icon-hamburger-cross').hasClass('si-icon-unselected')){
+        // Bouton noir
+        $('.si-icon-hamburger-cross').find('path').attr('stroke','#fff');
+        $('#detailButton').css('background-color','#000');
+        $('#detailButton').css('color','#fff');
+        $('.si-icon-hamburger-cross').removeClass('si-icon-unselected');
+        $('.si-icon-hamburger-cross').addClass('si-icon-selected');
+        // Fenêtres à droite
+        $('#artworkZoomHolder').removeClass('goLeft');
+        $('#artworkZoomHolder').addClass('goRight');
+        $('#artworkDetail').removeClass('goLeft').css('opacity','1');
+        $('#artworkDetail').addClass('goRight');
+        // Autre bouton blanc
+        // Autre fenêtre à gauche
+        if($('.si-icon-hamburger-cross2').hasClass('si-icon-selected')){
+            //$('.si-icon-hamburger-cross2').click();
+            $('#linkedArtworksButton').mousedown();
+            $('.si-icon-hamburger-cross2').find('path').attr('stroke','#000');
+            $('#linkedArtworksButton').css('background-color','#fff');
+            $('#linkedArtworksButton').css('color','#000');
+            $('#artworkLinks').removeClass('goRight').css('opacity','0');;
+            $('#artworkLinks').addClass('goLeft');
+            $('#artworkZoomHolder').removeClass('goLeft');
+            $('#artworkZoomHolder').addClass('goRight');
+        }
+    }
+    else {
+        // Bouton blanc
+        $('.si-icon-hamburger-cross').find('path').attr('stroke','#000');
+        $('#detailButton').css('background-color','#fff');
+        $('#detailButton').css('color','#000');
+        $('.si-icon-hamburger-cross').removeClass('si-icon-selected');
+        $('.si-icon-hamburger-cross').addClass('si-icon-unselected');
+        // Fenêtres à gauche
+        $('#artworkZoomHolder').removeClass('goRight');
+        $('#artworkZoomHolder').addClass('goLeft');
+        $('#artworkDetail').removeClass('goRight').css('opacity','0');
+        $('#artworkDetail').addClass('goLeft');
+    };
+    
+});
+
+// --- BOUTON OEUVRES LIEES ------------------------------------ //
+
+$('#linkedArtworksButton').mousedown(function() {
+    $('.si-icon-hamburger-cross2').click();
+    if($('.si-icon-hamburger-cross2').hasClass('si-icon-unselected')){
+        // Bouton noir
+        $('.si-icon-hamburger-cross2').find('path').attr('stroke','#fff');
+        $('#linkedArtworksButton').css('background-color','#000');
+        $('#linkedArtworksButton').css('color','#fff');
+        $('.si-icon-hamburger-cross2').removeClass('si-icon-unselected');
+        $('.si-icon-hamburger-cross2').addClass('si-icon-selected');
+        // Fenêtre à droite
+        $('#artworkZoomHolder').removeClass('goLeft');
+        $('#artworkZoomHolder').addClass('goRight');
+        $('#artworkLinks').removeClass('goLeft').css('opacity','1');
+        $('#artworkLinks').addClass('goRight');
+        // Autre bouton blanc
+        // Autre fenêtre à gauche
+        if($('.si-icon-hamburger-cross').hasClass('si-icon-selected')){
+            //$('.si-icon-hamburger-cross').click();
+            $('#detailButton').mousedown();
+            $('.si-icon-hamburger-cross').find('path').attr('stroke','#000');
+            $('#detailButton').css('background-color','#fff');
+            $('#detailButton').css('color','#000');
+            $('#artworkDetail').removeClass('goRight').css('opacity','0');;
+            $('#artworkDetail').addClass('goLeft');
+            $('#artworkZoomHolder').removeClass('goLeft');
+            $('#artworkZoomHolder').addClass('goRight');
+        }
+    }
+    else {
+        // Bouton blanc
+        $('.si-icon-hamburger-cross2').find('path').attr('stroke','#000');
+        $('#linkedArtworksButton').css('background-color','#fff');
+        $('#linkedArtworksButton').css('color','#000');
+        $('.si-icon-hamburger-cross2').removeClass('si-icon-selected');
+        $('.si-icon-hamburger-cross2').addClass('si-icon-unselected');
+        // Fenêtres à gauche
+        $('#artworkZoomHolder').removeClass('goRight');
+        $('#artworkZoomHolder').addClass('goLeft');
+        $('#artworkLinks').removeClass('goRight').css('opacity','0');
+        $('#artworkLinks').addClass('goLeft');
+    };
+    
+});
+
+// Hack pour corriger le double lancement lorsqu'on clic sur le svg, on relance le clic une fois ici.
+$('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').mousedown(function() {
+    $(this).click();
+});
 
 // --- ZOOM IMAGE ------------------------------------ //
 
 function displayingArtImage() {
     $('#artworkZoom').smoothZoom({ 
-        image_url: 'img/NIVEAU1+440.png',
+        image_url: 'img/oeuvre.jpg',
         width: 400,
         responsive: false,
         responsive_maintain_ratio: true,
@@ -545,7 +644,7 @@ $('#zoomLauncher').mousedown(function() {
     $(this).css('display','none');
     $('.si-icon-maximize-rotate').click();
     $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-        image_url: 'img/NIVEAU1+440.png',
+        image_url: 'img/oeuvre.jpg',
         width: 1000,
         height: 625,
         responsive: false,
@@ -575,7 +674,7 @@ $('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
     $('#zoomLauncher').css('display','block');
     $('.si-icon-maximize-rotate').click();
     $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-        image_url: 'img/NIVEAU1+440.png',
+        image_url: 'img/oeuvre.jpg',
         width: 400,
         height: 525,
         responsive: false,
