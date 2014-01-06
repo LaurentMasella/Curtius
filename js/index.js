@@ -386,7 +386,7 @@ elemToBeGenerated += "<ul>";
 */
 
 /* ================================================================================ */
-/* === ARTWORK VIEW =============================================================== */
+/* === DETAIL VIEW ================================================================ */
 /* ================================================================================ */
 
 // Couleur des SVG
@@ -395,98 +395,6 @@ function bidule(){
     $('#resize').find('path').attr({'stroke':'#fff','fill':'#fff'});
 };
 window.setTimeout(bidule, 100);
-
-// --- BOUTON DETAIL ------------------------------------ //
-
-/*
-$('.si-icon-hamburger-cross').mousedown(function() {
-    if($(this).hasClass('si-icon-unselected')){
-        // Bouton noir
-        $(this).find('path').attr('stroke','#fff');
-        $('#detailButton').css('background-color','#000');
-        $('#detailButton').css('color','#fff');
-        $(this).removeClass('si-icon-unselected');
-        $(this).addClass('si-icon-selected');
-        // Fenêtres à droite
-        $('#artworkZoomHolder').removeClass('goLeft');
-        $('#artworkZoomHolder').addClass('goRight');
-        $('#artworkDetail').removeClass('goLeft').css('opacity','1');
-        $('#artworkDetail').addClass('goRight');
-        // Autre bouton blanc
-        // Autre fenêtre à gauche
-        if($('.si-icon-hamburger-cross2').hasClass('si-icon-selected')){
-            $('.si-icon-hamburger-cross2').click();
-            $('.si-icon-hamburger-cross2').mousedown();
-            $('.si-icon-hamburger-cross2').find('path').attr('stroke','#000');
-            $('#linkedArtworksButton').css('background-color','#fff');
-            $('#linkedArtworksButton').css('color','#000');
-            $('#artworkLinks').removeClass('goRight').css('opacity','0');;
-            $('#artworkLinks').addClass('goLeft');
-            $('#artworkZoomHolder').removeClass('goLeft');
-            $('#artworkZoomHolder').addClass('goRight');
-        }
-    }
-    else {
-        // Bouton blanc
-        $(this).find('path').attr('stroke','#000');
-        $('#detailButton').css('background-color','#fff');
-        $('#detailButton').css('color','#000');
-        $(this).removeClass('si-icon-selected');
-        $(this).addClass('si-icon-unselected');
-        // Fenêtres à gauche
-        $('#artworkZoomHolder').removeClass('goRight');
-        $('#artworkZoomHolder').addClass('goLeft');
-        $('#artworkDetail').removeClass('goRight').css('opacity','0');
-        $('#artworkDetail').addClass('goLeft');
-    };
-    
-});
-
-// --- BOUTON OEUVRES LIEES ------------------------------------ //
-
-$('.si-icon-hamburger-cross2').mousedown(function() {
-    if($(this).hasClass('si-icon-unselected')){
-        // Bouton noir
-        $(this).find('path').attr('stroke','#fff');
-        $('#linkedArtworksButton').css('background-color','#000');
-        $('#linkedArtworksButton').css('color','#fff');
-        $(this).removeClass('si-icon-unselected');
-        $(this).addClass('si-icon-selected');
-        // Fenêtre à droite
-        $('#artworkZoomHolder').removeClass('goLeft');
-        $('#artworkZoomHolder').addClass('goRight');
-        $('#artworkLinks').removeClass('goLeft').css('opacity','1');
-        $('#artworkLinks').addClass('goRight');
-        // Autre bouton blanc
-        // Autre fenêtre à gauche
-        if($('.si-icon-hamburger-cross').hasClass('si-icon-selected')){
-            $('.si-icon-hamburger-cross').click();
-            $('.si-icon-hamburger-cross').mousedown();
-            $('.si-icon-hamburger-cross').find('path').attr('stroke','#000');
-            $('#detailButton').css('background-color','#fff');
-            $('#detailButton').css('color','#000');
-            $('#artworkDetail').removeClass('goRight').css('opacity','0');;
-            $('#artworkDetail').addClass('goLeft');
-            $('#artworkZoomHolder').removeClass('goLeft');
-            $('#artworkZoomHolder').addClass('goRight');
-        }
-    }
-    else {
-        // Bouton blanc
-        $(this).find('path').attr('stroke','#000');
-        $('#linkedArtworksButton').css('background-color','#fff');
-        $('#linkedArtworksButton').css('color','#000');
-        $(this).removeClass('si-icon-selected');
-        $(this).addClass('si-icon-unselected');
-        // Fenêtres à gauche
-        $('#artworkZoomHolder').removeClass('goRight');
-        $('#artworkZoomHolder').addClass('goLeft');
-        $('#artworkLinks').removeClass('goRight').css('opacity','0');
-        $('#artworkLinks').addClass('goLeft');
-    };
-    
-});
-*/
 
 // --- BOUTON DETAIL ------------------------------------ //
 
@@ -676,25 +584,12 @@ $('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
         });
 });
 
+/* ================================================================================ */
+/* === ARTWORK VIEW =============================================================== */
+/* ================================================================================ */
 
+$('.spacerTd').first().remove();
 
-
-
-
-
-
-
-
-
-
-
-/*
-jQuery(function($){
-    populateMap1();
-    displayingMap();
-    window.setTimeout(addingSpotLights, 100);
-    addingClicksFeatures();
-    window.setTimeout(localize, 250);
+$('#slideBGArtworks img').mousedown(function() {
+    window.location.href = "http://localhost/PROJETS/CurtiusGIT/detail.html";
 });
-*/
-
