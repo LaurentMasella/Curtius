@@ -274,16 +274,6 @@ function addingClicksFeatures() {
     $('#localize').mousedown(function() {
         localize();
     }); 
-/*
-    $('.lifiPointHolder').mousedown(function() {
-        $.getJSON('data.json', function(data) {
-            $.each( data, function( key, val ) {
-                console.log(val.idLiFi);
-                console.log(val.Oeuvre[0].idOeuvre);
-                console.log(val.Oeuvre[0].FichierImage);
-            });
-        });
-    });  */
 
     for (var i = 0; i < coord1.length; i++) {
         $('#Lampe'+i).mousedown( function(){
