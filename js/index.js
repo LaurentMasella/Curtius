@@ -10,7 +10,11 @@ TODO :
 ------
 
 - Avoir les bonnes images de chaque étage
-- Faire la css des bulles
+
+- Cabler langues
+- Cabler JSON
+- Enlever loader
+- Avoir toutes les datas des visites et les json complets
 
 - comment afficher les infos de la borne lifi ?
 - Faire dépendre les tableaux de Bubbles du type de visite choisie
@@ -151,21 +155,21 @@ coord2[ 42 ] = "1760,978";
 
 function populateMapRDC() {
     for (var i = 0; i < coordRDC.length; i++) {
-        $('.landmarks').append('<div class="item mark"data-position="'+coordRDC[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+        $('.landmarks').append('<div href="oeuvres.html" class="item mark"data-position="'+coordRDC[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
     }
 };
 
 function populateMap1() {
     for (var i = 0; i < coord1.length; i++) {
         floor1Num = i+parseInt(coordRDC.length);
-        $('.landmarks').append('<div class="item mark" data-position="'+coord1[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
+        $('.landmarks').append('<div href="oeuvres.html" class="item mark" data-position="'+coord1[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
     }
 };
 
 function populateMap2() {
     for (var i = 0; i < coord2.length; i++) {
         floor2Num = i+parseInt(coordRDC.length)+parseInt(coord1.length)-1;
-        $('.landmarks').append('<div class="item mark" data-position="'+coord2[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
+        $('.landmarks').append('<div href="oeuvres.html" class="item mark" data-position="'+coord2[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
     }
 };
 
@@ -201,8 +205,8 @@ var localize = function () {
 };
 
 function displayingMap() {
-    $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-        image_url: 'img/NIVEAU1+440.png',       
+    $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({
+        image_url: 'img/NIVEAU1+440.png',
         responsive: false,
         responsive_maintain_ratio: true,
         max_WIDTH: '',
@@ -267,8 +271,8 @@ function addingClicksFeatures() {
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#e9af60'); 
-        $('#levels').css('border-color','#e9af60');
+        $('#floorHeadBand').css('background-color','#a9c8e0'); 
+        $('#levels').css('border-color','#a9c8e0');
     });
 
     $('#localize').mousedown(function() {
@@ -291,6 +295,7 @@ function addingClicksFeatures() {
     };
 
 };
+
   
 /*
 function displayWorkOfArt() {
@@ -593,3 +598,46 @@ $('.spacerTd').first().remove();
 $('#slideBGArtworks img').mousedown(function() {
     window.location.href = "http://localhost/PROJETS/CurtiusGIT/detail.html";
 });
+
+/* ================================================================================ */
+/* === LANGUAGES ================================================================== */
+/* ================================================================================ */
+
+/*
+var lang = "fr";
+
+$('#fr').mousedown(function() {
+    lang=="fr";
+    console.log(lang);
+});
+$('#chooseLang').mousedown(function() {
+    lang=="eng";
+    console.log(lang);
+});
+$('#ned').mousedown(function() {
+    lang=="ned";
+    console.log(lang);
+});
+$('#deu').mousedown(function() {
+    lang==="deu";
+    console.log(lang);
+});
+
+function checkLang() {
+
+    repetition = setTimeout(checkLang,1000);   // Lancement de checkLang(); toutes les secs
+    if(lang=="fr"){
+        console.log('fr');
+    }
+    if(lang=="eng"){
+        console.log('eng');
+    }
+    if(lang=="ned"){
+        console.log('ned');
+    }
+    if(lang=="deu"){
+        console.log('deu');
+    }       
+};
+checkLang();
+*/

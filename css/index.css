@@ -181,13 +181,13 @@ transition: all .8s ease-in-out; }
 #legendBlock2 .mapIcon,
 #legendBlock3 .mapIcon,
 #legendBlock4 .mapIcon,
-#legendBlock5 .mapIcon { position: absolute; top: 15px; left: 10px; width: 51px; height: 50px; background: url('../img/mapIcons.png') 0 0 no-repeat; }
+#legendBlock5 .mapIcon { position: absolute; top: 15px; left: 10px; width: 51px; height: 50px; background: url('../img/mapIcons2.png') 0 0 no-repeat; }
 #legend1 .mapIcon { height: 58px; background-position: 0 0; }
 #legend2 .mapIcon { top: 33px; left: 5px; height: 50px; background-position: 0 -358px; }
 #legend3 .mapIcon { height: 50px; background-position: 0 -58px; }
 #legend4 .mapIcon { height: 50px; background-position: 0 -108px; }
-#legend5 .mapIcon { height: 50px; background-position: 0 -158px; }
-#legend6 .mapIcon { height: 50px; background-position: 0 -208px; }
+#legend5 .mapIcon { height: 50px; background-position: 0 -208px; }
+#legend6 .mapIcon { height: 50px; background-position: 0 -158px; }
 #legend7 .mapIcon { height: 50px; background-position: 0 -258px; }
 #legend8 .mapIcon { height: 50px; background-position: 0 -308px; }
 #legendBlock3 div#legend3 { height: 60px; padding-top: 20px; line-height: normal; }
@@ -196,7 +196,7 @@ transition: all .8s ease-in-out; }
 -ms-transition: all .4s ease-in-out;
 -o-transition: all .4s ease-in-out;
 transition: all .4s ease-in-out; }
-#localize:hover { background-color: #7e7e7e; background-size: 80px; cursor: pointer; }
+#localize:hover { -moz-transform: scale(0.8); -webkit-transform: scale(0.8); -o-transform: scale(0.8); -ms-transform: scale(0.8); transform: scale(0.8); background-color: #7e7e7e; background-size: 50px; cursor: pointer; }
 #legendBlock6 p { margin: 0; margin-top: 8px; }
 
 .smooth_zoom_preloader { background-image: url('../img/preloader.gif'); }   
@@ -209,23 +209,23 @@ transition: all .4s ease-in-out; }
 
 .lifiPoint { display: inline-block; position: relative; width: 3em; height: 3em; line-height: 3em; font-size: 2em; font-family: 'RobotoBold'; color: #efefef; text-align: center; background: #474747; -moz-border-radius: 100%; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); -webkit-transition: all .4s linear; -moz-transition: all .4s linear; -ms-transition: all .4s linear; -o-transition: all .4s linear; transition: all .4s linear; opacity: 0.8; }
 .lifiPoint:hover { background: #646464; cursor: pointer; }
-.currentLifiPoint .lifiPoint { width: 56px; height: 108px; background: url('../img/manIcon.png') no-repeat 0 0; font-size: 0; color: transparent; border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; border-radius: 0; box-shadow: 0 0 0 transparent; }
-.nextLifiPoint .lifiPoint { background: #f1008b; animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; border: 2px solid #fff; }
-.visitedLifiPoint .lifiPoint { background-color: #4863d4; }
+.currentLifiPoint .lifiPoint { width: 87px; height: 96px; background: url('../img/manPlanIcon.png') no-repeat 0 0; font-size: 0; color: transparent; border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; border-radius: 0; box-shadow: 0 0 0 transparent; opacity: 1; }
+.nextLifiPoint .lifiPoint { background: #8e3a77; animation:fade2 1500ms infinite; -webkit-animation:fade2 1500ms infinite; border: 2px solid #fff; }
+.visitedLifiPoint .lifiPoint { background-color: #69718d; }
 
 #legendBlock1 p { margin: 5px 0 15px 0; font-size: 20px; text-transform: uppercase; }
 
 #levels { float: left; margin: 5px 0 0 20px; -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; border: 3px solid #9bd3c3; }
 .level { float: left; width: 60px; height: 60px; line-height: 54px; font-size: 20px; color: #fff; text-align: center; background: #000; -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; -ms-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out; opacity: 0.5; box-shadow: 0 1px 0 #efefef, inset 0 2px 5px rgba(0,0,0,.05); }
 .level:hover { opacity: 1; cursor: pointer; }
-#level1 { font-family: 'playfair'; background: #0ca4cc; -webkit-border-top-left-radius: 5px;
+#level1 { font-family: 'playfair'; background: #E2DBD3; -webkit-border-top-left-radius: 5px;
 -webkit-border-bottom-left-radius: 5px;
 -moz-border-radius-topleft: 5px;
 -moz-border-radius-bottomleft: 5px;
 border-top-left-radius: 5px;
 border-bottom-left-radius: 5px; }
 #level2 { font-size: 26px; font-family: 'playfair'; background: #9bd3c3; }
-#level3 { font-size: 26px; font-family: 'playfair'; background: #e9af60; -webkit-border-top-right-radius: 5px;
+#level3 { font-size: 26px; font-family: 'playfair'; background: #a9c8e0; -webkit-border-top-right-radius: 5px;
 -webkit-border-bottom-right-radius: 5px;
 -moz-border-radius-topright: 5px;
 -moz-border-radius-bottomright: 5px;
