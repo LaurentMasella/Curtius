@@ -512,14 +512,14 @@ function displayingArtImage() {
         pan_BUTTONS_SHOW: false,
         zoom_MAX:'150',
         initial_ZOOM: '0',
-        border_SIZE: 0,
+        border_SIZE: 0
     }); 
 };
 
 window.setTimeout(
     function(){
 
-        if(location.pathname.indexOf('oeuvres.html') != -1) {
+        if(location.pathname.indexOf('detail.html') != -1) {
             displayingArtImage();                   
         }
     }
@@ -555,7 +555,7 @@ $('#zoomLauncher').mousedown(function() {
         pan_BUTTONS_SHOW: false,
         zoom_MAX:'150',
         initial_ZOOM: '0',
-        border_SIZE: 0,
+        border_SIZE: 0
         }); 
 });
 
@@ -585,7 +585,7 @@ $('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
         pan_BUTTONS_SHOW: false,
         zoom_MAX:'150',
         initial_ZOOM: '0',
-        border_SIZE: 0,
+        border_SIZE: 0
         });
 });
 
@@ -603,23 +603,23 @@ $('#slideBGArtworks img').mousedown(function() {
 /* === LANGUAGES ================================================================== */
 /* ================================================================================ */
 
-/*
+
 var lang = "fr";
 
 $('#fr').mousedown(function() {
-    lang=="fr";
+    lang="fr";
     console.log(lang);
 });
 $('#chooseLang').mousedown(function() {
-    lang=="eng";
+    lang="eng";
     console.log(lang);
 });
 $('#ned').mousedown(function() {
-    lang=="ned";
+    lang="ned";
     console.log(lang);
 });
 $('#deu').mousedown(function() {
-    lang==="deu";
+    lang="deu";
     console.log(lang);
 });
 
@@ -640,4 +640,3 @@ function checkLang() {
     }       
 };
 checkLang();
-*/
