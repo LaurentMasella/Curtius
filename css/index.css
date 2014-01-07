@@ -298,7 +298,7 @@ box-shadow:         0px 3px 12px rgba(54, 80, 78, 0.48); z-index: 1000; }
 -ms-transition: all .4s ease-in-out;
 -o-transition: all .4s ease-in-out;
 transition: all .4s ease-in-out; z-index: 2000; }
-#artworksinfosMap { bottom: 310px; border: 1px solid #ccc;}
+#artworksinfosMap { top: 540px; border: 1px solid #ccc;}
 #slideBGArtworks #artworksinfos:hover,
 #artworksinfosMap:hover { cursor: pointer; background-color: #fff; }
 
