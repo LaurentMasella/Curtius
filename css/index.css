@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     width: 1280px;   
+    background-color: #000000;
 }
 
 @keyframes fade {
@@ -352,7 +353,7 @@ transition: all .4s ease-in-out; z-index: 1000; }
     position: absolute;
     left: 577px;
     top: 200px;
-    background: url(../img/perso-2.gif) #FFFFFF;
+    background: url(../img/perso-2.gif);
     background-size: 125px 134px;
     width: 125px;
     height: 134px;

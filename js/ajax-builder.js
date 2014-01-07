@@ -44,6 +44,9 @@ var s,
 
 		init: function() {
 
+
+		console.log(history);
+
 			parsingLinks.settings = {
 				numALinks: $("a").length, 
 				aLinksList: $("a")
@@ -111,7 +114,7 @@ var s,
 						    window.setTimeout(localize, 250);					
 						}
 						if(whichOne.href.indexOf('page1.html') != -1 || whichOne.href.indexOf('page2.html') != -1) {
-						   startPagesHoverEffect();
+						//   startPagesHoverEffect();
 						}
 						parsingLinks.init();
 					}

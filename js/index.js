@@ -591,5 +591,5 @@ $('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
 $('.spacerTd').first().remove();
 
 $('#slideBGArtworks img').mousedown(function() {
-    window.location.href = "http://localhost/PROJETS/CurtiusGIT/detail.html";
+    window.location.href = "detail.html";
 });
