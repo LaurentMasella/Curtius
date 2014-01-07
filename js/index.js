@@ -9,8 +9,6 @@ temps à se charger et que localize ne fonctionne plus, chercher "localize"
 TODO :
 ------
 
-- Avoir les bonnes images de chaque étage
-
 - Cabler langues
 - Cabler JSON
 - Enlever loader
@@ -156,21 +154,21 @@ coord2[ 42 ] = "1760,978";
 
 function populateMapRDC() {
     for (var i = 0; i < coordRDC.length; i++) {
-        $('.landmarks').append('<div href="oeuvres.html" class="item mark"data-position="'+coordRDC[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+        $('.landmarks').append('<div class="item mark"data-position="'+coordRDC[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
     }
 };
 
 function populateMap1() {
     for (var i = 0; i < coord1.length; i++) {
         floor1Num = i+parseInt(coordRDC.length);
-        $('.landmarks').append('<div href="oeuvres.html" class="item mark" data-position="'+coord1[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
+        $('.landmarks').append('<div class="item mark" data-position="'+coord1[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
     }
 };
 
 function populateMap2() {
     for (var i = 0; i < coord2.length; i++) {
         floor2Num = i+parseInt(coordRDC.length)+parseInt(coord1.length)-1;
-        $('.landmarks').append('<div href="oeuvres.html" class="item mark" data-position="'+coord2[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
+        $('.landmarks').append('<div class="item mark" data-position="'+coord2[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
     }
 };
 
@@ -226,6 +224,10 @@ function displayingMap() {
 };
         
 function addingClicksFeatures() {
+
+    $('.mark').mousedown(function() {
+        window.location = 'oeuvres.html';
+    });
 
     $('#level1').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -797,5 +799,24 @@ function selectTools() {
         $(this).parent().addClass('paramSelected'); 
     });
 }; selectTools();
+
+function openTools() {
+    $('#artworksinfos, #artworksinfosMap').mousedown(function() { 
+        window.location = 'tools.html'; 
+    });
+}; openTools();
+
+function closeTools() {
+    $('.cancel, .validate').mousedown(function() { 
+        event.preventDefault();
+        history.back(1); 
+    });
+}; closeTools();
+
+function backToMap() {
+    $('#planButton').mousedown(function() { 
+        window.location = 'map.html';
+    });
+}; backToMap();
 
 
