@@ -154,7 +154,7 @@ body {
 #toolsValidate {  }
 #toolsValidate p { width: 1280px; font-size: 22px; font-family:'roboto'; color: #fff; text-align: center; }
 #toolsValidate .cancel, 
-#toolsValidate .validate { float: left; width: 270px; height: 50px; line-height: 50px; font-size: 26px; font-family: 'robotoCondLight'; text-transform: uppercase; text-align: center; background: rgba(255,255,255,1); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-transition: all .4s ease-in; -moz-transition: all .4s ease-in; -o-transition: all .4s ease-in; transition: all .4s ease-in; }
+#toolsValidate .validate { float: left; width: 270px; height: 50px; line-height: 46px; font-size: 26px; font-family: 'robotoCondLight'; text-transform: uppercase; text-align: center; background: rgba(255,255,255,1); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-transition: all .4s ease-in; -moz-transition: all .4s ease-in; -o-transition: all .4s ease-in; transition: all .4s ease-in; }
 #toolsValidate .cancel { margin: 0 40px 0 350px; }
 #toolsValidate .cancel:hover, 
 #toolsValidate .validate:hover { cursor: pointer; color: #fff; background: rgba(147,19,92,1); }
