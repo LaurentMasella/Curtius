@@ -1,0 +1,105 @@
+{
+  "Lampe" : {
+    "idLiFi" : "Lampe1",
+    "Oeuvre" : [
+      {
+        "idOeuvre" : "GC.ARC.01b.1907.52276",
+        "FichierImage" : "GC.ARC.01b.1907.52276.jpg",
+        "Adulte" : {
+          "FR" : {
+            "ChapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "AD-FR: Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          },
+          "EN" : {
+            "ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          },
+          "DE" : {
+            "ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          },
+          "DU" : {
+            "ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          }
+        },
+        "Enfant" : {
+          "FR" : {
+            "ChapeauOeuvre" : "EF-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "EF-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "EF-FR: Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "EF-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          },
+          "EN" : {
+            "ChapeauOeuvre" : "EF-EN : Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "EF-EN : Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "EF-EN : Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "EF-EN : Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          },
+          "DE" : {
+            "ChapeauOeuvre" : "EF-DE : Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "EF-DE : Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "EF-DE : Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "EF-DE : Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          },
+          "DU" : {
+            "ChapeauOeuvre" : "EF-DU : Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+            "LegendeImage" : "EF-DU : Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+            "TitreOeuvre" : "EF-DU : Peigne à quatre dents ou \"gradine\"",
+            "DescriptionOeuvre" : "EF-DU : Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+          }
+        },
+        "SousOeuvres" : [
+          {
+            "Id" : "2a",
+            "Fichier" : "image 3 gradine.jpg",
+            "Adulte" : {
+              "FR" : {
+                "Descriptif" : "AD-FR : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "AD-FR : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              },
+              "EN" : {
+                "Descriptif" : "AD-EN : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "AD-EN : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              },
+              "DE" : {
+                "Descriptif" : "AD-DE : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "AD-DE : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              },
+              "DU" : {
+                "Descriptif" : "AD-DU : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "AD-DU : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              }
+            },
+            "Enfant" : {
+              "FR" : {
+                "Descriptif" : "EF-FR : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "EF-FR : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              },
+              "EN" : {
+                "Descriptif" : "EF-EN : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "EF-EN : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              },
+              "DE" : {
+                "Descriptif" : "EF-DE : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "EF-DE : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              },
+              "DU" : {
+                "Descriptif" : "EF-DU : Ces rubans prennent la forme de méandres, de spirales, de chevrons ou encore de motifs en forme de vague et sont remplis de lignes incisées ou de motifs imprimés.",
+                "Legende" : "EF-DU : Détail d'un vase orné de rubans décoratifs. Grand Curtius, Liège."
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
