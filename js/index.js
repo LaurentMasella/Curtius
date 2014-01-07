@@ -222,12 +222,25 @@ function displayingMap() {
         border_SIZE: 0
     }); 
 };
-        
-function addingClicksFeatures() {
+    
+if(location.pathname.indexOf('map.html') != -1) {
+    populateMap1();
+    displayingMap();
+    window.setTimeout(addingSpotLights, 100);
+    addingClicksFeatures();
+    addingSpotInteraction();
+    window.setTimeout(localize, 250);                   
+}
 
-    $('.mark').mousedown(function() {
+function addingSpotInteraction() {
+
+$('.mark').mousedown(function() {
         window.location = 'oeuvres.html';
     });
+
+};
+
+function addingClicksFeatures() {
 
     $('#level1').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -240,6 +253,8 @@ function addingClicksFeatures() {
             $('#zoom_container').smoothZoom('refreshAllLandmarks');
             window.setTimeout(addingSpotLights, 100);
             window.setTimeout(localize, 250);
+            openTools();
+            addingSpotInteraction();
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
@@ -258,6 +273,8 @@ function addingClicksFeatures() {
             $('#zoom_container').smoothZoom('refreshAllLandmarks');
             window.setTimeout(addingSpotLights, 100);
             window.setTimeout(localize, 250);
+            openTools();
+            addingSpotInteraction();
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
@@ -276,6 +293,8 @@ function addingClicksFeatures() {
             $('#zoom_container').smoothZoom('refreshAllLandmarks');
             window.setTimeout(addingSpotLights, 100);
             window.setTimeout(localize, 250);
+            openTools();
+            addingSpotInteraction();
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
