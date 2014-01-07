@@ -228,13 +228,13 @@ if(location.pathname.indexOf('map.html') != -1) {
     displayingMap();
     window.setTimeout(addingSpotLights, 100);
     addingClicksFeatures();
-    addingSpotInteraction();
-    window.setTimeout(localize, 250);                   
+    window.setTimeout(localize, 250);
+    window.setTimeout(addingSpotInteraction, 100);                  
 }
 
 function addingSpotInteraction() {
 
-$('.mark').mousedown(function() {
+$('.visitedLifiPoint, .currentLifiPoint').mousedown(function() {
         window.location = 'oeuvres.html';
     });
 
@@ -254,7 +254,7 @@ function addingClicksFeatures() {
             window.setTimeout(addingSpotLights, 100);
             window.setTimeout(localize, 250);
             openTools();
-            addingSpotInteraction();
+            window.setTimeout(addingSpotInteraction, 100);
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
@@ -274,7 +274,7 @@ function addingClicksFeatures() {
             window.setTimeout(addingSpotLights, 100);
             window.setTimeout(localize, 250);
             openTools();
-            addingSpotInteraction();
+            window.setTimeout(addingSpotInteraction, 100);
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
@@ -294,7 +294,7 @@ function addingClicksFeatures() {
             window.setTimeout(addingSpotLights, 100);
             window.setTimeout(localize, 250);
             openTools();
-            addingSpotInteraction();
+            window.setTimeout(addingSpotInteraction, 100);
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
