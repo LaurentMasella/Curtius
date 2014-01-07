@@ -70,6 +70,7 @@ var app = {
 // Tableaux de coordonnées -----------------------------------------------------------
 
 var coordRDC = [];
+coordRDC[ 1 ] = "1375,780";
 
 var coord1 = [];
 coord1[ 1 ] = "448,493";
@@ -131,7 +132,7 @@ coord2[ 20 ] = "1153,463";
 coord2[ 21 ] = "1263,324";
 coord2[ 22 ] = "1310,282";
 coord2[ 23 ] = "1366,261";
-coord2[ 24 ] = "1402,354";
+coord2[ 24 ] = "1402,304";
 coord2[ 25 ] = "1441,255";
 coord2[ 26 ] = "1558,242";
 coord2[ 27 ] = "1598,351";
@@ -179,18 +180,23 @@ function addingSpotLights() {
     // (Lorsqu'on aura l'info Lifi il faudra Addclass lors de l'évènement Lifi 
     // sur la borne dont l'innerHtml correspond à la borne de l'évènement, retirer cette class de tout les autres, et ajouter une seconde class)
     var markcount = $(".landmarks .mark").length;
-    var randomnumber=Math.floor(Math.random()*(markcount+1));
-    $(".landmarks .mark:nth-child("+randomnumber+")").addClass("currentLifiPoint");
-    $('.currentLifiPoint').css('z-index','10000000000000');
-    $('.currentLifiPoint').prevAll('.mark').addClass('visitedLifiPoint');
-    // -----------------------------------------------------------------------------------------
+    if(markcount > 2) {
+        var randomnumber=Math.floor(Math.random()*(markcount+1));
+        $(".landmarks .mark:nth-child("+randomnumber+")").addClass("currentLifiPoint");
+        $('.currentLifiPoint').css('z-index','10000000000000');
+        $('.currentLifiPoint').prevAll('.mark').addClass('visitedLifiPoint');
+        // -----------------------------------------------------------------------------------------
 
-    // Position de la dernière biorne consultée (.currentLifiPoint)
-    position= ($('.currentLifiPoint').attr('data-position'));
-    positionArray= position.split(',');
+        // Position de la prochaine borne (.nextLifiPoint)
+        $('.currentLifiPoint').next().addClass('nextLifiPoint');
+    }
+    else {
+        $(".landmarks .mark:last-child").addClass("currentLifiPoint");
+    }
+     // Position de la dernière biorne consultée (.currentLifiPoint)
+        position= ($('.currentLifiPoint').attr('data-position'));
+        positionArray= position.split(',');
 
-    // Position de la dernière borne consultée (.currentLifiPoint)
-    $('.currentLifiPoint').next().addClass('nextLifiPoint');
 };
 
 var localize = function () {
@@ -206,7 +212,7 @@ var localize = function () {
 
 function displayingMap() {
     $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({
-        image_url: 'img/NIVEAU1+440.png',
+        image_url: 'img/lvl1.png',
         responsive: false,
         responsive_maintain_ratio: true,
         max_WIDTH: '',
@@ -223,7 +229,7 @@ function addingClicksFeatures() {
 
     $('#level1').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1+440.png',
+            image_url: 'img/lvl0.png',
             zoom_MAX:'150'
         }); 
         $('.landmarks').empty();
@@ -235,13 +241,13 @@ function addingClicksFeatures() {
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#0ca4cc'); 
-        $('#levels').css('border-color','#0ca4cc');  
+        $('#floorHeadBand').css('background-color','#E2DBD3'); 
+        $('#levels').css('border-color','#E2DBD3');  
     });
 
     $('#level2').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1+440.png',
+            image_url: 'img/lvl1.png',
             zoom_MAX:'150'
         }); 
         $('.landmarks').empty();
@@ -259,7 +265,7 @@ function addingClicksFeatures() {
 
     $('#level3').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/NIVEAU1+440.png',
+            image_url: 'img/lvl2.png',
             zoom_MAX:'150'
         }); 
         $('.landmarks').empty();
@@ -271,8 +277,8 @@ function addingClicksFeatures() {
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#a9c8e0'); 
-        $('#levels').css('border-color','#a9c8e0');
+        $('#floorHeadBand').css('background-color','#EACA81'); 
+        $('#levels').css('border-color','#EACA81');
     });
 
     $('#localize').mousedown(function() {
@@ -395,11 +401,11 @@ elemToBeGenerated += "<ul>";
 /* ================================================================================ */
 
 // Couleur des SVG
-function bidule(){ 
+function svgColor(){ 
     $('#artworkLeft').find('path').attr({'stroke':'#000','fill':'#000'});
     $('#resize').find('path').attr({'stroke':'#fff','fill':'#fff'});
 };
-window.setTimeout(bidule, 100);
+window.setTimeout(svgColor, 100);
 
 // --- BOUTON DETAIL ------------------------------------ //
 
@@ -606,37 +612,190 @@ $('#slideBGArtworks img').mousedown(function() {
 
 var lang = "fr";
 
-$('#fr').mousedown(function() {
-    lang="fr";
-    console.log(lang);
-});
-$('#chooseLang').mousedown(function() {
-    lang="eng";
-    console.log(lang);
-});
-$('#ned').mousedown(function() {
-    lang="ned";
-    console.log(lang);
-});
-$('#deu').mousedown(function() {
-    lang="deu";
-    console.log(lang);
-});
+function changeLang() {
+    $('#fr').mousedown(function() { lang="fr"; console.log(lang); });
+    $('#eng').mousedown(function() { lang="eng"; console.log(lang); });
+    $('#ned').mousedown(function() { lang="ned"; console.log(lang); });
+    $('#deu').mousedown(function() { lang="deu"; console.log(lang); });
+}; changeLang();
 
 function checkLang() {
+    repetition = setTimeout(checkLang,50);   // Lancement de checkLang(); toutes les secs
 
-    repetition = setTimeout(checkLang,1000);   // Lancement de checkLang(); toutes les secs
     if(lang=="fr"){
-        console.log('fr');
+        // Visits
+        $('#free').html('Visite libre');
+        $('#fast').html('Visite rapide');
+        $('#per').html('Visite par période');
+        $('#scol').html('Visite scolaire');
+        // Lifi Explanation
+        $('#lifiTitle').html('Comment ça marche ?');
+        $('#lifiSubtitle').html('C\'est facile !');
+        $('#lifiStep1').html('Etape <span>1</span> :');
+        $('#lifiStep2').html('Etape <span>2</span> :');
+        $('#lifiTxt1').html('La technologie Lifi utilise la lumière<br/> pour transmettre des données en haut débit.');
+        $('#lifiTxt2').html('Placez-vous sous une source lumineuse.');
+        $('#lifiTxt3').html('Lorsque vous êtes devant une borne<br/> elle vous localise et affiche automatiquement<br/> sur votre tablette les informations sur l\'oeuvre<br/> qui est devant vous.');
+        $('#lifiNext').html('Suivant');
+        // Map
+        $('.legendBlock p').html('choix du niveau');
+        $('#legend1 span').html('Votre localisation');
+        $('#legend2 span').html('Sens de la visite');
+        $('#legend3 span').html('Oeuvres<br/>non visitées');
+        $('#legend4 span').html('Oeuvres visitées');
+        $('#legend5 span').html('Oeuvre suivante');
+        $('#legend6 span').html('Toilettes');
+        $('#legend7 span').html('Escaliers');
+        $('#legend8 span').html('Ascenseurs');
+        $('#legendBlock6 p').html('Ma position');
+        // Artworks
+        $('#planButton').html('plan');
+        $('#artItemsTitle').html('Sélectionnez une oeuvre');
+        // Detail
+        $('#detailButton .buttonText').html('Détail');
+        $('#linkedArtworksButton .buttonText').html('Oeuvres liées');
+        // Tools
+        $('#toolsHeadband').html('Changer de langue ou de visite');
+        $('#toolsLeft #chooseVisit').html('Choisissez votre visite');
+        $('#toolsRight #chooseLang').html('Choisissez votre langue');
+        $('#toolsValidate p').html('Êtes-vous sûr(e) de votre choix ?');
+        $('.cancel').html('Annulez');
+        $('.validate').html('Validez');  
     }
-    if(lang=="eng"){
-        console.log('eng');
+
+    if(lang=="eng"){$
+        // Visits
+        $('#free').html('Free visit');
+        $('#fast').html('Quick visit');
+        $('#per').html('Visit by period');
+        $('#scol').html('School visit');
+        // Lifi Explanation
+        $('#lifiTitle').html('');
+        $('#lifiSubtitle').html('');
+        $('#lifiStep1','#lifiStep2').html('');
+        $('#lifiTxt1').html('');
+        $('#lifiTxt2').html('');
+        $('#lifiTxt3').html('');
+        $('#lifiNext').html('');
+        // Map
+        $('.legendBlock p').html('');
+        $('#legend1 span').html('');
+        $('#legend2 span').html('');
+        $('#legend3 span').html('');
+        $('#legend4 span').html('');
+        $('#legend5 span').html('');
+        $('#legend6 span').html('');
+        $('#legend7 span').html('');
+        $('#legend8 span').html('');
+        $('#legendBlock6 p').html('');
+        // Artworks
+        $('#planButton').html('map');
+        $('#artItemsTitle').html('Select an artwork');
+        // Detail
+        $('#detailButton .buttonText').html('Detail');
+        $('#linkedArtworksButton .buttonText').html('Linked artworks');
+        // Tools
+        $('#toolsHeadband').html('Change language or visit');
+        $('#toolsLeft #chooseVisit').html('Choose a visit');
+        $('#toolsRight #chooseLang').html('Choose a language');
+        $('#toolsValidate p').html('Are you sure about your choice ?');
+        $('.cancel').html('Cancel');
+        $('.validate').html('Confirm');  
     }
     if(lang=="ned"){
-        console.log('ned');
+        // Visits
+        $('#free').html('');
+        $('#fast').html('');
+        $('#per').html('');
+        $('#scol').html('');
+        // Lifi Explanation
+        $('#lifiTitle').html('');
+        $('#lifiSubtitle').html('');
+        $('#lifiStep1','#lifiStep2').html('');
+        $('#lifiTxt1').html('');
+        $('#lifiTxt2').html('');
+        $('#lifiTxt3').html('');
+        $('#lifiNext').html('');
+        // Map
+        $('.legendBlock p').html('');
+        $('#legend1 span').html('');
+        $('#legend2 span').html('');
+        $('#legend3 span').html('');
+        $('#legend4 span').html('');
+        $('#legend5 span').html('');
+        $('#legend6 span').html('');
+        $('#legend7 span').html('');
+        $('#legend8 span').html('');
+        $('#legendBlock6 p').html('');
+        // Artworks
+        $('#planButton').html('');
+        $('#artItemsTitle').html('');
+        // Detail
+        $('#detailButton .buttonText').html('');
+        $('#linkedArtworksButton .buttonText').html('');
+        // Tools
+        $('#toolsHeadband').html('');
+        $('#toolsLeft #chooseVisit').html('');
+        $('#toolsRight #chooseLang').html('');
+        $('#toolsValidate p').html('');
+        $('.cancel').html('');
+        $('.validate').html('');  
     }
     if(lang=="deu"){
-        console.log('deu');
+        // Visits
+        $('#free').html('');
+        $('#fast').html('');
+        $('#per').html('');
+        $('#scol').html('');
+        // Lifi Explanation
+        $('#lifiTitle').html('');
+        $('#lifiSubtitle').html('');
+        $('#lifiStep1','#lifiStep2').html('');
+        $('#lifiTxt1').html('');
+        $('#lifiTxt2').html('');
+        $('#lifiTxt3').html('');
+        $('#lifiNext').html('');
+        // Map
+        $('.legendBlock p').html('');
+        $('#legend1 span').html('');
+        $('#legend2 span').html('');
+        $('#legend3 span').html('');
+        $('#legend4 span').html('');
+        $('#legend5 span').html('');
+        $('#legend6 span').html('');
+        $('#legend7 span').html('');
+        $('#legend8 span').html('');
+        $('#legendBlock6 p').html('');
+        // Artworks
+        $('#planButton').html('');
+        $('#artItemsTitle').html('');
+        // Detail
+        $('#detailButton .buttonText').html('');
+        $('#linkedArtworksButton .buttonText').html('');
+        // Tools
+        $('#toolsHeadband').html('');
+        $('#toolsLeft #chooseVisit').html('');
+        $('#toolsRight #chooseLang').html('');
+        $('#toolsValidate p').html('');
+        $('.cancel').html('');
+        $('.validate').html('');  
     }       
 };
 checkLang();
+
+/* ================================================================================ */
+/* === TOOLS ====================================================================== */
+/* ================================================================================ */
+
+function selectTools() {
+    $('.lang').mousedown(function() { 
+        $('.lang').parent().removeClass('paramSelected'); 
+        $(this).parent().addClass('paramSelected'); 
+    });
+    $('.visit').mousedown(function() { 
+        $('.visit').parent().removeClass('paramSelected'); 
+        $(this).parent().addClass('paramSelected'); 
+    });
+}; selectTools();
+
+

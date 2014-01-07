@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Curtius</title>
+    </head>
+    <body>
+        
+        <section id="wrapper">
+            <section class="content contentIsHiddenOnRight">
+                <div id="toolBG"> 
+                    <div id="toolsHeadband">Changer de langue ou de visite</div>
+
+                    <div id="toolsLeft">
+                        <div id="chooseVisit">Choisissez votre visite</div>
+                        <div id="visits">
+                            <div class="chooseSquare" id="chooseSquare1">
+                                <a class="visit" id="free" title="">Visite libre</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare paramSelected" id="chooseSquare2">
+                                <a class="visit" id="fast" title="">Visite rapide</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare" id="chooseSquare3">
+                                <a class="visit" id="per" title="">Visite par période</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare" id="chooseSquare4">
+                                <a class="visit" id="scol" title="">Visite scolaire</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="toolsRight">
+                        <div id="chooseLang">Choisissez votre langue</div>
+                        <div id="langs">
+                            <div class="chooseSquare" id="chooseSquare1">
+                                <a class="lang" id="fr" title="">Français</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare" id="chooseSquare2">
+                                <a class="lang" id="eng" title="">English</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare" id="chooseSquare3">
+                                <a class="lang" id="ned" title="">Nederlands</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare paramSelected" id="chooseSquare4">
+                                <a class="lang" id="deu" title="">Deutsch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div id="toolsValidate">
+                        <p>Êtes-vous sûr(e) de votre choix ?</p>
+                        <div class="cancel">Annulez</div>
+                        <div class="validate">Validez</div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script src="js/jquery.smoothZoom.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <!--<script type="text/javascript" src="js/ajax-builder.js"></script>-->
+    </body>
+</html>
