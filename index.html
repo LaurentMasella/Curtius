@@ -29,6 +29,20 @@
         <script type="text/javascript">
             app.initialize();
         </script>
+        <script type="text/javascript">
+            function killCookie(cname,exdays) {
+                
+                var d = new Date();
+
+                d.setTime(d.getTime()+(exdays*24*60*60*1000));
+                
+                var expires = "expires="+d.toGMTString();
+                
+                document.cookie = cname + "=; " + expires;
+
+            }        
+            killCookie('lang.curtius.com','365');
+        </script>
         <!--<script type="text/javascript" src="js/ajax-builder.js"></script>-->
 
     </body>

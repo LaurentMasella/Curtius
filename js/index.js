@@ -643,7 +643,6 @@ function setCookie(cname,cvalue,exdays) {
 
 }
 
-
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');
@@ -665,16 +664,16 @@ function getCookie(cname) {
 var lang = "fr";
 
 function changeLang() {
-    $('#fr').mousedown(function() { lang="fr"; setCookie('curtius.com','fr','365'); console.log(lang); });
-    $('#eng').mousedown(function() { lang="eng"; setCookie('curtius.com','eng','365'); console.log(lang); });
-    $('#ned').mousedown(function() { lang="ned"; setCookie('curtius.com','ned','365'); console.log(lang); });
-    $('#deu').mousedown(function() { lang="deu"; setCookie('curtius.com','deu','365'); console.log(lang); });
+    $('#fr').mousedown(function() { lang="fr"; setCookie('lang.curtius.com','fr','365'); console.log(lang); });
+    $('#eng').mousedown(function() { lang="eng"; setCookie('lang.curtius.com','eng','365'); console.log(lang); });
+    $('#ned').mousedown(function() { lang="ned"; setCookie('lang.curtius.com','ned','365'); console.log(lang); });
+    $('#deu').mousedown(function() { lang="deu"; setCookie('lang.curtius.com','deu','365'); console.log(lang); });
 }; changeLang();
 
 function checkLang() {
     //repetition = setTimeout(checkLang,50);   // Lancement de checkLang(); toutes les secs
 
-    if(getCookie('curtius.com')=="fr"){
+    if(getCookie('lang.curtius.com')=="fr"){
         // Visits
         $('#free').html('Visite libre');
         $('#fast').html('Visite rapide');
@@ -715,7 +714,7 @@ function checkLang() {
         $('.validate').html('Validez');  
     }
 
-    if(getCookie('curtius.com')=="eng"){$
+    if(getCookie('lang.curtius.com')=="eng"){$
         // Visits
         $('#free').html('Free visit');
         $('#fast').html('Quick visit');
@@ -754,7 +753,7 @@ function checkLang() {
         $('.cancel').html('Cancel');
         $('.validate').html('Confirm');  
     }
-    if(getCookie('curtius.com')=="ned"){
+    if(getCookie('lang.curtius.com')=="ned"){
         // Visits
         $('#free').html('');
         $('#fast').html('');
@@ -793,7 +792,7 @@ function checkLang() {
         $('.cancel').html('');
         $('.validate').html('');  
     }
-    if(getCookie('curtius.com')=="deu"){
+    if(getCookie('lang.curtius.com')=="deu"){
         // Visits
         $('#free').html('');
         $('#fast').html('');
