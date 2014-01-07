@@ -9,9 +9,7 @@ temps à se charger et que localize ne fonctionne plus, chercher "localize"
 TODO :
 ------
 
-- Cabler langues
 - Cabler JSON
-- Enlever loader
 - Avoir toutes les datas des visites et les json complets
 
 - comment afficher les infos de la borne lifi ?
@@ -235,7 +233,7 @@ if(location.pathname.indexOf('map.html') != -1) {
 function addingSpotInteraction() {
 
 $('.visitedLifiPoint, .currentLifiPoint').mousedown(function() {
-        window.location = 'oeuvres.html';
+        window.location = 'oeuvres.html?5';
     });
 
 };
