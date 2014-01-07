@@ -626,24 +626,55 @@ $('#slideBGArtworks img').mousedown(function() {
     window.location.href = "detail.html";
 });
 
+
+/* ================================================================================ */
+/* === COOKIES ==================================================================== */
+/* ================================================================================ */
+
+function setCookie(cname,cvalue,exdays) {
+    
+    var d = new Date();
+
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    
+    var expires = "expires="+d.toGMTString();
+    
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+
+}
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+
+    for(var i=0; i<ca.length; i++) {
+
+        var c = ca[i].trim();
+
+        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+    }
+    return "";
+}
+
+
 /* ================================================================================ */
 /* === LANGUAGES ================================================================== */
 /* ================================================================================ */
 
-
 var lang = "fr";
 
 function changeLang() {
-    $('#fr').mousedown(function() { lang="fr"; console.log(lang); });
-    $('#eng').mousedown(function() { lang="eng"; console.log(lang); });
-    $('#ned').mousedown(function() { lang="ned"; console.log(lang); });
-    $('#deu').mousedown(function() { lang="deu"; console.log(lang); });
+    $('#fr').mousedown(function() { lang="fr"; setCookie('curtius.com','fr','365'); console.log(lang); });
+    $('#eng').mousedown(function() { lang="eng"; setCookie('curtius.com','eng','365'); console.log(lang); });
+    $('#ned').mousedown(function() { lang="ned"; setCookie('curtius.com','ned','365'); console.log(lang); });
+    $('#deu').mousedown(function() { lang="deu"; setCookie('curtius.com','deu','365'); console.log(lang); });
 }; changeLang();
 
 function checkLang() {
-    repetition = setTimeout(checkLang,50);   // Lancement de checkLang(); toutes les secs
+    //repetition = setTimeout(checkLang,50);   // Lancement de checkLang(); toutes les secs
 
-    if(lang=="fr"){
+    if(getCookie('curtius.com')=="fr"){
         // Visits
         $('#free').html('Visite libre');
         $('#fast').html('Visite rapide');
@@ -684,7 +715,7 @@ function checkLang() {
         $('.validate').html('Validez');  
     }
 
-    if(lang=="eng"){$
+    if(getCookie('curtius.com')=="eng"){$
         // Visits
         $('#free').html('Free visit');
         $('#fast').html('Quick visit');
@@ -723,7 +754,7 @@ function checkLang() {
         $('.cancel').html('Cancel');
         $('.validate').html('Confirm');  
     }
-    if(lang=="ned"){
+    if(getCookie('curtius.com')=="ned"){
         // Visits
         $('#free').html('');
         $('#fast').html('');
@@ -762,7 +793,7 @@ function checkLang() {
         $('.cancel').html('');
         $('.validate').html('');  
     }
-    if(lang=="deu"){
+    if(getCookie('curtius.com')=="deu"){
         // Visits
         $('#free').html('');
         $('#fast').html('');
@@ -837,5 +868,10 @@ function backToMap() {
         window.location = 'map.html';
     });
 }; backToMap();
+
+
+
+
+
 
 
