@@ -632,6 +632,11 @@ $('#slideBGArtworks img').mousedown(function() {
 /* ================================================================================ */
 
 function setCookie(cname,cvalue,exdays) {
+
+    if(window.location.href.indexOf("tools.html") > -1) {
+       window.location="tools.html";
+       /*    Changer class */   
+    }    
     
     var d = new Date();
 
@@ -669,6 +674,18 @@ function changeLang() {
     $('#ned').mousedown(function() { lang="ned"; setCookie('lang.curtius.com','ned','365'); console.log(lang); });
     $('#deu').mousedown(function() { lang="deu"; setCookie('lang.curtius.com','deu','365'); console.log(lang); });
 }; changeLang();
+
+
+
+
+function changeVisit() {
+    $('#free').mousedown(function() { lang="fr"; setCookie('visit.curtius.com','free','365'); console.log(lang); });
+    $('#fast').mousedown(function() { lang="eng"; setCookie('visit.curtius.com','fast','365'); console.log(lang); });
+    $('#per').mousedown(function() { lang="ned"; setCookie('visit.curtius.com','per','365'); console.log(lang); });
+    $('#scol').mousedown(function() { lang="deu"; setCookie('visit.curtius.com','scol','365'); console.log(lang); });
+}; changeLang();
+
+
 
 function checkLang() {
     //repetition = setTimeout(checkLang,50);   // Lancement de checkLang(); toutes les secs
