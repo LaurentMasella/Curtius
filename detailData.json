@@ -1,0 +1,84 @@
+{
+  "Lifi" : [
+    {
+	"idLifi" : 1,
+	"oeuvre" :
+	  {
+	    "idOeuvre" : "GC.ADC.SEY",
+		"images" : {
+		  "srcImage" : "GC.ADC.SEY-01.jpg"
+		},  
+		"parcours" : {
+		  "chronologique" : {
+			"FR" : {
+			  "chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+              "legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+              "titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
+              "DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			}
+		  },
+		  "rapide" : {
+		    "FR" : {
+			  "chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+              "legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+              "titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
+              "DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			}
+		  }
+		},
+		"sousOeuvres": [
+		  {
+		    "idSousOeuvre" : "GC.ADC.SEY",
+ 			"srcImage" : "GC.ADC.SEY-01.jpg",
+			"details" : {
+			  "FR" : {
+				"Descriptif" : "test descriptif",
+				"Legende" : "test legende"
+			  }
+			}
+		  }
+		]
+	  }
+  	},
+  	{
+	"idLifi" : 17,
+	"oeuvre" :
+	  {
+	    "idOeuvre" : "GC.ADC.SEY",
+		"images" : {
+		  "srcImage" : "GC.ADC.SEY-01.jpg"
+		},  
+		"parcours" : {
+		  "chronologique" : {
+			"FR" : {
+			  "chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+              "legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+              "titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
+              "DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			}
+		  },
+		  "rapide" : {
+		    "FR" : {
+			  "chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
+              "legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
+              "titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
+              "DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			}
+		  }
+		},
+		"sousOeuvres": [
+		  {
+		    "idSousOeuvre" : "GC.ADC.SEY",
+ 			"srcImage" : "GC.ADC.SEY-01.jpg",
+			"details" : {
+			  "FR" : {
+				"Descriptif" : "test descriptif",
+				"Legende" : "test legende"
+			  }
+			}
+		  }
+		]
+	  }
+  	}
+  ]
+}

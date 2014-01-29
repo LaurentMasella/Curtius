@@ -259,7 +259,6 @@ function addingClicksFeatures() {
         $('#floorHeadBand').css('background-color','#E2DBD3'); 
         $('#levels').css('border-color','#E2DBD3');  
     });
-
     $('#level2').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
             image_url: 'img/lvl1.png',
