@@ -111,6 +111,73 @@ var coordRDC = [];
 var coord1 = [];
 var coord2 = [];
 
+var coordAllLigths = [];
+coordAllLigths[1] ="506,489";
+coordAllLigths[2] ="435,597";
+coordAllLigths[3] ="250,705";
+coordAllLigths[4] ="277,858";
+coordAllLigths[5] ="273,980";
+coordAllLigths[6] ="273,1030";
+coordAllLigths[7] ="472,1246";
+coordAllLigths[8] ="291,1310";
+coordAllLigths[9] ="745,519";
+coordAllLigths[10] ="884,520";
+coordAllLigths[11] ="953,511";
+coordAllLigths[12] ="1094,491";
+coordAllLigths[13] ="1408,342";
+coordAllLigths[14] ="1437,313";
+coordAllLigths[15] ="1474,334";
+coordAllLigths[16] ="1542,342";
+coordAllLigths[17] ="1610,292";
+coordAllLigths[18] ="1343,621";
+coordAllLigths[19] ="1443,674";
+coordAllLigths[20] ="1282,746";
+coordAllLigths[21] ="1284,792";
+coordAllLigths[22] ="1442,876";
+coordAllLigths[23] ="1503,876";
+coordAllLigths[24] ="1328,946";
+coordAllLigths[25] ="1392,946";
+coordAllLigths[26] ="1443,946";
+coordAllLigths[27] ="1686,933";
+
+coordAllLigths[28] ="246,522";
+coordAllLigths[29] ="288,553";
+coordAllLigths[30] ="378,496";
+coordAllLigths[31] ="449,512";
+coordAllLigths[32] ="241,634";
+coordAllLigths[33] ="385,605";
+coordAllLigths[34] ="315,506";
+coordAllLigths[35] ="449,613";
+coordAllLigths[36] ="289,1219";
+coordAllLigths[37] ="308,1406";
+coordAllLigths[38] ="461,1418";
+// MISSING coordAllLigths[39] ="";
+coordAllLigths[40] ="692,484";
+coordAllLigths[41] ="864,461";
+coordAllLigths[42] ="900,458";
+coordAllLigths[43] ="903,543";
+coordAllLigths[44] ="981,448";
+coordAllLigths[45] ="1018,444";
+coordAllLigths[46] ="1057,441";
+coordAllLigths[47] ="";
+coordAllLigths[48] ="1295,337";
+coordAllLigths[49] ="1334,332";
+coordAllLigths[50] ="1395,323";
+// MISSING coordAllLigths[50] ="";
+// MISSING coordAllLigths[51] ="";
+coordAllLigths[51] ="1343";
+coordAllLigths[52] ="";
+coordAllLigths[53] ="";
+coordAllLigths[54] ="";
+coordAllLigths[55] ="";
+coordAllLigths[56] ="";
+coordAllLigths[57] ="";
+coordAllLigths[58] ="";
+coordAllLigths[59] ="";
+
+
+
+
 if(getCookie('visit.curtius.com')=="free"){
     coordRDC[ 1 ] = "1375,780";
     coord1[ 1 ] = "448,493";
@@ -372,7 +439,7 @@ function addingClicksFeatures() {
 
     $('#level1').mousedown(function() {
         $('#zoom_container').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-            image_url: 'img/lvl0.png',
+            image_url: 'img/lvl0-2.png',
             zoom_MAX:'150'
         }); 
         $('.landmarks').empty();
@@ -387,10 +454,11 @@ function addingClicksFeatures() {
         }
         $('.level').removeClass('levelSelected');
         $(this).addClass('levelSelected');
-        $('#floorHeadBand').css('background-color','#E2DBD3'); 
-        $('#levels').css('border-color','#E2DBD3');
-        $('#legend2 .mapIcon').css({'background-position':'0 -158px','top':'15px','left':'10px'}); 
+        $('#floorHeadBand').css('background-color','#B3B2B2'); 
+        $('#levels').css('border-color','#B3B2B2');
+        $('#legend2 .mapIcon').css({'background':'url("img/info.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
         $('#legend3').css({'background-position':'0 -158px','height':'80px','line-height':'80px','padding-top':'0'});
+        $('#legend2').css({'height':'80px','line-height':'80px','padding-top':'0'});
         $('#legend3 .mapIcon').css('background-position','0 -158px'); 
         $('#legend4 .mapIcon').css('background-position','0 -158px'); 
         $('#legend5 .mapIcon').css('background-position','0 -158px'); 
@@ -415,7 +483,7 @@ function addingClicksFeatures() {
         $(this).addClass('levelSelected');
         $('#floorHeadBand').css('background-color','#9bd3c3');
         $('#levels').css('border-color','#9bd3c3');
-        $('#legend2 .mapIcon').css({'background-position':'0 -358px','top':'33px','left':'5px'}); 
+        $('#legend2 .mapIcon').css({'background':'url("img/mapIcons2.png") 0 -358px no-repeat','top':'33px','left':'5px'}); 
         $('#legend3').css({'background-position':'0 -158px','height':'60px','line-height':'normal','padding-top':'20px'});
         $('#legend3 .mapIcon').css('background-position','0 -58px'); 
         $('#legend4 .mapIcon').css('background-position','0 -108px'); 
@@ -443,7 +511,7 @@ function addingClicksFeatures() {
         $(this).addClass('levelSelected');
         $('#floorHeadBand').css('background-color','#EACA81'); 
         $('#levels').css('border-color','#EACA81');
-        $('#legend2 .mapIcon').css({'background-position':'0 -358px','top':'33px','left':'5px'}); 
+        $('#legend2 .mapIcon').css({'background':'url("img/mapIcons2.png") 0 -358px no-repeat','top':'33px','left':'5px'}); 
         $('#legend3').css({'background-position':'0 -158px','height':'60px','line-height':'normal','padding-top':'20px'});
         $('#legend3 .mapIcon').css('background-position','0 -58px'); 
         $('#legend4 .mapIcon').css('background-position','0 -108px'); 
@@ -671,7 +739,7 @@ $('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').mousedown(function() {
 
 function displayingArtImage() {
     $('#artworkZoom').smoothZoom({ 
-        image_url: 'img/oeuvre.jpg',
+        image_url: 'img/oeuvre2.jpg',
         width: 400,
         height: 525,
         responsive: false,
@@ -714,7 +782,7 @@ $('#zoomLauncher').mousedown(function() {
     $(this).css('display','none');
     $('.si-icon-maximize-rotate').click();
     $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-        image_url: 'img/oeuvre.jpg',
+        image_url: 'img/oeuvre2.jpg',
         width: 1000,
         height: 625,
         responsive: false,
@@ -744,7 +812,7 @@ $('#zoomBack, .si-icon-maximize-rotate svg').mousedown(function() {
     $('#zoomLauncher').css('display','block');
     $('.si-icon-maximize-rotate').click();
     $('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
-        image_url: 'img/oeuvre.jpg',
+        image_url: 'img/oeuvre2.jpg',
         width: 400,
         height: 525,
         responsive: false,
@@ -786,9 +854,12 @@ function checkLang() {
     //repetition = setTimeout(checkLang,50);   // Lancement de checkLang(); toutes les secs
 
     if(getCookie('lang.curtius.com')=="fr"){
+        $('html').removeClass('langENG, langNED, langDEU');
+        $('html').addClass('langFR');
         $('.lang').parent().removeClass('paramSelected');
         $('#fr').parent().addClass('paramSelected');
         // Visits
+        $('#chooseVisit').html('Choisissez votre visite');
         $('#free').html('Visite libre');
         $('#fast').html('Visite rapide');
         $('#per').html('Visite par période');
@@ -815,13 +886,13 @@ function checkLang() {
             $('#legend4 span').html('Oeuvres visitées');
             $('#legend5 span').html('Oeuvre suivante');
         }
-        $('#legend1 span').html('Votre localisation');
+        $('#legend1 span').html('Ma dernière position');
         $('#legend6 span').html('Toilettes');
         $('#legend7 span').html('Escaliers');
         $('#legend8 span').html('Ascenseurs');
-        $('#legendBlock6 p').html('Ma position');
+        $('#legendBlock6 p').html('Dernière position');
         // Artworks
-        $('#planButton').html('plan');
+        $('#planButton').html('Map');
         $('#artItemsTitle').html('Sélectionnez une oeuvre');
         // Detail
         $('#detailButton .buttonText').html('Détail');
@@ -836,148 +907,160 @@ function checkLang() {
     }
 
     if(getCookie('lang.curtius.com')=="eng"){
+        $('html').removeClass('langFR, langNED, langDEU');
+        $('html').addClass('langENG');
         $('.lang').parent().removeClass('paramSelected');
         $('#eng').parent().addClass('paramSelected');
         // Visits
-        $('#free').html('Free visit');
-        $('#fast').html('Quick visit');
-        $('#per').html('Visit by period');
-        $('#scol').html('School visit');
+        $('#chooseVisit').html('Select your tours');
+        $('#free').html('Self-guided tours');
+        $('#fast').html('Quick tours');
+        $('#per').html('Tours by period');
+        $('#scol').html('School tours');
         // Lifi Explanation
-        $('#lifiTitle').html('-');
-        $('#lifiSubtitle').html('-');
-        $('#lifiStep1','#lifiStep2').html('-');
-        $('#lifiTxt1').html('-');
-        $('#lifiTxt2').html('-');
-        $('#lifiTxt3').html('-');
-        $('#lifiNext').html('-');
+        $('#lifiTitle').html('How does it work?');
+        $('#lifiSubtitle').html('Easy!');
+        $('#lifiStep1').html('Stage <span>1</span> :');
+        $('#lifiStep2').html('Stage <span>2</span> :');
+        $('#lifiTxt1').html('Li-Fi uses light to transmit data at high speed.');
+        $('#lifiTxt2').html('Go and stand under a light source.');
+        $('#lifiTxt3').html('When you are standing in front of a terminal, the light source will find you and automatically display the information about the work in front of you on your tablet.');
+        $('#lifiNext').html('Next');
         // Map
-        $('.legendBlock p').html('-');
+        $('.legendBlock p').html('Choice of level');
         if($('#level1').hasClass('levelSelected')){
-            $('#legend2 span').html('--');
-            $('#legend3 span').html('--');
-            $('#legend4 span').html('--');
-            $('#legend5 span').html('--');
+            $('#legend2 span').html('Reception');
+            $('#legend3 span').html('Cloakrooms');
+            $('#legend4 span').html('Shop');
+            $('#legend5 span').html('Cafeteria');
         }else{
-            $('#legend2 span').html('-');
-            $('#legend3 span').html('-');
-            $('#legend4 span').html('-');
-            $('#legend5 span').html('-');
+            $('#legend2 span').html('Direction of the tour');
+            $('#legend3 span').html('Non-visited <br/>works');
+            $('#legend4 span').html('Visited works');
+            $('#legend5 span').html('Next work');
         }
-        $('#legend1 span').html('-');
-        $('#legend6 span').html('-');
-        $('#legend7 span').html('-');
-        $('#legend8 span').html('-');
-        $('#legendBlock6 p').html('-');
+        $('#legend1 span').html('Your last location');
+        $('#legend6 span').html('Toilets');
+        $('#legend7 span').html('Stairs');
+        $('#legend8 span').html('Lifts');
+        $('#legendBlock6 p').html('My last position');
         // Artworks
-        $('#planButton').html('map');
-        $('#artItemsTitle').html('Select an artwork');
+        $('#planButton').html('Map');
+        $('#artItemsTitle').html('Select a work');
         // Detail
-        $('#detailButton .buttonText').html('Detail');
-        $('#linkedArtworksButton .buttonText').html('Linked artworks');
+        $('#detailButton .buttonText').html('Details');
+        $('#linkedArtworksButton .buttonText').html('Related works');
         // Tools
         $('#toolsHeadband').html('Change language');
-        $('#toolsLeft #chooseVisit').html('Choose a visit');
-        $('#toolsRight #chooseLang').html('Choose a language');
-        $('#toolsValidate p').html('Are you sure about your choice ?');
+        $('#toolsLeft #chooseVisit').html('Select your tour');
+        $('#toolsRight #chooseLang').html('Select your language');
+        $('#toolsValidate p').html('Are you sure you have made the correct choice?');
         $('.cancel').html('Cancel');
         $('.validate').html('Continue');  
     }
     if(getCookie('lang.curtius.com')=="ned"){
+        $('html').removeClass('langFR, langENG, langDEU');
+        $('html').addClass('langNED');
         $('.lang').parent().removeClass('paramSelected');
         $('#ned').parent().addClass('paramSelected');
         // Visits
-        $('#free').html('-');
-        $('#fast').html('-');
-        $('#per').html('-');
-        $('#scol').html('-');
+        $('#chooseVisit').html('Kies uw bezoek');
+        $('#free').html('Vrij bezoek');
+        $('#fast').html('Snel bezoek');
+        $('#per').html('Bezoek per periode');
+        $('#scol').html('Schoolbezoek');
         // Lifi Explanation
-        $('#lifiTitle').html('-');
-        $('#lifiSubtitle').html('-');
-        $('#lifiStep1','#lifiStep2').html('-');
-        $('#lifiTxt1').html('-');
-        $('#lifiTxt2').html('-');
-        $('#lifiTxt3').html('-');
-        $('#lifiNext').html('-');
+        $('#lifiTitle').html('Hoe werkt het?');
+        $('#lifiSubtitle').html('Heel eenvoudig!');
+        $('#lifiStep1').html('Stap <span>1</span> :');
+        $('#lifiStep2').html('Stap <span>2</span> :');
+        $('#lifiTxt1').html('De Lifi-technologie maakt gebruik van het licht voor een datatransmissie op hoge snelheid.');
+        $('#lifiTxt2').html('Neem plaats onder een lichtbron.');
+        $('#lifiTxt3').html('Als u voor een terminal gaat staan, dan lokaliseert hij u en geeft hij op uw tablet automatisch informatie weer over het kunstwerk voor u.');
+        $('#lifiNext').html('Volgende');
         // Map
-        $('.legendBlock p').html('-');
+        $('.legendBlock p').html('Keuze van het niveau');
         if($('#level1').hasClass('levelSelected')){
-            $('#legend2 span').html('--');
-            $('#legend3 span').html('--');
-            $('#legend4 span').html('--');
-            $('#legend5 span').html('--');
+            $('#legend2 span').html('Onthaal');
+            $('#legend3 span').html('Vestiaires');
+            $('#legend4 span').html('Winkel');
+            $('#legend5 span').html('Cafetaria');
         }else{
-            $('#legend2 span').html('-');
-            $('#legend3 span').html('-');
-            $('#legend4 span').html('-');
-            $('#legend5 span').html('-');
+            $('#legend2 span').html('Richting van het bezoek');
+            $('#legend3 span').html('Niet-bezochte kunstwerken');
+            $('#legend4 span').html('Bezochte kunstwerken');
+            $('#legend5 span').html('Volgend kunstwerk');
         }
-        $('#legend1 span').html('-');
-        $('#legend6 span').html('-');
-        $('#legend7 span').html('-');
-        $('#legend8 span').html('-');
-        $('#legendBlock6 p').html('-');
+        $('#legend1 span').html('Uw locatie');
+        $('#legend6 span').html('Toiletten');
+        $('#legend7 span').html('Trappen');
+        $('#legend8 span').html('Liften');
+        $('#legendBlock6 p').html('Mijn positie');
         // Artworks
-        $('#planButton').html('-');
-        $('#artItemsTitle').html('-');
+        $('#planButton').html('Map');
+        $('#artItemsTitle').html('Selecteer een kunstwerk');
         // Detail
-        $('#detailButton .buttonText').html('-');
-        $('#linkedArtworksButton .buttonText').html('-');
+        $('#detailButton .buttonText').html('Detail');
+        $('#linkedArtworksButton .buttonText').html('Verwante kunstwerken');
         // Tools
-        $('#toolsHeadband').html('-');
-        $('#toolsLeft #chooseVisit').html('-');
-        $('#toolsRight #chooseLang').html('-');
-        $('#toolsValidate p').html('-');
-        $('.cancel').html('-');
-        $('.validate').html('-');  
+        $('#toolsHeadband').html('Taal wijzigen');
+        $('#toolsLeft #chooseVisit').html('Kies uw bezoek');
+        $('#toolsRight #chooseLang').html('Kies uw taal');
+        $('#toolsValidate p').html('Bent u zeker van uw keuze?');
+        $('.cancel').html('Annuleer');
+        $('.validate').html('Ga verder');  
     }
     if(getCookie('lang.curtius.com')=="deu"){
+        $('html').removeClass('langFR, langENG, langNED');
+        $('html').addClass('langDEU');
         $('.lang').parent().removeClass('paramSelected');
         $('#deu').parent().addClass('paramSelected');
         // Visits
-        $('#free').html('-');
-        $('#fast').html('-');
-        $('#per').html('-');
-        $('#scol').html('-');
+        $('#chooseVisit').html('Wählen Sie Ihren Besichtigung');
+        $('#free').html('Freie Besichtigung');
+        $('#fast').html('Schnelle Besichtigung');
+        $('#per').html('Besichtigung pro Zeitraum');
+        $('#scol').html('Schulbesichtigung');
         // Lifi Explanation
-        $('#lifiTitle').html('-');
-        $('#lifiSubtitle').html('-');
-        $('#lifiStep1','#lifiStep2').html('-');
-        $('#lifiTxt1').html('-');
-        $('#lifiTxt2').html('-');
-        $('#lifiTxt3').html('-');
-        $('#lifiNext').html('-');
+        $('#lifiTitle').html('Wie funktioniert das ?');
+        $('#lifiSubtitle').html('So einfach !');
+        $('#lifiStep1').html('Schritt <span>1</span> :');
+        $('#lifiStep2').html('Schritt <span>2</span> :');
+        $('#lifiTxt1').html('Die Lifi-Technologie nutzt das Licht, um Daten im hohen Volumen zu versenden.');
+        $('#lifiTxt2').html('Stellen Sie sich unter eine Lichtquelle.');
+        $('#lifiTxt3').html('Wenn Sie vor einer Markierung stehen, werden sie automatisch entdeckt, und auf Ihrem Tablet erscheinen die Informationen des Kunstwerkes, vor dem Sie stehen.');
+        $('#lifiNext').html('Nächstes');
         // Map
-        $('.legendBlock p').html('-');
+        $('.legendBlock p').html('Wahl der Ebene');
         if($('#level1').hasClass('levelSelected')){
-            $('#legend2 span').html('--');
-            $('#legend3 span').html('--');
-            $('#legend4 span').html('--');
-            $('#legend5 span').html('--');
+            $('#legend2 span').html('Empfang');
+            $('#legend3 span').html('Umkleideräume');
+            $('#legend4 span').html('Shop');
+            $('#legend5 span').html('Cafeteria');
         }else{
-            $('#legend2 span').html('-');
-            $('#legend3 span').html('-');
-            $('#legend4 span').html('-');
-            $('#legend5 span').html('-');
+            $('#legend2 span').html('Richtung der Besichtigung');
+            $('#legend3 span').html('Nicht besichtigte Kunstwerke');
+            $('#legend4 span').html('Besichtigte Kunstwerke');
+            $('#legend5 span').html('Nächstes Kunstwerk');
         }
-        $('#legend1 span').html('-');
-        $('#legend6 span').html('-');
-        $('#legend7 span').html('-');
-        $('#legend8 span').html('-');
-        $('#legendBlock6 p').html('-');
+        $('#legend1 span').html('Ihr Standort');
+        $('#legend6 span').html('Toiletten');
+        $('#legend7 span').html('Treppen');
+        $('#legend8 span').html('Aufzüge');
+        $('#legendBlock6 p').html('Meine Position');
         // Artworks
-        $('#planButton').html('-');
-        $('#artItemsTitle').html('-');
+        $('#planButton').html('Map');
+        $('#artItemsTitle').html('Ein Kunstwerk auswählen');
         // Detail
-        $('#detailButton .buttonText').html('-');
-        $('#linkedArtworksButton .buttonText').html('-');
+        $('#detailButton .buttonText').html('Detail');
+        $('#linkedArtworksButton .buttonText').html('Verbundenes Kunstwerk');
         // Tools
-        $('#toolsHeadband').html('-');
-        $('#toolsLeft #chooseVisit').html('-');
-        $('#toolsRight #chooseLang').html('-');
-        $('#toolsValidate p').html('-');
-        $('.cancel').html('-');
-        $('.validate').html('-');  
+        $('#toolsHeadband').html('Die Sprache auswählen');
+        $('#toolsLeft #chooseVisit').html('Ihre Besichtigung auswählen');
+        $('#toolsRight #chooseLang').html('Ihre Sprache auswählen ');
+        $('#toolsValidate p').html('Sind Sie sich Ihrer Auswahl sicher ?');
+        $('.cancel').html('Löschen');
+        $('.validate').html('Fortfahren');  
     }       
 };
 checkLang();
