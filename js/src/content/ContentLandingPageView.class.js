@@ -1,0 +1,27 @@
+function ContentLandingPageView(){
+
+}
+
+ContentLandingPageView.prototype.destroy = function(){
+	// console.info('ContentLandingPageView.prototype.destroy');
+	this.killCookie('lang.curtius.com', '365');
+	this.killCookie('visit.curtius.com', '365');
+};
+
+ContentLandingPageView.prototype.init = function(tag){
+	// console.info('ContentLandingPageView.prototype.init');
+	//dom/var
+	this.tag = jQuery(tag);
+	//functions init
+	this.destroy();
+
+};
+
+ContentLandingPageView.prototype.killCookie = function(cname,exdays){
+	// console.info('ContentLandingPageView.prototype.killCookie');	
+	var d = new Date();
+	d.setTime(d.getTime()+(exdays*24*60*60*1000));
+	var expires = "expires="+d.toGMTString();
+	document.cookie = cname + "=; " + expires;	
+
+};

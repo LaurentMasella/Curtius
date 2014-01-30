@@ -12,7 +12,7 @@
     <body>
 
         <section id="wrapper">
-            <section class="content">
+            <section class="content" id="contentLanding">
                 <img id="slide1BG" src="img/slide_1_BG.jpg" alt=""/>
                 <div id="logoBlackSquare"></div>
                 <div id="logo"></div>
@@ -21,31 +21,18 @@
             </section>
         </section>
 
+        <!-- etxernals -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
-        <script src="js/jquery.smoothZoom.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery.smoothZoom.min.js"></script>
+        <!-- custom -->
+        <script type="text/javascript" src="js/src/cordova/app.js"></script>
+        <script type="text/javascript" src="js/src/content/ContentLandingPageView.class.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
-        <script type="text/javascript">
-            function killCookie(cname,exdays) {
-                
-                var d = new Date();
-
-                d.setTime(d.getTime()+(exdays*24*60*60*1000));
-                
-                var expires = "expires="+d.toGMTString();
-                
-                document.cookie = cname + "=; " + expires;
-
-            }        
-            killCookie('lang.curtius.com','365');
-            killCookie('visit.curtius.com','365');
-
-        </script>
-        <!--<script type="text/javascript" src="js/ajax-builder.js"></script>-->
 
     </body>
 </html>

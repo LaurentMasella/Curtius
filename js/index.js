@@ -105,7 +105,7 @@ function changeVisit() {
     $('#scol').mousedown(function() { lang="deu"; setCookie('visit.curtius.com','scol','365'); console.log(lang); });
 }; changeVisit();
 
-// Tableaux de coordonnées -----------------------------------------------------------
+Tableaux de coordonnées -----------------------------------------------------------
 
 var coordRDC = [];
 var coord1 = [];
@@ -270,7 +270,7 @@ function AddingCurrentPos() {
     }
 };*/
 
-// Ajout des Bulles sur la map -------------------------------------------------------
+//Ajout des Bulles sur la map -------------------------------------------------------
 
 function populateMapRDC() {
     //$('.landmarks').removeClass('lvl1Marks');
@@ -667,7 +667,7 @@ $('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').mousedown(function() {
     $(this).click();
 });
 
-// --- ZOOM IMAGE ------------------------------------ //
+--- ZOOM IMAGE ------------------------------------ //
 
 function displayingArtImage() {
     $('#artworkZoom').smoothZoom({ 
