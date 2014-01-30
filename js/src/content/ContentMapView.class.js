@@ -169,9 +169,9 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        }
 	        this.level.removeClass('levelSelected');
 	        jQuery('#level1').addClass('levelSelected');
-	        this.floorHeadBand.css('background-color','#E2DBD3'); 
-	        this.levels.css('border-color','#E2DBD3');
-	        this.legend2.find('.mapIcon').css({'background-position':'0 -158px','top':'15px','left':'10px'}); 
+	        this.floorHeadBand.css('background-color','#B3B2B2'); 
+	        this.levels.css('border-color','#B3B2B2');
+	        this.legend2.find('.mapIcon').css({'background':'url("img/info.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
 	        this.legend3.css({'background-position':'0 -158px','height':'80px','line-height':'80px','padding-top':'0'});
 	        this.legend3.find('.mapIcon').css('background-position','0 -158px'); 
 	        this.legend4.find('.mapIcon').css('background-position','0 -158px'); 
@@ -197,7 +197,7 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        jQuery('#level2').addClass('levelSelected');
 	        this.floorHeadBand.css('background-color','#9bd3c3');
 	        this.levels.css('border-color','#9bd3c3');
-	        this.legend2.find('.mapIcon').css({'background-position':'0 -358px','top':'33px','left':'5px'}); 
+	        this.legend2.find('.mapIcon').css({'background':'url("img/mapIcons2.png") 0 -358px no-repeat','top':'33px','left':'5px'}); 
 	        this.legend3.css({'background-position':'0 -158px','height':'60px','line-height':'normal','padding-top':'20px'});
 	        this.legend3.find('.mapIcon').css('background-position','0 -58px'); 
 	        this.legend4.find('.mapIcon').css('background-position','0 -108px'); 
@@ -223,7 +223,7 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        jQuery('#level3').addClass('levelSelected');
 	        this.floorHeadBand.css('background-color','#EACA81'); 
 	        this.levels.css('border-color','#EACA81');
-	        this.legend2.find('.mapIcon').css({'background-position':'0 -358px','top':'33px','left':'5px'}); 
+	        this.legend2.find('.mapIcon').css({'background':'url("img/mapIcons2.png") 0 -358px no-repeat','top':'33px','left':'5px'}); 
 	        this.legend3.css({'background-position':'0 -158px','height':'60px','line-height':'normal','padding-top':'20px'});
 	        this.legend3.find('.mapIcon').css('background-position','0 -58px'); 
 	        this.legend4.find('.mapIcon').css('background-position','0 -108px'); 

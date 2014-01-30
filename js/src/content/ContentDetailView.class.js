@@ -31,6 +31,7 @@ ContentDetailView.prototype.onCurrentUpdated = function(){
 	this.artworkTitle.html(currentData.oeuvre.parcours.chronologique.FR['titreOeuvre']);
 	this.artworkDetail.html(currentData.oeuvre.parcours.chronologique.FR['DescriptionOeuvre']);
 	this.artworkLink.html(currentData.oeuvre.sousOeuvres[0].details.FR['Descriptif']);
+    
 };
 
 /* ================================================================================ */
