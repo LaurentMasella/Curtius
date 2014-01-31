@@ -65,6 +65,14 @@ ContentMapView.prototype.onDataUpdated = function(){
 	this.checkStage();
 	if(this.controller.model.current == this.id){
 		console.info(this.hotSpotController.model.current);
+		if(hotSpotController.model.scope[i]['oeuvre'].length() > 1){
+			console.log('Plusieurs oeuvres');
+		}
+		else {  
+			console.log('Une seule oeuvre');
+		}
+
+
 	}
 };
 
@@ -130,7 +138,7 @@ ContentMapView.prototype.addingSpotLights = function() {
         jQuery('.landmarks').find(".mark:last-child").addClass("currentLifiPoint");
 
     }
-     // Position de la dernière biorne consultée (.currentLifiPoint)
+     // Position de la dernière borne consultée (.currentLifiPoint)
         this.position = (jQuery('.currentLifiPoint').attr('data-position'));
         this.positionArray = this.position.split(',');
 
@@ -304,6 +312,7 @@ ContentMapView.prototype.destroyCoordonates = function(){
 
 
 ContentMapView.prototype.initCoordonates = function(){
+
 	// for(var i = 1; i< jQuery(this.hotSpotController.model.scope).length; i++){
 	// 	for(var j = 0; j< jQuery(this.hotSpotController.model.scope[i]['parcours']).length; j++){
 	// 		//console.info(jQuery(this.hotSpotController.model.scope[i]['parcours'][j]);
