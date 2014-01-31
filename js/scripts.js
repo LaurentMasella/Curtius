@@ -56,14 +56,7 @@
 	        rawFile.send(null);
     	}
     }, 100)
-      // TEST EN INCREMENTANT LE CURRENT
- // 	 var i = 0;
-	//  window.setInterval(function(){
-	// 	i ++;
-	// 	hotSpotController.setCurrent(hotSpotController.model.scope[i]);
-	// 	console.info(hotSpotController.model.scope[i]);
-	// }, 10000);
->>>>>>> dc29d36f7c5605ecb7a1e211f40a2eca454ade23
+
     
     // VIEWS
 	var contentLandingPageView = new ContentLandingPageView();
