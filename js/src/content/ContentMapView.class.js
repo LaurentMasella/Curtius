@@ -304,6 +304,11 @@ ContentMapView.prototype.destroyCoordonates = function(){
 
 
 ContentMapView.prototype.initCoordonates = function(){
+	// for(var i = 1; i< jQuery(this.hotSpotController.model.scope).length; i++){
+	// 	for(var j = 0; j< jQuery(this.hotSpotController.model.scope[i]['parcours']).length; j++){
+	// 		//console.info(jQuery(this.hotSpotController.model.scope[i]['parcours'][j]);
+	// 	}
+	// }
 	switch(Cookie.getCookie('visit.curtius.com')){
 		case 'free':
 		    this.coordRDC[ 1 ] = "1375,780";
