@@ -25,7 +25,7 @@
 			hotSpotController.model.scope[element['mapNumber']] = element;
     	},this));
     	// TEST EN CURRENT = 1
-		hotSpotController.setCurrent(hotSpotController.model.scope[1]);
+		//hotSpotController.setCurrent(hotSpotController.model.scope[1]);
     })
       .fail(function(){
 		console.info('fail');
@@ -46,7 +46,8 @@
 	                    var currentValue = allTextArray[0];
 	                    for (var i = 1; i < jQuery(hotSpotController.model.scope).length; i++){
 	                    	if(hotSpotController.model.scope[i]['idLifi'] == currentValue){
-	                    		hotSpotController.setCurrent(hotSpotController.model.scope[i]['mapNumber']);
+	                    		//console.info(currentValue);
+	                    		hotSpotController.setCurrent(hotSpotController.model.scope[i]);
 	                    	}
 	                    }
 	                    
