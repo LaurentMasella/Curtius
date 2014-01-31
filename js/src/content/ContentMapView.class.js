@@ -63,7 +63,7 @@ ContentMapView.prototype.onDataUpdated = function(){
 		this.lastPositionData = this.currentPositionData
 	}
 	
-	//this.checkStage();
+	this.checkStage();
 };
 
 ContentMapView.prototype.checkStage = function(){
@@ -234,9 +234,9 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        this.levels.css('border-color','#B3B2B2');
 	        this.legend2.find('.mapIcon').css({'background':'url("img/info.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
 	        this.legend3.css({'background-position':'0 -158px','height':'80px','line-height':'80px','padding-top':'0'});
-	        this.legend3.find('.mapIcon').css({'background':'url("img/cloakIcon.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
-	        this.legend4.find('.mapIcon').css({'background':'url("img/shopIcon.png") 0 0 no-repeat','top':'15px','left':'10px'});
-	        this.legend5.find('.mapIcon').css({'background':'url("img/cafeIcon.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
+	        this.legend3.find('.mapIcon').css('background-position','0 -158px'); 
+	        this.legend4.find('.mapIcon').css('background-position','0 -158px'); 
+	        this.legend5.find('.mapIcon').css('background-position','0 -158px'); 
 	        this.checkLang();
 		break;
 		case 'level2':
@@ -260,9 +260,9 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        this.levels.css('border-color','#9bd3c3');
 	        this.legend2.find('.mapIcon').css({'background':'url("img/mapIcons2.png") 0 -358px no-repeat','top':'33px','left':'5px'}); 
 	        this.legend3.css({'background-position':'0 -158px','height':'60px','line-height':'normal','padding-top':'20px'});
-	        this.legend3.find('.mapIcon').css('background','url("img/mapIcons2.png") 0 -58px no-repeat'); 
-	        this.legend4.find('.mapIcon').css('background','url("img/mapIcons2.png") 0 -108px no-repeat'); 
-	        this.legend5.find('.mapIcon').css('background','url("img/mapIcons2.png") 0 -208px no-repeat');
+	        this.legend3.find('.mapIcon').css('background-position','0 -58px'); 
+	        this.legend4.find('.mapIcon').css('background-position','0 -108px'); 
+	        this.legend5.find('.mapIcon').css('background-position','0 -208px');
 	        this.checkLang();
 		break;
 		case 'level3':
@@ -286,9 +286,9 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        this.levels.css('border-color','#EACA81');
 	        this.legend2.find('.mapIcon').css({'background':'url("img/mapIcons2.png") 0 -358px no-repeat','top':'33px','left':'5px'}); 
 	        this.legend3.css({'background-position':'0 -158px','height':'60px','line-height':'normal','padding-top':'20px'});
-	        this.legend3.find('.mapIcon').css('background','url("img/mapIcons2.png") 0 -58px no-repeat'); 
-	        this.legend4.find('.mapIcon').css('background','url("img/mapIcons2.png") 0 -108px no-repeat'); 
-	        this.legend5.find('.mapIcon').css('background','url("img/mapIcons2.png") 0 -208px no-repeat');
+	        this.legend3.find('.mapIcon').css('background-position','0 -58px'); 
+	        this.legend4.find('.mapIcon').css('background-position','0 -108px'); 
+	        this.legend5.find('.mapIcon').css('background-position','0 -208px');
 	        this.checkLang();
 		break;		
 	}
@@ -302,7 +302,6 @@ ContentMapView.prototype.destroyCoordonates = function(){
 
 
 ContentMapView.prototype.initCoordonates = function(){
-
 	switch(Cookie.getCookie('visit.curtius.com')){
 		case 'free':
 		    this.coordRDC[ 1 ] = "1375,780";
