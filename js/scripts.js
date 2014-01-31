@@ -1,5 +1,7 @@
 (function(jQuery) {
 
+	var urlToJson = 'detailData.json';
+
 	// MAIN CONTROLLER
 	MainContentController.getInstance().setScope(
 		new Array(
@@ -15,6 +17,29 @@
 	var hotSpotController = new HotSpotController();
 	hotSpotController.init();
 
+    $.getJSON(urlToJson,{
+    	format:'json',
+    })
+      .done(function(data){
+    	jQuery(data['Lifi']).each(jQuery.proxy(function(index,element){
+			hotSpotController.model.scope[element['mapNumber']] = element;
+    	},this));
+    	// TEST EN CURRENT = 1
+		hotSpotController.setCurrent(hotSpotController.model.scope[1]);
+    })
+      .fail(function(){
+		console.info('fail');
+    });
+
+      
+      // TEST EN INCREMENTANT LE CURRENT
+ 	//  var i = 0;
+	//  window.setInterval(function(){
+	// 	i ++;
+	// 	hotSpotController.setCurrent(hotSpotController.model.scope[i]);
+	// 	console.info(hotSpotController.model.scope[i]);
+	// }, 10000);
+    
     // VIEWS
 	var contentLandingPageView = new ContentLandingPageView();
 	contentLandingPageView.id = Repository.LANDING_ID;
@@ -61,33 +86,5 @@
 
 	//INIT WITH FIRST VIEW AS CURRENT
     MainContentController.getInstance().setCurrent(Repository.LANDING_ID);
-    	
-
-  //   // VIEW DETAIL
-  //   if(jQuery("#contentDetail").length != 0){
-
-
-		// // getData JSON
-		// var urlToJson = 'detailData.json';
-	 //    $.getJSON(urlToJson,{
-	 //    	format:'json',
-	 //    })
-	 //      .done(function(data){
-	    	
-	 //    	jQuery(data['Lifi']).each(jQuery.proxy(function(index,element){
-		// 		//hotSpotController.model.scope.push(element);
-		// 		hotSpotController.model.scope[element['idLifi']] = element;
-	 //    	},this));
-		// 	hotSpotController.setCurrent(17);
-	 //    })
-	 //      .fail(function(){
-		// 	console.info('fail');
-	 //    });
-
-		// // Init detailView for all content of working details
-		// var contentDetailView = new ContentDetailView();
-		// contentDetailView.controller = hotSpotController;
-		// contentDetailView.init("#contentDetail");
-    // }
 
 })(jQuery);

@@ -20,8 +20,11 @@ ContentMapView.prototype.init = function(tag){
     this.legend3 = jQuery('#legend3');
     this.legend4 = jQuery('#legend4');
     this.legend5 = jQuery('#legend5');
+    this.currentPositionData = "";
     this.floorHeadBand = jQuery('#floorHeadBand');
-	
+	//this.displayingMap();
+
+	jQuery(this.hotSpotController.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));	
 };
 
 ContentMapView.prototype.onCurrentUpdated = function(){
@@ -37,12 +40,12 @@ ContentMapView.prototype.onCurrentUpdated = function(){
 
 ContentMapView.prototype.enableView = function(){
 	this.initCoordonates();
-	this.populateMap1();
-	this.displayingMap();
+	//this.populateMapRDC();
 	window.setTimeout(jQuery.proxy(this.addingSpotLights, this), 100);
 	this.addingClicksFeatures();
+	this.checkStage();
 	window.setTimeout(jQuery.proxy(this.localize,this), 250);
-	window.setTimeout(jQuery.proxy(this.addingSpotInteraction,this), 100); 		
+	window.setTimeout(jQuery.proxy(this.addingSpotInteraction,this), 100);
 };
 
 ContentMapView.prototype.disableView = function(){
@@ -53,6 +56,29 @@ ContentMapView.prototype.disableView = function(){
 	this.destroyCoordonates();	
 };
 
+ContentMapView.prototype.onDataUpdated = function(){
+	this.currentPositionData = this.hotSpotController.model.current;
+	//this.checkStage();
+};
+
+ContentMapView.prototype.checkStage = function(){
+	console.info('coucou');
+	console.info(this.currentPositionData["etage"]);
+	if(this.currentPositionData != ""){
+		switch(this.currentPositionData["etage"]){
+			case 0:
+				jQuery("#level1").mousedown();
+			break;
+			case 1:
+				console.info('checkstage 1');
+				jQuery("#level2").mousedown();
+			break;
+			case 2:
+				jQuery("#level3").mousedown();
+			break;
+		}
+	}
+};
 
 ContentMapView.prototype.populateMapRDC = function(){
 	// console.info('ContentMapView.prototype.populateMapRDC');
@@ -80,19 +106,18 @@ ContentMapView.prototype.populateMap2 = function(){
 };
 
 ContentMapView.prototype.addingSpotLights = function() {
-	// console.info('ContentMapView.prototype.addingSpotLights');
-    // Ajout artificiel de la borne actuelle en attendant de récupérer réelement l'info par Lifi
-    // -----------------------------------------------------------------------------------------
-    // (Lorsqu'on aura l'info Lifi il faudra Addclass lors de l'évènement Lifi 
-    // sur la borne dont l'innerHtml correspond à la borne de l'évènement, retirer cette class de tout les autres, et ajouter une seconde class)
-    var markcount = jQuery('.landmarks').find(".mark").length;
+	var markcount = jQuery('.landmarks').find(".mark").length;
+    //Si il y a plusieurs marks, alors on affiche et positionne
     if(markcount > 2) {
-        var randomnumber = Math.floor(Math.random()*(markcount)+1);
-        jQuery('.landmarks').find(".mark:nth-child("+randomnumber+")").addClass("currentLifiPoint");
+        if(this.currentPositionData != ""){
+        	jQuery('.landmarks').find(".mark:nth-child("+this.currentPositionData['mapNumber']+")").addClass("currentLifiPoint");
+        }else{
+        	//nécessaire ?
+        	jQuery('.landmarks').find(".mark:nth-child("+0+")").addClass("currentLifiPoint");
+        }
+        
         jQuery('.currentLifiPoint').css('z-index','10000000000000');
         jQuery('.currentLifiPoint').prevAll('.mark').addClass('visitedLifiPoint');
-        // -----------------------------------------------------------------------------------------
-
         // Position de la prochaine borne (.nextLifiPoint)
         jQuery('.currentLifiPoint').next().addClass('nextLifiPoint');
     }
@@ -120,7 +145,7 @@ ContentMapView.prototype.localize = function () {
 ContentMapView.prototype.displayingMap = function() {
 	// console.info('ContentMapView.prototype.displayingMap');
     this.zoomContainer.smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({
-        image_url: 'img/lvl1.png',
+        image_url: 'img/lvl0.png',
         responsive: false,
         responsive_maintain_ratio: true,
         max_WIDTH: '',
@@ -130,7 +155,8 @@ ContentMapView.prototype.displayingMap = function() {
         zoom_MAX:'150',
         initial_ZOOM: '150',
         border_SIZE: 0
-    }); 
+    });
+
 };
     
 
@@ -183,7 +209,7 @@ ContentMapView.prototype.onClickSpot = function(){
 };
 
 ContentMapView.prototype.onClickFeatures = function(e){
-
+	console.info(e);
 	switch(jQuery(e.currentTarget).attr('id')){
 		case 'level1':
 			this.zoomContainer.smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
