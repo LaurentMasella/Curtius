@@ -64,6 +64,14 @@ ContentMapView.prototype.onDataUpdated = function(){
 	}
 	if(this.controller.model.current == this.id){
 		console.info(this.hotSpotController.model.current);
+		if(hotSpotController.model.scope[i]['oeuvre'].length() > 1){
+			console.log('Plusieurs oeuvres');
+		}
+		else {  
+			console.log('Une seule oeuvre');
+		}
+
+
 	}
 	//this.checkStage();
 };
@@ -130,7 +138,7 @@ ContentMapView.prototype.addingSpotLights = function() {
         jQuery('.landmarks').find(".mark:last-child").addClass("currentLifiPoint");
 
     }
-     // Position de la dernière biorne consultée (.currentLifiPoint)
+     // Position de la dernière borne consultée (.currentLifiPoint)
         this.position = (jQuery('.currentLifiPoint').attr('data-position'));
         this.positionArray = this.position.split(',');
 
@@ -304,6 +312,13 @@ ContentMapView.prototype.destroyCoordonates = function(){
 
 
 ContentMapView.prototype.initCoordonates = function(){
+
+	/*if(hotSpotController.model.scope[i]['oeuvre'] > 1){
+			console.log('Plusieurs oeuvres');
+		}
+		else {  
+			console.log('Une seule oeuvre');
+		}*/
 
 	switch(Cookie.getCookie('visit.curtius.com')){
 		case 'free':
