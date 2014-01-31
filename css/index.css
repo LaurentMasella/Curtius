@@ -407,3 +407,6 @@ transition: all .4s ease-in-out; z-index: 1000; }
 #slideBGArtworks table img:hover { cursor: pointer; -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2); transform: scale(1.2); }
 
 
+/* ---- INIT ---- */
+#contentLanding,#langage,#visit,#howItWork,#mapView{ display:none; }
+

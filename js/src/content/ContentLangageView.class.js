@@ -2,7 +2,10 @@ function ContentLangageView(){
 	
 }
 
+ContentLangageView.prototype = new MainContentSmoothyView();
+
 ContentLangageView.prototype.init = function(tag){
+	MainContentView.prototype.init.call(this, tag);
 	this.tag = jQuery(tag);
 	var listButtons = jQuery("#langs .chooseSquare .lang");
 	//events
@@ -40,4 +43,5 @@ ContentLangageView.prototype.onClick = function(e){
 	        jQuery('#deu').parent().addClass('paramSelected');
 		break;
 	}
+	this.controller.setCurrent(Repository.PAGE2_ID);
 };

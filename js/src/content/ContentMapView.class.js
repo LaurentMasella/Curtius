@@ -2,8 +2,10 @@ function ContentMapView(){
 
 }
 
-ContentMapView.prototype.init = function(tag){
+ContentMapView.prototype = new MainContentSmoothyView();
 
+ContentMapView.prototype.init = function(tag){
+	MainContentView.prototype.init.call(this, tag);
 	//dom/var
 	this.tag = jQuery(tag);
 	this.coordRDC = [];
@@ -20,16 +22,35 @@ ContentMapView.prototype.init = function(tag){
     this.legend5 = jQuery('#legend5');
     this.floorHeadBand = jQuery('#floorHeadBand');
 	
-    //functions
-    this.checkLang();
-		//initialises coord. data
+};
+
+ContentMapView.prototype.onCurrentUpdated = function(){
+	MainContentView.prototype.onCurrentUpdated.call(this);
+	if(this.controller.model.current == this.id){
+	    this.checkLang();
+		this.enableView();
+	}else{
+		this.disableView();
+	}
+
+};
+
+ContentMapView.prototype.enableView = function(){
 	this.initCoordonates();
 	this.populateMap1();
-    this.displayingMap();
-    window.setTimeout(jQuery.proxy(this.addingSpotLights, this), 100);
-    this.addingClicksFeatures();
-    window.setTimeout(jQuery.proxy(this.localize,this), 250);
-    window.setTimeout(jQuery.proxy(this.addingSpotInteraction,this), 100); 
+	this.displayingMap();
+	window.setTimeout(jQuery.proxy(this.addingSpotLights, this), 100);
+	this.addingClicksFeatures();
+	window.setTimeout(jQuery.proxy(this.localize,this), 250);
+	window.setTimeout(jQuery.proxy(this.addingSpotInteraction,this), 100); 		
+};
+
+ContentMapView.prototype.disableView = function(){
+	window.clearTimeout(jQuery.proxy(this.addingSpotLights, this), 100);
+	this.removeClicksFeatures();
+	window.clearTimeout(jQuery.proxy(this.localize,this), 250);
+	window.clearTimeout(jQuery.proxy(this.addingSpotInteraction,this), 100);
+	this.destroyCoordonates();	
 };
 
 
@@ -121,7 +142,14 @@ ContentMapView.prototype.addingSpotInteraction = function() {
 
 ContentMapView.prototype.onSpotMouseDown = function(){
 	// console.info('ContentMapView.prototype.onSpotMouseDown');
-	window.location = 'oeuvres.html';
+	this.controller.setCurrent(Repository.WORKS_ID);
+};
+
+ContentMapView.prototype.removeClicksFeatures = function(){
+	jQuery("#level1").unbind('mousedown', jQuery.proxy(this.onClickFeatures, this));
+	jQuery("#level2").unbind('mousedown', jQuery.proxy(this.onClickFeatures, this));
+	jQuery("#level3").unbind('mousedown', jQuery.proxy(this.onClickFeatures, this));
+	jQuery("#localize").unbind('mousedown', jQuery.proxy(this.localize, this));
 };
 
 ContentMapView.prototype.addingClicksFeatures = function() {
@@ -231,6 +259,12 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        //window.setTimeout(checkLang, 10);
 		break;		
 	}
+};
+
+ContentMapView.prototype.destroyCoordonates = function(){
+	this.coordRDC = [];
+	this.coord1 = [];
+	this.coord2 = [];
 };
 
 

@@ -1,62 +1,87 @@
 (function(jQuery) {
 
-    // VIEW LANDING 
-    if(jQuery("#contentLanding").length != 0){
-		var contentLandingPageView = new ContentLandingPageView();
-		contentLandingPageView.init("#contentLanding");    	
-    }
+	// MAIN CONTROLLER
+	MainContentController.getInstance().setScope(
+		new Array(
+			Repository.LANDING_ID,
+			Repository.PAGE1_ID,
+			Repository.PAGE2_ID,
+			Repository.PAGE3_ID,
+			Repository.MAP_ID,
+			Repository.WORKS_ID)
+		);
 
-    if(jQuery(".page1").length != 0){
-		var contentLangageView = new ContentLangageView();
-		contentLangageView.init(".page1");    	
-    }
+	// HotSpotController
+	var hotSpotController = new HotSpotController();
+	hotSpotController.init();
 
-    if(jQuery(".page2").length != 0){
-		var contentVisitView = new ContentVisitView();
-		contentVisitView.init(".page2");    	
-    }
+    // VIEWS
+	var contentLandingPageView = new ContentLandingPageView();
+	contentLandingPageView.id = Repository.LANDING_ID;
+	contentLandingPageView.controller = MainContentController.getInstance();
+	contentLandingPageView.init("#contentLanding");    	
 
-    if(jQuery(".page3").length != 0){
-		var contentWorkingView = new ContentWorkingView();
-		contentWorkingView.init(".page3");    	
-    }
+	var contentLangageView = new ContentLangageView();
+	contentLangageView.id = Repository.PAGE1_ID;
+	contentLangageView.controller = MainContentController.getInstance();
+	contentLangageView.init("#langage");    	
 
-    if(jQuery("#mapView").length != 0){
-		var contentMapView = new ContentMapView();
-		contentMapView.init("#mapView");    	
-    }
+	var contentVisitView = new ContentVisitView();
+	contentVisitView.id = Repository.PAGE2_ID;
+	contentVisitView.controller = MainContentController.getInstance();
+	contentVisitView.init("#visit");
 
-    if(jQuery("#oeuvresView").length != 0){
-		var contentWorksView = new ContentWorksView();
-		contentWorksView.init("#oeuvresView");    	
-    }
-    // VIEW DETAIL
-    if(jQuery("#contentDetail").length != 0){
-		// HotSpotController
-		var hotSpotController = new HotSpotController();
-		hotSpotController.init();
+	var contentWorkingView = new ContentWorkingView();
+	contentWorkingView.id = Repository.PAGE3_ID;
+	contentWorkingView.controller = MainContentController.getInstance();
+	contentWorkingView.init("#howItWork");    	
 
-		// getData JSON
-		var urlToJson = 'detailData.json';
-	    $.getJSON(urlToJson,{
-	    	format:'json',
-	    })
-	      .done(function(data){
+	var contentMapView = new ContentMapView();
+	contentMapView.id = Repository.MAP_ID;
+	contentMapView.controller = MainContentController.getInstance();
+	contentMapView.init("#mapView");    	
+
+	var contentWorksView = new ContentWorksView();
+	contentWorksView.id = Repository.WORKS_ID;
+	contentWorksView.controller = MainContentController.getInstance();
+	contentWorksView.init("#oeuvresView");    
+
+	var contentDetailView = new ContentDetailView();
+	contentDetailView.id = Repository.DETAIL_ID;
+	contentDetailView.controller = MainContentController.getInstance();
+	contentDetailView.hotSpotController = hotSpotController;
+	contentDetailView.init("#contentDetail");
+
+
+	//INIT WITH FIRST VIEW AS CURRENT
+    MainContentController.getInstance().setCurrent(Repository.LANDING_ID);
+    	
+
+  //   // VIEW DETAIL
+  //   if(jQuery("#contentDetail").length != 0){
+
+
+		// // getData JSON
+		// var urlToJson = 'detailData.json';
+	 //    $.getJSON(urlToJson,{
+	 //    	format:'json',
+	 //    })
+	 //      .done(function(data){
 	    	
-	    	jQuery(data['Lifi']).each(jQuery.proxy(function(index,element){
-				//hotSpotController.model.scope.push(element);
-				hotSpotController.model.scope[element['idLifi']] = element;
-	    	},this));
-			hotSpotController.setCurrent(17);
-	    })
-	      .fail(function(){
-			console.info('fail');
-	    });
+	 //    	jQuery(data['Lifi']).each(jQuery.proxy(function(index,element){
+		// 		//hotSpotController.model.scope.push(element);
+		// 		hotSpotController.model.scope[element['idLifi']] = element;
+	 //    	},this));
+		// 	hotSpotController.setCurrent(17);
+	 //    })
+	 //      .fail(function(){
+		// 	console.info('fail');
+	 //    });
 
-		// Init detailView for all content of working details
-		var contentDetailView = new ContentDetailView();
-		contentDetailView.controller = hotSpotController;
-		contentDetailView.init("#contentDetail");
-    }
+		// // Init detailView for all content of working details
+		// var contentDetailView = new ContentDetailView();
+		// contentDetailView.controller = hotSpotController;
+		// contentDetailView.init("#contentDetail");
+    // }
 
 })(jQuery);

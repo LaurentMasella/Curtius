@@ -2,17 +2,39 @@ function ContentWorksView(){
 	
 }
 
-ContentWorksView.prototype.init = function(tag){
-	this.tag = jQuery(tag);
-	this.checkLang();
-	jQuery('.spacerTd').first().remove();
+ContentWorksView.prototype = new MainContentSmoothyView();
 
+ContentWorksView.prototype.init = function(tag){
+	MainContentView.prototype.init.call(this, tag);
+	this.tag = jQuery(tag);
+
+};
+
+ContentWorksView.prototype.onCurrentUpdated = function(){
+	MainContentView.prototype.onCurrentUpdated.call(this);
+	if(this.controller.model.current == this.id){
+		this.checkLang();
+		this.enableView();
+	}else{
+		this.disableView();
+	}
+}
+
+ContentWorksView.prototype.enableView = function(){
+	jQuery('.spacerTd').first().remove();
+	//enable events
 	jQuery('#slideBGArtworks img').bind('mousedown', jQuery.proxy(this.onClickWork, this));
-	jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this));    
+	jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this)); 
+};
+
+ContentWorksView.prototype.disableView = function(){
+	//disable events
+	jQuery('#slideBGArtworks img').unbind('mousedown', jQuery.proxy(this.onClickWork, this));
+	jQuery('#planButton').unbind('mousedown', jQuery.proxy(this.onBackToMap,this)); 
 };
 
 ContentWorksView.prototype.onClickWork = function(tag){
-	window.location.href = "detail.html";
+	this.controller.setCurrent(Repository.DETAIL_ID);
 };
 
 ContentWorksView.prototype.checkLang = function(){

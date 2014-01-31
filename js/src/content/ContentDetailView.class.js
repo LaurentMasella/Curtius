@@ -2,8 +2,10 @@ function ContentDetailView(){
 
 }
 
-ContentDetailView.prototype.init = function(tag){
+ContentDetailView.prototype = new MainContentView();
 
+ContentDetailView.prototype.init = function(tag){
+    MainContentView.prototype.init.call(this,tag);
 	this.tag = jQuery(tag);
 	/*init data to change by json*/
 	this.artworkTitle = this.tag.find('#artworkTitle span');
@@ -11,20 +13,48 @@ ContentDetailView.prototype.init = function(tag){
 	this.artworkLink = this.tag.find('#artworkLinks');
 	this.detailButton = jQuery('#detailButton');
 	this.linkedArtworksButton = jQuery('#linkedArtworksButton');
-	this.displayingArtImage();
-	//events
-	this.detailButton.bind('mousedown', jQuery.proxy(this.onClickedDetail, this));
-	this.linkedArtworksButton.bind('mousedown', jQuery.proxy(this.onClickedLinkedArt, this));
-	jQuery('#zoomLauncher').bind('mousedown', jQuery.proxy(this.onZoomLauncher,this));
-	jQuery('#zoomBack, .si-icon-maximize-rotate svg').bind('mousedown', jQuery.proxy(this.onZoomBack,this));
-	jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').bind('mousedown', jQuery.proxy(this.onClickIcon, this));
-	jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this));
-	jQuery(this.controller.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onCurrentUpdated, this));
-	//this.initData();
-	window.setTimeout(jQuery.proxy(this.svgColor,this), 100);
+
 };
 
+
 ContentDetailView.prototype.onCurrentUpdated = function(){
+    MainContentView.prototype.onCurrentUpdated.call(this);
+    if(this.controller.model.current == this.id){
+        this.enableView();
+    }else{
+        this.disableView();
+    }
+};
+
+ContentDetailView.prototype.enableView = function(){
+    this.displayingSVG();
+    this.displayingArtImage();
+    //events
+    this.detailButton.bind('mousedown', jQuery.proxy(this.onClickedDetail, this));
+    this.linkedArtworksButton.bind('mousedown', jQuery.proxy(this.onClickedLinkedArt, this));
+    jQuery('#zoomLauncher').bind('mousedown', jQuery.proxy(this.onZoomLauncher,this));
+    jQuery('#zoomBack, .si-icon-maximize-rotate svg').bind('mousedown', jQuery.proxy(this.onZoomBack,this));
+    jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').bind('mousedown', jQuery.proxy(this.onClickIcon, this));
+    jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this));
+    jQuery(this.hotSpotController.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));
+    //this.initData();
+    window.setTimeout(jQuery.proxy(this.svgColor,this), 100);
+};
+
+ContentDetailView.prototype.disableView = function(){
+    //events
+    this.detailButton.unbind('mousedown', jQuery.proxy(this.onClickedDetail, this));
+    this.linkedArtworksButton.unbind('mousedown', jQuery.proxy(this.onClickedLinkedArt, this));
+    jQuery('#zoomLauncher').unbind('mousedown', jQuery.proxy(this.onZoomLauncher,this));
+    jQuery('#zoomBack, .si-icon-maximize-rotate svg').unbind('mousedown', jQuery.proxy(this.onZoomBack,this));
+    jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').unbind('mousedown', jQuery.proxy(this.onClickIcon, this));
+    jQuery('#planButton').unbind('mousedown', jQuery.proxy(this.onBackToMap,this));
+    jQuery(this.hotSpotController.model).unbind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));
+    //this.initData();
+    window.clearTimeout(jQuery.proxy(this.svgColor,this), 100);
+};
+
+ContentDetailView.prototype.onDataUpdated = function(){
 
 	var currentData = this.controller.model.scope[this.controller.model.current];
 
@@ -34,6 +64,24 @@ ContentDetailView.prototype.onCurrentUpdated = function(){
     
 };
 
+
+ContentDetailView.prototype.displayingSVG = function(){
+    [].slice.call( document.querySelectorAll( '#resize > .si-icon' ) ).forEach( function( el ) {
+        var svgicon = new svgIcon( el, svgIconConfig );
+    } );
+
+    new svgIcon( document.querySelector( '.si-icon-hamburger-cross' ), svgIconConfig, { 
+        easing : mina.elastic, 
+        speed: 600,
+        size : { w : 50, h : 50 }
+    } );
+
+    new svgIcon( document.querySelector( '.si-icon-hamburger-cross2' ), svgIconConfig, { 
+        easing : mina.elastic, 
+        speed: 600,
+        size : { w : 50, h : 50 }
+    } );
+};
 /* ================================================================================ */
 /* === DETAIL VIEW ================================================================ */
 /* ================================================================================ */
