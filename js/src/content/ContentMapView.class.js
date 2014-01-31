@@ -69,7 +69,6 @@ ContentMapView.prototype.checkStage = function(){
 				jQuery("#level1").mousedown();
 			break;
 			case 1:
-				console.info('checkstage 1');
 				jQuery("#level2").mousedown();
 			break;
 			case 2:
@@ -208,7 +207,6 @@ ContentMapView.prototype.onClickSpot = function(){
 };
 
 ContentMapView.prototype.onClickFeatures = function(e){
-	console.info(e);
 	switch(jQuery(e.currentTarget).attr('id')){
 		case 'level1':
 			this.zoomContainer.smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
