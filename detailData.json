@@ -1,26 +1,15 @@
 {"Lifi" : [
-
-
-
-
-
-
-
-
 	{
 		"idLifi" : 4996,
 		"mapNumber": 1,
 		"coordinates": "506,489",
 		"etage": 1,
 		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+			"parcoursType":"chronologique"
 		},
 		"oeuvre" : [
 		{
-		    "idOeuvre" : "GC.ADC.SEY",
+		    "idOeuvre" : "OEUVRE 1",
 		    "coordOeuvre" : "451,485",
 			"images" : { 
 				"srcImage":"GC.ADC.SEY-01.jpg",
@@ -28,72 +17,72 @@
 			},  
 			"textes" : {
 				"FR" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			  		"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Ttitre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
 				},
 	      		"EN" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"FR-Child" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+					"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Titre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          	},
+	          	"NED" : {
+					"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Titre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          	},
+	          	"DEU" : {
+					"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Titre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          	},
+	          	"FR-CHILD" : {
+			  		"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Ttitre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
 				},
-	      		"EN-Child" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE-Child" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU-Child" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		}
+	      		"EN-CHILD" : {
+					"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Titre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          	},
+	          	"NED-CHILD" : {
+					"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Titre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          	},
+	          	"DEU-CHILD" : {
+					"chapeauOeuvre" : "Chapo 1",
+	          		"legendeImage" : "Legende 1",
+	          		"titreOeuvre" : "Titre 1",
+	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          	}
 			},
 			"sousOeuvres": [
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 1-1",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 1-1",
+						"Legende" : "Legende sous-oeuvre 1-1"
 				  	}
 				}
 			},
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 1-2",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 1-2",
+						"Legende" : "Legende sous-oeuvre 1-2"
 				  	}
 				}
 			}]
@@ -122,13 +111,11 @@
 		"etage": 1,
 		"parcours": {
 			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+			"parcoursType":"rapide"
 		},
 		"oeuvre" : [
 		{
-		    "idOeuvre" : "GC.ADC.SEY",
+		    "idOeuvre" : "OEUVRE 2",
 		    "coordOeuvre" : "421,629",
 			"images" : { 
 				"srcImage":"GC.ADC.SEY-01.jpg",
@@ -136,78 +123,78 @@
 			},  
 			"textes" : {
 				"FR" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			  		"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Ttitre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
 				},
 	      		"EN" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"FR-Child" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+					"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Titre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          	},
+	          	"NED" : {
+					"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Titre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          	},
+	          	"DEU" : {
+					"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Titre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          	},
+	          	"FR-CHILD" : {
+			  		"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Ttitre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
 				},
-	      		"EN-Child" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE-Child" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU-Child" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		}
+	      		"EN-CHILD" : {
+					"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Titre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          	},
+	          	"NED-CHILD" : {
+					"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Titre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          	},
+	          	"DEU-CHILD" : {
+					"chapeauOeuvre" : "Chapo 2",
+	          		"legendeImage" : "Legende 2",
+	          		"titreOeuvre" : "Titre 2",
+	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          	}
 			},
 			"sousOeuvres": [
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 2-1",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 2-1",
+						"Legende" : "Legende sous-oeuvre 2-1"
 				  	}
 				}
 			},
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 2-2",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 2-2",
+						"Legende" : "Legende sous-oeuvre 2-2"
 				  	}
 				}
 			}]
 		},
 		{
-		    "idOeuvre" : "GC.ADC.SEY",
+		    "idOeuvre" : "OEUVRE 3",
 		    "coordOeuvre" : "461,629",
 			"images" : { 
 				"srcImage":"GC.ADC.SEY-01.jpg",
@@ -215,72 +202,72 @@
 			},  
 			"textes" : {
 				"FR" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			  		"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Ttitre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
 				},
 	      		"EN" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"FR-Child" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+					"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Titre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          	},
+	          	"NED" : {
+					"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Titre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          	},
+	          	"DEU" : {
+					"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Titre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          	},
+	          	"FR-CHILD" : {
+			  		"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Ttitre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
 				},
-	      		"EN-Child" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE-Child" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU-Child" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		}
+	      		"EN-CHILD" : {
+					"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Titre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          	},
+	          	"NED-CHILD" : {
+					"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Titre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          	},
+	          	"DEU-CHILD" : {
+					"chapeauOeuvre" : "Chapo 3",
+	          		"legendeImage" : "Legende 3",
+	          		"titreOeuvre" : "Titre 3",
+	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          	}
 			},
 			"sousOeuvres": [
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 3-1",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 3-1",
+						"Legende" : "Legende sous-oeuvre 3-1"
 				  	}
 				}
 			},
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 3-2",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 3-2",
+						"Legende" : "Legende sous-oeuvre 3-2"
 				  	}
 				}
 			}]
@@ -302,13 +289,11 @@
 		"etage": 1,
 		"parcours": {
 			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+			"parcoursType":"rapide"
 		},
 		"oeuvre" : [
 		{
-		    "idOeuvre" : "GC.ADC.SEY",
+		    "idOeuvre" : "OEUVRE 4",
 		    "coordOeuvre" : "238,657",
 			"images" : { 
 				"srcImage":"GC.ADC.SEY-01.jpg",
@@ -316,72 +301,72 @@
 			},  
 			"textes" : {
 				"FR" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			  		"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Ttitre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
 				},
 	      		"EN" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"FR-Child" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+					"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Titre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
+	          	},
+	          	"NED" : {
+					"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Titre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
+	          	},
+	          	"DEU" : {
+					"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Titre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
+	          	},
+	          	"FR-CHILD" : {
+			  		"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Ttitre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
 				},
-	      		"EN-Child" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE-Child" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU-Child" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		}
+	      		"EN-CHILD" : {
+					"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Titre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
+	          	},
+	          	"NED-CHILD" : {
+					"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Titre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
+	          	},
+	          	"DEU-CHILD" : {
+					"chapeauOeuvre" : "Chapo 4",
+	          		"legendeImage" : "Legende 4",
+	          		"titreOeuvre" : "Titre 4",
+	          		"DescriptionOeuvre" : "Desrcripion 4"
+	          	}
 			},
 			"sousOeuvres": [
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 4-1",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 4-1",
+						"Legende" : "Legende sous-oeuvre 4-1"
 				  	}
 				}
 			},
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 4-2",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 4-2",
+						"Legende" : "Legende sous-oeuvre 4-2"
 				  	}
 				}
 			}]
@@ -409,7 +394,7 @@
 		},
 		"oeuvre" : [
 		{
-		    "idOeuvre" : "GC.ADC.SEY",
+		    "idOeuvre" : "OEUVRE 5",
 		    "coordOeuvre" : "277,753",
 			"images" : { 
 				"srcImage":"GC.ADC.SEY-01.jpg",
@@ -417,151 +402,151 @@
 			},  
 			"textes" : {
 				"FR" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			  		"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Ttitre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
 				},
 	      		"EN" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"FR-Child" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+					"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Titre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
+	          	},
+	          	"NED" : {
+					"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Titre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
+	          	},
+	          	"DEU" : {
+					"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Titre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
+	          	},
+	          	"FR-CHILD" : {
+			  		"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Ttitre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
 				},
-	      		"EN-Child" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE-Child" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU-Child" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		}
+	      		"EN-CHILD" : {
+					"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Titre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
+	          	},
+	          	"NED-CHILD" : {
+					"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Titre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
+	          	},
+	          	"DEU-CHILD" : {
+					"chapeauOeuvre" : "Chapo 5",
+	          		"legendeImage" : "Legende 5",
+	          		"titreOeuvre" : "Titre 5",
+	          		"DescriptionOeuvre" : "Desrcripion 5"
+	          	}
 			},
 			"sousOeuvres": [
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 5-1",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 5-1",
+						"Legende" : "Legende sous-oeuvre 5-1"
 				  	}
 				}
 			},
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 5-2",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 5-2",
+						"Legende" : "Legende sous-oeuvre 5-2"
 				  	}
 				}
 			}]
 		},
 		{
-		    "idOeuvre" : "GC.ADC.SEY",
-		    "coordOeuvre" : "277,788",
+		    "idOeuvre" : "OEUVRE 6",
+		    "coordOeuvre" : "461,629",
 			"images" : { 
 				"srcImage":"GC.ADC.SEY-01.jpg",
 				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			  		"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Ttitre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
 				},
 	      		"EN" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"FR-Child" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+					"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Titre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
+	          	},
+	          	"NED" : {
+					"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Titre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
+	          	},
+	          	"DEU" : {
+					"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Titre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
+	          	},
+	          	"FR-CHILD" : {
+			  		"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Ttitre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
 				},
-	      		"EN-Child" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE-Child" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU-Child" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		}
+	      		"EN-CHILD" : {
+					"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Titre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
+	          	},
+	          	"NED-CHILD" : {
+					"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Titre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
+	          	},
+	          	"DEU-CHILD" : {
+					"chapeauOeuvre" : "Chapo 6",
+	          		"legendeImage" : "Legende 6",
+	          		"titreOeuvre" : "Titre 6",
+	          		"DescriptionOeuvre" : "Desrcripion 6"
+	          	}
 			},
 			"sousOeuvres": [
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 6-1",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 6-1",
+						"Legende" : "Legende sous-oeuvre 6-1"
 				  	}
 				}
 			},
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 6-2",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 6-2",
+						"Legende" : "Legende sous-oeuvre 6-2"
 				  	}
 				}
 			}]
@@ -587,7 +572,7 @@
 		},
 		"oeuvre" : [
 		{
-		    "idOeuvre" : "GC.ADC.SEY",
+		    "idOeuvre" : "OEUVRE 7",
 		    "coordOeuvre" : "217,815",
 			"images" : { 
 				"srcImage":"GC.ADC.SEY-01.jpg",
@@ -595,72 +580,72 @@
 			},  
 			"textes" : {
 				"FR" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+			  		"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Ttitre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
 				},
 	      		"EN" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"FR-Child" : {
-			  		"chapeauOeuvre" : "AD-FR: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	          		"legendeImage" : "AD-FR: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	          		"titreOeuvre" : "Le Studio d’Eugène Ysaye :une intimité musicale empreinte d’Art nouveau",
-	          		"DescriptionOeuvre" : "AD-FR: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
+					"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Titre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
+	          	},
+	          	"NED" : {
+					"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Titre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
+	          	},
+	          	"DEU" : {
+					"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Titre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
+	          	},
+	          	"FR-CHILD" : {
+			  		"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Ttitre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
 				},
-	      		"EN-Child" : {
-	        		"ChapeauOeuvre" : "AD-EN: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-EN: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-EN: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-EN: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DE-Child" : {
-	        		"ChapeauOeuvre" : "AD-DE: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DE: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DE: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DE: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		},
-	      		"DU-Child" : {
-	        		"ChapeauOeuvre" : "AD-DU: Petit peigne préhistorique découvert en 1907 lors de travaux sur la place Saint-Lambert.",
-	        		"LegendeImage" : "AD-DU: Peigne à quatre dents ou \"gradine\". Grand Curtius, Liège.",
-	        		"TitreOeuvre" : "AD-DU: Peigne à quatre dents ou \"gradine\"",
-	        		"DescriptionOeuvre" : "AD-DU: Ce petit peigne en os a été découvert en 1907, dans une fosse à déchets préhistorique. Il était utilisé pour tracer des décors sur les céramiques néolithiques. Ceux-ci prenaient principalement la forme de rubans. La \"Civilisation rubanée\" (5400 - 4600 avant J.-C.) tire son nom de cette décoration. Effilé, il est muni de quatre dents courtes. Il ressemble, en miniature, à un outil de tailleur de pierre : la gradine. C'est pourquoi, on lui a également attribué ce nom."
-	      		}
+	      		"EN-CHILD" : {
+					"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Titre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
+	          	},
+	          	"NED-CHILD" : {
+					"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Titre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
+	          	},
+	          	"DEU-CHILD" : {
+					"chapeauOeuvre" : "Chapo 7",
+	          		"legendeImage" : "Legende 7",
+	          		"titreOeuvre" : "Titre 7",
+	          		"DescriptionOeuvre" : "Desrcripion 7"
+	          	}
 			},
 			"sousOeuvres": [
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 7-1",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 7-1",
+						"Legende" : "Legende sous-oeuvre 7-1"
 				  	}
 				}
 			},
 			{
-			    "idSousOeuvre" : "GC.ADC.SEY",
+			    "idSousOeuvre" : "SOUS-OEUVRE 7-2",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
 					"FR" : {
-						"Descriptif" : "test descriptif",
-						"Legende" : "test legende"
+						"Descriptif" : "Description sous-oeuvre 7-2",
+						"Legende" : "Legende sous-oeuvre 7-2"
 				  	}
 				}
 			}]
@@ -1727,7 +1712,7 @@
 				}
 			}]
 		}]
-	},
+	}
 
 
 
