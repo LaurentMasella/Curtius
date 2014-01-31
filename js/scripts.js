@@ -37,7 +37,7 @@
 	//  window.setInterval(function(){
 	// 	i ++;
 	// 	hotSpotController.setCurrent(hotSpotController.model.scope[i]);
-	// 	console.info(hotSpotController.model.scope[i]);
+	// 	console.info(hotSpotController.model	i]);
 	// }, 10000);
     
     // VIEWS
