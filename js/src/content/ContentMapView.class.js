@@ -21,6 +21,7 @@ ContentMapView.prototype.init = function(tag){
     this.legend4 = jQuery('#legend4');
     this.legend5 = jQuery('#legend5');
     this.currentPositionData = "";
+    this.lastPositionData = "";
     this.floorHeadBand = jQuery('#floorHeadBand');
 	//this.displayingMap();
 
@@ -58,19 +59,21 @@ ContentMapView.prototype.disableView = function(){
 
 ContentMapView.prototype.onDataUpdated = function(){
 	this.currentPositionData = this.hotSpotController.model.current;
+	if(this.currentPositionData != "" && this.currentPositionData != null && this.currentPositionData != undefined){
+		this.lastPositionData = this.currentPositionData
+	}
+	
 	//this.checkStage();
 };
 
 ContentMapView.prototype.checkStage = function(){
-	console.info('coucou');
-	console.info(this.currentPositionData["etage"]);
-	if(this.currentPositionData != ""){
-		switch(this.currentPositionData["etage"]){
+
+	if(this.lastPositionData != ""){
+		switch(this.lastPositionData["etage"]){
 			case 0:
 				jQuery("#level1").mousedown();
 			break;
 			case 1:
-				console.info('checkstage 1');
 				jQuery("#level2").mousedown();
 			break;
 			case 2:
@@ -109,8 +112,8 @@ ContentMapView.prototype.addingSpotLights = function() {
 	var markcount = jQuery('.landmarks').find(".mark").length;
     //Si il y a plusieurs marks, alors on affiche et positionne
     if(markcount > 2) {
-        if(this.currentPositionData != ""){
-        	jQuery('.landmarks').find(".mark:nth-child("+this.currentPositionData['mapNumber']+")").addClass("currentLifiPoint");
+        if(this.lastPositionData != ""){
+        	jQuery('.landmarks').find(".mark:nth-child("+this.lastPositionData['mapNumber']+")").addClass("currentLifiPoint");
         }else{
         	//nécessaire ?
         	jQuery('.landmarks').find(".mark:nth-child("+0+")").addClass("currentLifiPoint");
@@ -209,7 +212,6 @@ ContentMapView.prototype.onClickSpot = function(){
 };
 
 ContentMapView.prototype.onClickFeatures = function(e){
-	console.info(e);
 	switch(jQuery(e.currentTarget).attr('id')){
 		case 'level1':
 			this.zoomContainer.smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -235,7 +237,7 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        this.legend3.find('.mapIcon').css({'background':'url("img/cloakIcon.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
 	        this.legend4.find('.mapIcon').css({'background':'url("img/cafeIcon.png") 0 0 no-repeat','top':'15px','left':'10px'});
 	        this.legend5.find('.mapIcon').css({'background':'url("img/shopIcon.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
-	        //window.setTimeout(checkLang, 10);
+	        this.checkLang();
 		break;
 		case 'level2':
 	        this.zoomContainer.smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -261,7 +263,7 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        this.legend3.find('.mapIcon').css('background-position','0 -58px'); 
 	        this.legend4.find('.mapIcon').css('background-position','0 -108px'); 
 	        this.legend5.find('.mapIcon').css('background-position','0 -208px');
-	        //window.setTimeout(checkLang, 10);
+	        this.checkLang();
 		break;
 		case 'level3':
 			this.zoomContainer.smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -287,7 +289,7 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        this.legend3.find('.mapIcon').css('background-position','0 -58px'); 
 	        this.legend4.find('.mapIcon').css('background-position','0 -108px'); 
 	        this.legend5.find('.mapIcon').css('background-position','0 -208px');
-	        //window.setTimeout(checkLang, 10);
+	        this.checkLang();
 		break;		
 	}
 };
