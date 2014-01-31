@@ -62,8 +62,10 @@ ContentMapView.prototype.onDataUpdated = function(){
 	if(this.currentPositionData != "" && this.currentPositionData != null && this.currentPositionData != undefined){
 		this.lastPositionData = this.currentPositionData
 	}
-	
 	this.checkStage();
+	if(this.controller.model.current == this.id){
+		console.info(this.hotSpotController.model.current);
+	}
 };
 
 ContentMapView.prototype.checkStage = function(){
