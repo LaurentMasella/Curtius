@@ -4,7 +4,7 @@
 
 * { -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */ }
 
-html { width: 1280px; height: 800px; }
+html { width: 1280px; height: 800px;}
 
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
@@ -408,5 +408,36 @@ transition: all .4s ease-in-out; z-index: 1000; }
 
 
 /* ---- INIT ---- */
-#contentLanding,#langage,#visit,#howItWork,#mapView{ display:none; }
+#wrapper{
+    overflow:hidden;
+    width:1280px;
+    height:800px;
+}
+#contentLanding,#howItWork,#mapView, #oeuvresView,#contentDetail,#tools,#langage,#visit{ 
+    display:none;
+/*    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;*/
+}
 
+
+section.left{
+    transform:translate3D(-100%, 0, 0);
+    -ms-transform:translate3D(-100%, 0, 0);
+    -webkit-transform:translate3D(-100%, 0, 0);
+}
+
+section.center{
+    transform:translate3D(0%, 0, 0);
+    -ms-transform:translate3D(0%, 0, 0);
+    -webkit-transform:translate3D(0%, 0, 0);
+}
+section.right{
+    transform:translate3D(100%, 0, 0);
+    -ms-transform:translate3D(100%, 0, 0);
+    -webkit-transform:translate3D(100%, 0, 0);
+}

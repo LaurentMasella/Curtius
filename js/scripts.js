@@ -39,11 +39,13 @@
 	var contentMapView = new ContentMapView();
 	contentMapView.id = Repository.MAP_ID;
 	contentMapView.controller = MainContentController.getInstance();
+	contentMapView.hotSpotController = hotSpotController;
 	contentMapView.init("#mapView");    	
 
 	var contentWorksView = new ContentWorksView();
 	contentWorksView.id = Repository.WORKS_ID;
 	contentWorksView.controller = MainContentController.getInstance();
+	contentWorksView.hotSpotController = hotSpotController;
 	contentWorksView.init("#oeuvresView");    
 
 	var contentDetailView = new ContentDetailView();
