@@ -13,17 +13,17 @@
 		"coordinates": "506,489",
 		"etage": 1,
 		"parcours": {
-			"chronologique",
-			"rapide",
-			"libre",
-			"scolaire"
+			"parcoursType":"chronologique",
+			"parcoursType":"rapide",
+			"parcoursType":"libre",
+			"parcoursType":"scolaire"
 		},
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -84,8 +84,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -99,8 +100,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -161,8 +162,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -205,8 +207,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -267,8 +269,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -282,8 +285,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -344,8 +347,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -381,8 +385,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -443,8 +447,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -458,8 +463,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -520,8 +525,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -557,8 +563,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -619,8 +625,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -634,8 +641,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -696,8 +703,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -718,7 +726,7 @@
 
 	{
 		"idLifi" : "WAITING",
-		"mapNumber": 404,
+		"mapNumber": "4-BIS",
 		"coordinates": "277,858",
 		"etage": 1,
 		"parcours": {
@@ -731,8 +739,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"srcImages":"GC.ADC.SEY-01.jpg",
-				"srcImages":"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -793,8 +801,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -808,8 +817,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -870,8 +879,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -915,8 +925,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -977,8 +987,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -992,8 +1003,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -1054,8 +1065,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -1089,8 +1101,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -1151,8 +1163,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -1166,8 +1179,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -1228,8 +1241,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -1264,8 +1278,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -1326,8 +1340,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
@@ -1341,8 +1356,8 @@
 		{
 		    "idOeuvre" : "GC.ADC.SEY",
 			"images" : { 
-				"GC.ADC.SEY-01.jpg",
-				"GC.ADC.SEY-01.jpg"
+				"srcImage":"GC.ADC.SEY-01.jpg",
+				"srcImage":"GC.ADC.SEY-01.jpg"
 			},  
 			"textes" : {
 				"FR" : {
@@ -1403,8 +1418,9 @@
 						"Descriptif" : "test descriptif",
 						"Legende" : "test legende"
 				  	}
-				},
-				{
+				}
+			},
+			{
 			    "idSousOeuvre" : "GC.ADC.SEY",
 	 			"srcImage" : "GC.ADC.SEY-01.jpg",
 				"details" : {
