@@ -31,14 +31,39 @@
 		console.info('fail');
     });
 
-      
-    //  TEST EN INCREMENTANT LE CURRENT
- 	 var i = 0;
-	 window.setInterval(function(){
-		i ++;
-		hotSpotController.setCurrent(hotSpotController.model.scope[i]);
-		//console.info(hotSpotController.model.scope[i]);
-	}, 5000);
+    //var urlFile = '/sdcard/lifiID.txt';
+    var urlFile =  'test/lifiID.txt';
+    window.setInterval(function(){
+    	if(jQuery(hotSpotController.model.scope).length != 0){
+	    	var rawFile = new XMLHttpRequest();
+	        rawFile.open("GET", urlFile, true);
+	        rawFile.onreadystatechange = function ()
+	        {
+	            if(rawFile.readyState === 4) {
+	                if(rawFile.status === 200 || rawFile.status == 0) {
+	                    var allText = rawFile.responseText;
+	                    var allTextArray = allText.split(" ");
+	                    var currentValue = allTextArray[0];
+	                    for (var i = 1; i < jQuery(hotSpotController.model.scope).length; i++){
+	                    	if(hotSpotController.model.scope[i]['idLifi'] == currentValue){
+	                    		hotSpotController.setCurrent(hotSpotController.model.scope[i]['mapNumber']);
+	                    	}
+	                    }
+	                    
+	                }
+	            }
+	        }
+	        rawFile.send(null);
+    	}
+    }, 100)
+      // TEST EN INCREMENTANT LE CURRENT
+ // 	 var i = 0;
+	//  window.setInterval(function(){
+	// 	i ++;
+	// 	hotSpotController.setCurrent(hotSpotController.model.scope[i]);
+	// 	console.info(hotSpotController.model.scope[i]);
+	// }, 10000);
+>>>>>>> dc29d36f7c5605ecb7a1e211f40a2eca454ade23
     
     // VIEWS
 	var contentLandingPageView = new ContentLandingPageView();
