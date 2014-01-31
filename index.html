@@ -62,7 +62,7 @@
                         <a class="visit" id="scol" title=""></a>
                     </div>
                 </div>
-                <a id="backBtn" href="page1.html" title=""></a>
+                <a id="backBtn" title=""></a>
             </section>
             <section class="content page3 contentIsHiddenOnRight" id="howItWork">
 
@@ -173,7 +173,7 @@
                         <div id="artworkLeft">
                             <div class="button" id="detailButton"><span class="si-icon si-icon-hamburger-cross si-icon-unselected" data-icon-name="hamburgerCross"></span><span class="buttonText"></span></div>
                             <div class="button" id="linkedArtworksButton"><span class="si-icon si-icon-hamburger-cross2 si-icon-unselected" data-icon-name="hamburgerCross"></span><span class="buttonText"></span></div>
-                            <div id="artworksinfos"></div>
+                            <div id="artworkinfos"></div>
                         </div>
                         <div id="artworkDetail">
                             <h1>DETAILS</h1>
@@ -191,6 +191,38 @@
                     </div>
                 </div>
             </section>
+            <section class="content contentIsHiddenOnRight" id="tools">
+                <div id="toolBG"> 
+                    <div id="toolsHeadband"></div>
+                    <div id="toolsRight">
+                        <div id="chooseLang"></div>
+                        <div id="langs">
+                            <div class="chooseSquare" id="chooseSquare1">
+                                <a class="lang" id="fr" title="">Français</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare" id="chooseSquare2">
+                                <a class="lang" id="eng" title="">English</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare" id="chooseSquare3">
+                                <a class="lang" id="ned" title="">Nederlands</a>
+                            </div>
+                            <br/>
+                            <div class="chooseSquare" id="chooseSquare4">
+                                <a class="lang" id="deu" title="">Deutsch</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <div id="toolsValidate">
+                        <div class="validate"></div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <!-- etxernals -->
@@ -198,6 +230,8 @@
         <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="js/jquery.smoothZoom.min.js"></script>
+        <script src="js/svgicons-config.js"></script>
+        <script src="js/svgicons.js"></script>
         <!-- custom -->
         <script type="text/javascript" src="js/src/cordova/app.js"></script>
         <script type="text/javascript" src="js/src/utils/Cookie.class.js"></script>
@@ -218,9 +252,8 @@
         <script type="text/javascript" src="js/src/content/ContentWorkingView.class.js"></script>
         <script type="text/javascript" src="js/src/content/ContentMapView.class.js"></script>
         <script type="text/javascript" src="js/src/content/ContentWorksView.class.js"></script>
-        <script src="js/svgicons-config.js"></script>
-        <script src="js/svgicons.js"></script>
         <script type="text/javascript" src="js/src/content/ContentDetailView.class.js"></script>
+        <script type="text/javascript" src="js/src/content/ContentToolsView.class.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
         <script type="text/javascript">
             app.initialize();

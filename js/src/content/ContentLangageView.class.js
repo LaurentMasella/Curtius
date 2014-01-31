@@ -7,9 +7,25 @@ ContentLangageView.prototype = new MainContentSmoothyView();
 ContentLangageView.prototype.init = function(tag){
 	MainContentView.prototype.init.call(this, tag);
 	this.tag = jQuery(tag);
-	var listButtons = jQuery("#langs .chooseSquare .lang");
-	//events
-	listButtons.bind('mousedown', jQuery.proxy(this.onClick, this));
+	this.listButtons = jQuery("#langs .chooseSquare .lang");	
+};
+
+ContentLangageView.prototype.onCurrentUpdated = function(){
+	MainContentView.prototype.onCurrentUpdated.call(this);
+	if(this.controller.model.current == this.id){
+		this.enableView();
+	}else{
+		this.disableView();
+	}
+};
+
+ContentLangageView.prototype.enableView = function(){
+//events
+	this.listButtons.bind('mousedown', jQuery.proxy(this.onClick, this));
+};
+
+ContentLangageView.prototype.disableView = function(){
+	this.listButtons.unbind('mousedown', jQuery.proxy(this.onClick, this));
 };
 
 ContentLangageView.prototype.onClick = function(e){

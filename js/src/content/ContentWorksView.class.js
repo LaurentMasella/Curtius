@@ -23,14 +23,22 @@ ContentWorksView.prototype.onCurrentUpdated = function(){
 ContentWorksView.prototype.enableView = function(){
 	jQuery('.spacerTd').first().remove();
 	//enable events
+	jQuery('#artworksinfos').bind('mousedown', jQuery.proxy(this.onClickTools, this));
 	jQuery('#slideBGArtworks img').bind('mousedown', jQuery.proxy(this.onClickWork, this));
 	jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this)); 
 };
 
 ContentWorksView.prototype.disableView = function(){
 	//disable events
+	jQuery('#artworksinfos').unbind('mousedown', jQuery.proxy(this.onClickTools, this));
 	jQuery('#slideBGArtworks img').unbind('mousedown', jQuery.proxy(this.onClickWork, this));
 	jQuery('#planButton').unbind('mousedown', jQuery.proxy(this.onBackToMap,this)); 
+};
+
+
+ContentWorksView.prototype.onClickTools = function(){
+	this.controller.setHistoryId(Repository.WORKS_ID);
+	this.controller.setCurrent(Repository.TOOLS_ID);
 };
 
 ContentWorksView.prototype.onClickWork = function(tag){

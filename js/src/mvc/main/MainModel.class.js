@@ -6,6 +6,7 @@ function MainModel(){
 
 MainModel.prototype.current = "";
 MainModel.prototype.scope = "";
+MainModel.prototype.historyId = "";
 
 MainModel.prototype.setCurrent = function(current) {
 	this.current = current;
@@ -20,4 +21,9 @@ MainModel.prototype.setScope = function(scope) {
 MainModel.prototype.setTotalCount = function(totalCount) {
 	this.totalCount = totalCount;
 	jQuery(this).trigger(MainEvent.ON_TOTAL_COUNT_UPDATED, this.totalCount);
+};
+
+MainModel.prototype.setHistoryId = function(historyId){
+	this.historyId = historyId;
+	jQuery(this).trigger(MainEvent.ON_HISTORY_UPDATED, this.historyId);
 };

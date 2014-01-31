@@ -157,12 +157,17 @@ ContentMapView.prototype.addingClicksFeatures = function() {
 	jQuery("#level1").bind('mousedown', jQuery.proxy(this.onClickFeatures, this));
 	jQuery("#level2").bind('mousedown', jQuery.proxy(this.onClickFeatures, this));
 	jQuery("#level3").bind('mousedown', jQuery.proxy(this.onClickFeatures, this));
-
+	jQuery('#artworksinfosMap').bind('mousedown', jQuery.proxy(this.onClickTools, this));
 	jQuery("#localize").bind('mousedown', jQuery.proxy(this.localize, this));
 
 	for (var i = 0; i < this.coord1.length; i++) {
         jQuery('#lampe'+i).bind('mousedown', jQuery.proxy(this.onClickSpot, this));
     };
+};
+
+ContentMapView.prototype.onClickTools = function(){
+	this.controller.setHistoryId(Repository.MAP_ID);
+	this.controller.setCurrent(Repository.TOOLS_ID);
 };
 
 ContentMapView.prototype.onClickSpot = function(){

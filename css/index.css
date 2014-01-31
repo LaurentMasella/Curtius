@@ -303,14 +303,14 @@ box-shadow:         0px 3px 12px rgba(54, 80, 78, 0.48); z-index: 1000; }
 .langDEU #artworkView #artworkLeft #linkedArtworksButton,
 .langNED #artworkView #artworkLeft #linkedArtworksButton { line-height: normal; }
 #artworkView #artworkLeft .si-icon { position: absolute; top: 0; left: 0; margin-left: 5px; }
-#slideBGArtworks #artworksinfos,
+#slideBGArtworks #artworksinfos,#artworkinfos,
 #artworksinfosMap { position: absolute; bottom: 20px; left: 20px; width: 70px; height: 70px; background: #f4f4f4 url('../img/wheel.png') center center no-repeat; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, -webkit-transition: all .4s linear;
 -moz-transition: all .4s ease-in-out;
 -ms-transition: all .4s ease-in-out;
 -o-transition: all .4s ease-in-out;
 transition: all .4s ease-in-out; z-index: 2000; }
 #artworksinfosMap { top: 540px; border: 1px solid #ccc;}
-#slideBGArtworks #artworksinfos:hover,
+#slideBGArtworks #artworksinfos:hover,#artworkinfos:hover,
 #artworksinfosMap:hover { cursor: pointer; background-color: #fff; }
 
 #artworkView #artworkDetail,

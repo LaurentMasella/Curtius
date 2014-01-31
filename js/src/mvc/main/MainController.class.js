@@ -23,6 +23,13 @@ MainController.prototype.setCurrent = function(current){
 	}
 };
 
+MainController.prototype.setHistoryId = function(historyId){
+	if(this.model == undefined) return;
+	if(this.model.historyId !== historyId){
+		this.model.setHistoryId(historyId);
+	}
+};
+
 MainController.prototype.setScope = function(scope){
 	this.model.setScope(scope);
 };

@@ -13,7 +13,8 @@ ContentDetailView.prototype.init = function(tag){
 	this.artworkLink = this.tag.find('#artworkLinks');
 	this.detailButton = jQuery('#detailButton');
 	this.linkedArtworksButton = jQuery('#linkedArtworksButton');
-
+    this.displayingSVG();
+    this.displayingArtImage();
 };
 
 
@@ -27,8 +28,6 @@ ContentDetailView.prototype.onCurrentUpdated = function(){
 };
 
 ContentDetailView.prototype.enableView = function(){
-    this.displayingSVG();
-    this.displayingArtImage();
     //events
     this.detailButton.bind('mousedown', jQuery.proxy(this.onClickedDetail, this));
     this.linkedArtworksButton.bind('mousedown', jQuery.proxy(this.onClickedLinkedArt, this));
@@ -36,6 +35,7 @@ ContentDetailView.prototype.enableView = function(){
     jQuery('#zoomBack, .si-icon-maximize-rotate svg').bind('mousedown', jQuery.proxy(this.onZoomBack,this));
     jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').bind('mousedown', jQuery.proxy(this.onClickIcon, this));
     jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this));
+    jQuery('#artworkinfos').bind('mousedown', jQuery.proxy(this.onClickTools, this));
     jQuery(this.hotSpotController.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));
     //this.initData();
     window.setTimeout(jQuery.proxy(this.svgColor,this), 100);
@@ -49,6 +49,7 @@ ContentDetailView.prototype.disableView = function(){
     jQuery('#zoomBack, .si-icon-maximize-rotate svg').unbind('mousedown', jQuery.proxy(this.onZoomBack,this));
     jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').unbind('mousedown', jQuery.proxy(this.onClickIcon, this));
     jQuery('#planButton').unbind('mousedown', jQuery.proxy(this.onBackToMap,this));
+    jQuery('#artworkinfos').unbind('mousedown', jQuery.proxy(this.onClickTools, this));    
     jQuery(this.hotSpotController.model).unbind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));
     //this.initData();
     window.clearTimeout(jQuery.proxy(this.svgColor,this), 100);
@@ -64,6 +65,10 @@ ContentDetailView.prototype.onDataUpdated = function(){
     
 };
 
+ContentDetailView.prototype.onClickTools = function(){
+    this.controller.setHistoryId(Repository.DETAIL_ID);
+    this.controller.setCurrent(Repository.TOOLS_ID);
+};
 
 ContentDetailView.prototype.displayingSVG = function(){
     [].slice.call( document.querySelectorAll( '#resize > .si-icon' ) ).forEach( function( el ) {

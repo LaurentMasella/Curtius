@@ -7,9 +7,9 @@ ContentVisitView.prototype = new MainContentSmoothyView();
 ContentVisitView.prototype.init = function(tag){
 	MainContentView.prototype.init.call(this, tag);
 	this.tag = jQuery(tag);
-	var listButtons = jQuery("#visits .chooseSquare .visit");
+	this.listButtons = jQuery("#visits .chooseSquare .visit");
 	//events
-	listButtons.bind('mousedown', jQuery.proxy(this.onClick, this));
+	
 };
 
 ContentVisitView.prototype.onClick = function(e){
@@ -33,10 +33,31 @@ ContentVisitView.prototype.onClick = function(e){
 ContentVisitView.prototype.onCurrentUpdated = function(){
 	MainContentView.prototype.onCurrentUpdated.call(this);
 	if(this.controller.model.current == this.id){	
-		var lang = Cookie.getCookie('lang.curtius.com');
-		jQuery('#free').html(eval('Internationalization.VisitBtnFree'+lang));
-	    jQuery('#fast').html(eval('Internationalization.VisitBtnFast'+lang));
-	    jQuery('#per').html(eval('Internationalization.VisitBtnPer'+lang));
-	    jQuery('#scol').html(eval('Internationalization.VisitBtnScol'+lang));
+		this.checkLang();
+		this.enableView();
+	}else{
+		this.disableView();
 	}
+};
+
+ContentVisitView.prototype.enableView = function(){
+		this.listButtons.bind('mousedown', jQuery.proxy(this.onClick, this));
+		jQuery('#backBtn').bind('mousedown', jQuery.proxy(this.onClickBack, this));
+};
+
+ContentVisitView.prototype.disableView = function(){
+		this.listButtons.unbind('mousedown', jQuery.proxy(this.onClick, this));
+		jQuery('#backBtn').unbind('mousedown', jQuery.proxy(this.onClickBack, this));
+};
+
+ContentVisitView.prototype.onClickBack = function(){
+	this.controller.goPrevious();
+};
+
+ContentVisitView.prototype.checkLang = function(){
+	var lang = Cookie.getCookie('lang.curtius.com');
+	jQuery('#free').html(eval('Internationalization.VisitBtnFree'+lang));
+    jQuery('#fast').html(eval('Internationalization.VisitBtnFast'+lang));
+    jQuery('#per').html(eval('Internationalization.VisitBtnPer'+lang));
+    jQuery('#scol').html(eval('Internationalization.VisitBtnScol'+lang));	
 };

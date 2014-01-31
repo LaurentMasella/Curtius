@@ -52,6 +52,10 @@
 	contentDetailView.hotSpotController = hotSpotController;
 	contentDetailView.init("#contentDetail");
 
+	var contentToolsView = new ContentToolsView();
+	contentToolsView.id = Repository.TOOLS_ID;
+	contentToolsView.controller = MainContentController.getInstance();
+	contentToolsView.init("#tools");  
 
 	//INIT WITH FIRST VIEW AS CURRENT
     MainContentController.getInstance().setCurrent(Repository.LANDING_ID);

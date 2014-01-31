@@ -944,32 +944,32 @@ avec 'i' de 0 à tableau json length et i++
 /* === TOOLS ====================================================================== */
 /* ================================================================================ */
 
-function selectTools() {
-    $('.lang').mousedown(function() { 
-        $('.lang').parent().removeClass('paramSelected'); 
-        $(this).parent().addClass('paramSelected'); 
-    });
-    $('.visit').mousedown(function() { 
-        $('.visit').parent().removeClass('paramSelected'); 
-        $(this).parent().addClass('paramSelected'); 
-    });
-}; selectTools();
+// function selectTools() {
+//     $('.lang').mousedown(function() { 
+//         $('.lang').parent().removeClass('paramSelected'); 
+//         $(this).parent().addClass('paramSelected'); 
+//     });
+//     $('.visit').mousedown(function() { 
+//         $('.visit').parent().removeClass('paramSelected'); 
+//         $(this).parent().addClass('paramSelected'); 
+//     });
+// }; selectTools();
 
-function openTools() {
-    $('#artworksinfos, #artworksinfosMap').mousedown(function() { 
-        window.location = 'tools.html'; 
-    });
-}; openTools();
+// function openTools() {
+//     $('#artworksinfos, #artworksinfosMap').mousedown(function() { 
+//         window.location = 'tools.html'; 
+//     });
+// }; openTools();
 
-function closeTools() {
-    $('.cancel, .validate').mousedown(function() { 
-        event.preventDefault();
-        history.back(1); 
-    });
-}; closeTools();
+// function closeTools() {
+//     $('.cancel, .validate').mousedown(function() { 
+//         event.preventDefault();
+//         history.back(1); 
+//     });
+// }; closeTools();
 
-function backToMap() {
-    $('#planButton').mousedown(function() { 
-        window.location = 'map.html';
-    });
-}; backToMap();
+// function backToMap() {
+//     $('#planButton').mousedown(function() { 
+//         window.location = 'map.html';
+//     });
+// }; backToMap();
