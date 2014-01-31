@@ -232,9 +232,9 @@ ContentMapView.prototype.onClickFeatures = function(e){
 	        this.levels.css('border-color','#B3B2B2');
 	        this.legend2.find('.mapIcon').css({'background':'url("img/info.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
 	        this.legend3.css({'background-position':'0 -158px','height':'80px','line-height':'80px','padding-top':'0'});
-	        this.legend3.find('.mapIcon').css('background-position','0 -158px'); 
-	        this.legend4.find('.mapIcon').css('background-position','0 -158px'); 
-	        this.legend5.find('.mapIcon').css('background-position','0 -158px'); 
+	        this.legend3.find('.mapIcon').css({'background':'url("img/cloakIcon.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
+	        this.legend4.find('.mapIcon').css({'background':'url("img/cafeIcon.png") 0 0 no-repeat','top':'15px','left':'10px'});
+	        this.legend5.find('.mapIcon').css({'background':'url("img/shopIcon.png") 0 0 no-repeat','top':'15px','left':'10px'}); 
 	        //window.setTimeout(checkLang, 10);
 		break;
 		case 'level2':
