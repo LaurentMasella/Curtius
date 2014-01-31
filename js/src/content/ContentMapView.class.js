@@ -302,6 +302,7 @@ ContentMapView.prototype.destroyCoordonates = function(){
 
 
 ContentMapView.prototype.initCoordonates = function(){
+
 	switch(Cookie.getCookie('visit.curtius.com')){
 		case 'free':
 		    this.coordRDC[ 1 ] = "1375,780";

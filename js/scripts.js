@@ -32,13 +32,13 @@
     });
 
       
-      // TEST EN INCREMENTANT LE CURRENT
- 	//  var i = 0;
-	//  window.setInterval(function(){
-	// 	i ++;
-	// 	hotSpotController.setCurrent(hotSpotController.model.scope[i]);
-	// 	console.info(hotSpotController.model	i]);
-	// }, 10000);
+    //  TEST EN INCREMENTANT LE CURRENT
+ 	 var i = 0;
+	 window.setInterval(function(){
+		i ++;
+		hotSpotController.setCurrent(hotSpotController.model.scope[i]);
+		//console.info(hotSpotController.model.scope[i]);
+	}, 5000);
     
     // VIEWS
 	var contentLandingPageView = new ContentLandingPageView();
