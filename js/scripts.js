@@ -3,6 +3,8 @@
 	var urlToJson = 'detailData.json';
 
 	// MAIN CONTROLLER
+	// Controller général qui va permettre de définir quelle vue est à afficher, 
+	// selon le click sur un bouton ou au chargement de l'appli
 	MainContentController.getInstance().setScope(
 		new Array(
 			Repository.LANDING_ID,
@@ -14,9 +16,13 @@
 		);
 
 	// HotSpotController
+	// Controller qui va nous permettre de récupérer les data du json et du lifi, 
+	//et d'envoyer des informations selon les mises à jour de celui-ci (onCurrentUpdated)
 	var hotSpotController = new HotSpotController();
 	hotSpotController.init();
 
+
+	//Récupération du JSON
     $.getJSON(urlToJson,{
     	format:'json',
     })
@@ -31,6 +37,8 @@
 		console.info('fail');
     });
 
+    //Récupération du code lifi courant
+
     //var urlFile = '/sdcard/lifiID.txt';
     var urlFile =  'test/lifiID.txt';
     window.setInterval(function(){
@@ -44,6 +52,8 @@
 	                    var allText = rawFile.responseText;
 	                    var allTextArray = allText.split(" ");
 	                    var currentValue = allTextArray[0];
+	                    //Recherche du code lifi correspondant dans notre tableau (scope), et mise à jour de la
+	                    //data courante de notre controleur
 	                    for (var i = 1; i < jQuery(hotSpotController.model.scope).length; i++){
 	                    	if(hotSpotController.model.scope[i]['idLifi'] == currentValue){
 	                    		//console.info(currentValue);
@@ -61,7 +71,11 @@
     
     // VIEWS
 	var contentLandingPageView = new ContentLandingPageView();
+	//Ajout d'un id propre à la vue,
+	//Permet de définir notamment le current du controller, et de faire des modifs sur une vue
+	// seulement si cet id est égal au current du controller
 	contentLandingPageView.id = Repository.LANDING_ID;
+	//Ajout du controller General à ma vue
 	contentLandingPageView.controller = MainContentController.getInstance();
 	contentLandingPageView.init("#contentLanding");    	
 
@@ -83,6 +97,7 @@
 	var contentMapView = new ContentMapView();
 	contentMapView.id = Repository.MAP_ID;
 	contentMapView.controller = MainContentController.getInstance();
+	//Ajout du controller de data sur les views voulues
 	contentMapView.hotSpotController = hotSpotController;
 	contentMapView.init("#mapView");    	
 

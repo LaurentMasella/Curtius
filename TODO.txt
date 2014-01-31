@@ -1,11 +1,12 @@
 
 ================ FAIT ================
 
+2. renvoyer vers vue détails ou vue projets si réception d'un idLifi. Voir ondataupdated.
+
 ============= A FAIRE ================
 
 MAP / 
 1. lister les hotspot provenant du json, via la méthod initcoordonates, via le parcours dans cookie
-2. renvoyer vers vue détails ou vue projets si réception d'un idLifi. Voir ondataupdated.
 
 WORKS /
 

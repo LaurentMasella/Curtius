@@ -57,23 +57,29 @@ ContentMapView.prototype.disableView = function(){
 	this.destroyCoordonates();	
 };
 
+/*
+* ONDATAUPDATED : à chaque fois que nous reçevons un nouvel id de Lifi
+*/
 ContentMapView.prototype.onDataUpdated = function(){
+	//Récupération de la data courante pour évaluer la position courante
 	this.currentPositionData = this.hotSpotController.model.current;
-	if(this.currentPositionData != "" && this.currentPositionData != null && this.currentPositionData != undefined){
-		this.lastPositionData = this.currentPositionData
-	}
-	this.checkStage();
+
+	//Si nous sommes actuellement sur la vue map et seulement dans ce cas alors
+	//Renvoie sur une page selon le type de contenu
 	if(this.controller.model.current == this.id){
-		console.info(this.hotSpotController.model.current);
-		if(hotSpotController.model.scope[i]['oeuvre'].length() > 1){
-			console.log('Plusieurs oeuvres');
+		if(this.hotSpotController.model.current['oeuvre'].length > 1){
+			this.controller.setCurrent(Repository.WORKS_ID);
 		}
 		else {  
-			console.log('Une seule oeuvre');
+			this.controller.setCurrent(Repository.DETAIL_ID);
 		}
-
-
 	}
+
+	//Evaluation de la data pour donner la dernière position courante	
+	if(this.currentPositionData != "" && this.currentPositionData != null && this.currentPositionData != undefined){
+		this.lastPositionData = this.currentPositionData;
+	}
+	this.checkStage();
 };
 
 ContentMapView.prototype.checkStage = function(){
