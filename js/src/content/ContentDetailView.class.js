@@ -2,7 +2,7 @@ function ContentDetailView(){
 
 }
 
-ContentDetailView.prototype = new MainContentView();
+ContentDetailView.prototype = new MainContentSmoothyView();
 
 ContentDetailView.prototype.init = function(tag){
     MainContentView.prototype.init.call(this,tag);
