@@ -62,8 +62,7 @@ ContentMapView.prototype.onDataUpdated = function(){
 };
 
 ContentMapView.prototype.checkStage = function(){
-	console.info('coucou');
-	console.info(this.currentPositionData["etage"]);
+
 	if(this.currentPositionData != ""){
 		switch(this.currentPositionData["etage"]){
 			case 0:
