@@ -3,7 +3,7 @@
 MAP / 
 
 1. lister les hotspot provenant du json, via la méthod initcoordonates, via le parcours dans cookie
-2. renvoyer vers vue détails ou vue projets si réception d'un idLifi. Voir ondataupdated.
+2. renvoyer vers vue détail ou vue projets si réception d'un idLifi. Si une seule oeuvre, enregistrer dans un item de hotspotcontroller et redirection vers vue detail. Voir ondataupdated.
 
 TOOLS /
 
@@ -22,7 +22,7 @@ GENERAL /
 WORKS /
 
 1.récupérer les data en oncurrentupdated, mais aussi en ondataupdated( détection changement de spot quand on est sur cette page).
-+ enregister la data d'une oeuvre voulue dans item de hotspotcontroller au click d'une oeuvre
++ enregister la data d'une oeuvre voulue dans item de hotspotcontroller au click d'une oeuvres
 
 DETAIL /
 
@@ -30,9 +30,11 @@ DETAIL /
  - DataUpdated : qui renvoie vers la fiche des nouveaux projets, ou qui renvoie sur la même page si un seul projet à montrer sur le nouveau lifi
  - onCurrentUpdated : données depuis l'item cliqué sur la vue Works, ou depuis le lifi si un seul projet ...
  
- ------ edit : Pour répondre à ce problème, j'ai ajouté une variable au controller hotspot, s'appelant item (avec des methodes setItem pour le mettre a jour). En gros l'idée étant que sur la vue des oeuvres, si l'on clique sur l'une des oeuvres, on enregistre l'oeuvre clique dans cet item, comme cela on peut récupérer la bonne oeuvre cliqué quand on est dans la vue détail. Idem sur la map, si l'on recoit un spot lifi qui ne contient qu'une seule oeuvre, on l'enregistre dans item et on renvoie vers la page detail directement.
+ ------ edit : Pour répondre à ce problème, j'ai ajouté une variable au controller hotspot, s'appelant item (avec des methodes setItem pour le mettre a jour). En gros l'idée étant que sur la vue des oeuvres, si l'on clique sur l'une des oeuvres, on enregistre l'oeuvre clique dans cet item, comme cela on peut récupérer la bonne oeuvre cliqué quand on est dans la vue détail. (CF System fait pour la redirection depuis la map onDataUpdated)s
 
+MAP / 
 
+1 Système de click sur elements deja vu a revoir. Au click il faudra voir si cet element la possède une ou plusieurs oeuvres, et si c'est une, on enregistre dans item et on redirige vers detail, si c'est plusieurs alors on redirige vers la vue des oeuvres 
 
 
 NAVIGATION BAR / 

@@ -36,8 +36,9 @@ ContentDetailView.prototype.enableView = function(){
     jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').bind('mousedown', jQuery.proxy(this.onClickIcon, this));
     jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this));
     jQuery('#artworkinfos').bind('mousedown', jQuery.proxy(this.onClickTools, this));
+    //on écoute le changement de données du lifi que quand on est sur cette vue
     jQuery(this.hotSpotController.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));
-    //this.initData();
+    this.displayItem();
     window.setTimeout(jQuery.proxy(this.svgColor,this), 100);
 };
 
@@ -55,14 +56,17 @@ ContentDetailView.prototype.disableView = function(){
     window.clearTimeout(jQuery.proxy(this.svgColor,this), 100);
 };
 
+
+//ondataupdated : quand les données du lifi on changé
 ContentDetailView.prototype.onDataUpdated = function(){
 
-	var currentData = this.controller.model.scope[this.controller.model.current];
+   // Même problématique que pour la vue ContentWorks 
+};
 
-    // ANCIENNE VERSION !
-	// this.artworkTitle.html(currentData.oeuvre.parcours.chronologique.FR['titreOeuvre']);
-	// this.artworkDetail.html(currentData.oeuvre.parcours.chronologique.FR['DescriptionOeuvre']);
-	// this.artworkLink.html(currentData.oeuvre.sousOeuvres[0].details.FR['Descriptif']);
+
+ContentDetailView.prototype.displayItem = function(){
+    // Ici on ne récupère les données que de item de hotsSpotController. Si enregistré dans les vues précedentes, il devrait être
+    // récupéré ici
     
 };
 

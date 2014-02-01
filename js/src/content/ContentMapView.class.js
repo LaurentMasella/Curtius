@@ -28,6 +28,7 @@ ContentMapView.prototype.init = function(tag){
 	jQuery(this.hotSpotController.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));	
 };
 
+
 ContentMapView.prototype.onCurrentUpdated = function(){
 	MainContentView.prototype.onCurrentUpdated.call(this);
 	if(this.controller.model.current == this.id){
@@ -60,6 +61,7 @@ ContentMapView.prototype.disableView = function(){
 /*
 * ONDATAUPDATED : à chaque fois que nous reçevons un nouvel id de Lifi
 */
+//ondataupdated : quand les données du lifi on changé
 ContentMapView.prototype.onDataUpdated = function(){
 	//Récupération de la data courante pour évaluer la position courante
 	this.currentPositionData = this.hotSpotController.model.current;
@@ -70,7 +72,11 @@ ContentMapView.prototype.onDataUpdated = function(){
 		if(this.hotSpotController.model.current['oeuvre'].length > 1){
 			this.controller.setCurrent(Repository.WORKS_ID);
 		}
-		else {  
+		else {
+			//Si il n'y a qu'une seule oeuvre, on l'enregistre dans la variable item de hotspotcontroller
+			// va servir pour la vue detail, qui ne gère qu'un seul item venant de la map, 
+			// ou d'un clique depuis la page de plusieurs oeuvres
+			this.hotSpotController.setItem(this.hotSpotController.model.current['oeuvre']);
 			this.controller.setCurrent(Repository.DETAIL_ID);
 		}
 	}
