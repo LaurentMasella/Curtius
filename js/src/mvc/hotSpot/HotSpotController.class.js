@@ -13,7 +13,7 @@ HotSpotController.prototype.init = function(){
 	this.model = new HotSpotModel();
 };
 
-//curent
+//current
 HotSpotController.prototype.setCurrent = function(current){
 	if(this.model == undefined)
 		return;
@@ -30,4 +30,12 @@ HotSpotController.prototype.setState = function(state){
 		return;
 	if(this.model.state !== state)
 		this.model.setState(state);
+};
+
+//curent
+HotSpotController.prototype.setItem = function(item){
+	if(this.model == undefined)
+		return;
+	if(this.model.item !== item)
+		this.model.setItem(item);
 };
