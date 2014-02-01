@@ -22,6 +22,11 @@ ContentWorkingView.prototype.onCurrentUpdated = function(){
 ContentWorkingView.prototype.enableView = function(){
     this.checkLang();
     jQuery('#lifiNext').bind('mousedown', jQuery.proxy(this.onClick, this));
+    this.displayItems();
+};
+
+ContentWorkingView.prototype.displayItems = function(){
+    
 };
 
 ContentWorkingView.prototype.disableView = function(){

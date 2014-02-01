@@ -14,9 +14,18 @@ ContentToolsView.prototype.init = function(tag,e){
 ContentToolsView.prototype.onCurrentUpdated = function(e){
 
 	MainContentView.prototype.onCurrentUpdated.call(this);
+
 	if(this.controller.model.current == this.id){
+
 		this.currentLangage = Cookie.getCookie('lang.curtius.com');
-		this.newLangage = "";
+		jQuery('.lang').parent().removeClass('paramSelected');
+		jQuery('.lang').each(jQuery.proxy(function(index,element){
+			if(jQuery(element).attr('id') == this.currentLangage){
+				jQuery(element).parent().addClass('paramSelected');
+			}
+		},this));
+		this.newLangage = this.currentLangage;
+		this.checkLang();
 		this.enableView();
 	}else{
 		this.disableView();
@@ -44,10 +53,13 @@ ContentToolsView.prototype.onClickParam = function(e){
 };
 
 ContentToolsView.prototype.onClickValidate = function(e){
-	if(this.newLangage !== ""){
 		Cookie.setCookie('lang.curtius.com',this.newLangage,'365');
 		var redirectBack = this.controller.model.historyId;
 		this.controller.model.setHistoryId(null);
 		this.controller.setCurrent(redirectBack);
-	}
+};
+
+ContentToolsView.prototype.checkLang = function(){
+	var lang = Cookie.getCookie('lang.curtius.com');
+	jQuery('#toolsValidate .validate').html(eval('Internationalization.ToolsBtnValidate'+lang));
 };

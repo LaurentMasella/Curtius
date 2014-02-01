@@ -59,9 +59,10 @@ ContentDetailView.prototype.onDataUpdated = function(){
 
 	var currentData = this.controller.model.scope[this.controller.model.current];
 
-	this.artworkTitle.html(currentData.oeuvre.parcours.chronologique.FR['titreOeuvre']);
-	this.artworkDetail.html(currentData.oeuvre.parcours.chronologique.FR['DescriptionOeuvre']);
-	this.artworkLink.html(currentData.oeuvre.sousOeuvres[0].details.FR['Descriptif']);
+    // ANCIENNE VERSION !
+	// this.artworkTitle.html(currentData.oeuvre.parcours.chronologique.FR['titreOeuvre']);
+	// this.artworkDetail.html(currentData.oeuvre.parcours.chronologique.FR['DescriptionOeuvre']);
+	// this.artworkLink.html(currentData.oeuvre.sousOeuvres[0].details.FR['Descriptif']);
     
 };
 
@@ -271,5 +272,5 @@ ContentDetailView.prototype.onClickIcon = function(e){
 };
 
 ContentDetailView.prototype.onBackToMap = function() {
-    window.location = 'map.html';
+    this.controller.setCurrent(Repository.MAP_ID);
 };

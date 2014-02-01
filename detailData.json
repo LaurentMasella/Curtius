@@ -4,9 +4,10 @@
 		"mapNumber": 1,
 		"coordinates": "506,489",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique"
-		},
+		"parcours": [
+		{
+			"parcoursType":"per"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 1",
@@ -109,10 +110,12 @@
 		"mapNumber": 2,
 		"coordinates": "435,597",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide"
+		"parcours": [{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 2",
@@ -287,10 +290,12 @@
 		"mapNumber": 3,
 		"coordinates": "250,705",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide"
+		"parcours": [{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 4",
@@ -386,12 +391,18 @@
 		"mapNumber": 4,
 		"coordinates": "277,858",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 5",
@@ -564,12 +575,19 @@
 		"mapNumber": "4-BIS",
 		"coordinates": "277,858",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 7",
@@ -673,12 +691,19 @@
 		"mapNumber": 5,
 		"coordinates": "273,980",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 8",
@@ -930,12 +955,19 @@
 		"mapNumber": 6,
 		"coordinates": "273,1030",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 11",
@@ -1030,12 +1062,19 @@
 		"mapNumber": 7,
 		"coordinates": "472,1219",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 12",
@@ -1134,12 +1173,19 @@
 		"mapNumber": 8,
 		"coordinates": "291,1310",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 13",
@@ -1234,12 +1280,19 @@
 		"mapNumber": 9,
 		"coordinates": "745,519",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 14",
@@ -1340,12 +1393,19 @@
 		"mapNumber": 10,
 		"coordinates": "884,520",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 15",
@@ -1445,12 +1505,19 @@
 		"mapNumber": 11,
 		"coordinates": "953,511",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 16",
@@ -1547,12 +1614,19 @@
 		"mapNumber": 12,
 		"coordinates": "1094,491",
 		"etage": 1,
-		"parcours": {
-			"parcoursType":"chronologique",
-			"parcoursType":"rapide",
-			"parcoursType":"libre",
-			"parcoursType":"scolaire"
+		"parcours": [
+		{
+			"parcoursType":"per"
 		},
+		{
+			"parcoursType":"fast"
+		},
+		{
+			"parcoursType":"free"
+		},
+		{
+			"parcoursType":"scol"
+		}],
 		"oeuvre" : [
 		{
 		    "idOeuvre" : "OEUVRE 17",

@@ -319,127 +319,30 @@ ContentMapView.prototype.destroyCoordonates = function(){
 
 ContentMapView.prototype.initCoordonates = function(){
 
-	// for(var i = 1; i< jQuery(this.hotSpotController.model.scope).length; i++){
-	// 	for(var j = 0; j< jQuery(this.hotSpotController.model.scope[i]['parcours']).length; j++){
-	// 		//console.info(jQuery(this.hotSpotController.model.scope[i]['parcours'][j]);
-	// 	}
-	// }
-	switch(Cookie.getCookie('visit.curtius.com')){
-		case 'free':
-		    this.coordRDC[ 1 ] = "1375,780";
-		    this.coord1[ 1 ] = "448,493";
-		    this.coord1[ 2 ] = "241,669";
-		    this.coord1[ 3 ] = "406,641";
-		    this.coord1[ 4 ] = "470,641";
-		    this.coord1[ 5 ] = "271,751";
-		    this.coord2[ 1 ] = "268,461";
-		    this.coord2[ 2 ] = "321,500";
-		    this.coord2[ 3 ] = "382,494";
-		    this.coord2[ 4 ] = "497,486";
-		break;
-		case 'fast':
-		    this.coordRDC[ 1 ] = "1375,780";
-		    this.coord1[ 1 ] = "448,493";
-		    this.coord1[ 2 ] = "241,669";
-		    this.coord1[ 3 ] = "406,641";
-		    this.coord1[ 4 ] = "470,641";
-		    this.coord1[ 5 ] = "271,751";
-		    this.coord2[ 1 ] = "268,461";
-		    this.coord2[ 2 ] = "321,500";
-		    this.coord2[ 3 ] = "382,494";
-		    this.coord2[ 4 ] = "497,486";		
-		break;
-		case 'per':
-		    this.coordRDC[ 1 ] = "1375,780";
-		    this.coord1[ 1 ] = "448,493";
-		    this.coord1[ 2 ] = "241,669";
-		    this.coord1[ 3 ] = "406,641";
-		    this.coord1[ 4 ] = "470,641";
-		    this.coord1[ 5 ] = "271,751";
-		    this.coord1[ 6 ] = "273,817";
-		    this.coord1[ 7 ] = "225,926";
-		    this.coord1[ 8 ] = "319,969";
-		    this.coord1[ 9 ] = "319,1038";
-		    this.coord1[ 10 ] = "252,1057";
-		    this.coord1[ 11 ] = "473,1259";
-		    this.coord1[ 12 ] = "271,1351";
-		    this.coord1[ 13 ] = "737,452";
-		    this.coord1[ 14 ] = "890,548";
-		    this.coord1[ 15 ] = "960,539";
-		    this.coord1[ 16 ] = "1086,515";
-		    this.coord1[ 17 ] = "1146,539";
-		    this.coord1[ 18 ] = "1376,366";
-		    this.coord1[ 19 ] = "1444,347";
-		    this.coord1[ 20 ] = "1512,343";
-		    this.coord1[ 21 ] = "1585,366";
-		    this.coord1[ 22 ] = "1657,283";
-		    this.coord1[ 23 ] = "1302,604";
-		    this.coord1[ 24 ] = "1308,664";
-		    this.coord1[ 25 ] = "1273,753";
-		    this.coord1[ 26 ] = "1313,814";
-		    this.coord1[ 27 ] = "1444,836";
-		    this.coord1[ 28 ] = "1514,836";
-		    this.coord1[ 29 ] = "1350,909";
-		    this.coord1[ 30 ] = "1414,911";
-		    this.coord1[ 31 ] = "1474,912";
-		    this.coord1[ 32 ] = "1727,897";
-		    this.coord1[ 33 ] = "1727,963";
-		    this.coord1[ 34 ] = "1320,968";
-		    this.coord2[ 1 ] = "268,461";
-		    this.coord2[ 2 ] = "321,500";
-		    this.coord2[ 3 ] = "382,494";
-		    this.coord2[ 4 ] = "497,486";
-		    this.coord2[ 5 ] = "442,529";
-		    this.coord2[ 6 ] = "237,582";
-		    this.coord2[ 7 ] = "387,626";
-		    this.coord2[ 8 ] = "436,588";
-		    this.coord2[ 9 ] = "477,631";
-		    this.coord2[ 10 ] = "264,1230";
-		    this.coord2[ 11 ] = "269,1383";
-		    this.coord2[ 12 ] = "471,1454";
-		    this.coord2[ 13 ] = "753,486";
-		    this.coord2[ 14 ] = "876,543";
-		    this.coord2[ 15 ] = "927,388";
-		    this.coord2[ 16 ] = "929,475";
-		    this.coord2[ 17 ] = "974,430";
-		    this.coord2[ 18 ] = "1002,490";
-		    this.coord2[ 19 ] = "1070,408";
-		    this.coord2[ 20 ] = "1153,463";
-		    this.coord2[ 21 ] = "1263,324";
-		    this.coord2[ 22 ] = "1392,389";
-		    this.coord2[ 23 ] = "1366,261";
-		    this.coord2[ 24 ] = "1402,304";
-		    this.coord2[ 25 ] = "1441,255";
-		    this.coord2[ 26 ] = "1558,242";
-		    this.coord2[ 27 ] = "1598,351";
-		    this.coord2[ 28 ] = "1391,433";
-		    this.coord2[ 29 ] = "1338,508";
-		    this.coord2[ 30 ] = "1344,623";
-		    this.coord2[ 31 ] = "1358,697";
-		    this.coord2[ 32 ] = "1358,758";
-		    this.coord2[ 33 ] = "1362,818";
-		    this.coord2[ 34 ] = "1366,880";
-		    this.coord2[ 35 ] = "1375,945";
-		    this.coord2[ 36 ] = "1440,941";
-		    this.coord2[ 37 ] = "1537,829";
-		    this.coord2[ 38 ] = "1532,915";
-		    this.coord2[ 39 ] = "1734,789";
-		    this.coord2[ 40 ] = "1780,834";
-		    this.coord2[ 41 ] = "1696,980";
-		    this.coord2[ 42 ] = "1760,978";		
-		break;
-		case 'scol':
-		    this.coordRDC[ 1 ] = "1375,780";
-		    this.coord1[ 1 ] = "448,493";
-		    this.coord1[ 2 ] = "241,669";
-		    this.coord1[ 3 ] = "406,641";
-		    this.coord1[ 4 ] = "470,641";
-		    this.coord1[ 5 ] = "271,751";
-		    this.coord2[ 1 ] = "268,461";
-		    this.coord2[ 2 ] = "321,500";
-		    this.coord2[ 3 ] = "382,494";
-		    this.coord2[ 4 ] = "497,486";		
-		break;
+	//Cookie.setCookie('visit.curtius.com','per','365');
+	var visit = Cookie.getCookie('visit.curtius.com');
+	var itemCoordRDC = 0;
+	var itemCoord1 = 0;
+	var itemCoord2 = 0;
+	for(var i = 1; i< jQuery(this.hotSpotController.model.scope).length; i++){
+		for(var j = 0; j < this.hotSpotController.model.scope[i].parcours.length; j++){
+			if(this.hotSpotController.model.scope[i].parcours[j].parcoursType == visit){
+				switch(this.hotSpotController.model.scope[i].etage){
+					case 0:
+						itemCoordRDC ++;
+						this.coordRDC[itemCoordRDC] = this.hotSpotController.model.scope[i].coordinates;
+					break;
+					case 1:
+						itemCoord1 ++;
+						this.coord1[itemCoord1] = this.hotSpotController.model.scope[i].coordinates;
+					break;
+					case 2:
+						itemCoord2 ++;
+						this.coord2[itemCoord2] = this.hotSpotController.model.scope[i].coordinates;
+					break;
+				}
+			}
+		}
 	}
 };
 

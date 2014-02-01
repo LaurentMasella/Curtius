@@ -1,12 +1,23 @@
 
 ================ FAIT ================
+MAP / 
 
+1. lister les hotspot provenant du json, via la méthod initcoordonates, via le parcours dans cookie
 2. renvoyer vers vue détails ou vue projets si réception d'un idLifi. Voir ondataupdated.
+
+TOOLS /
+
+1. Couleur sur le langage courant. Si validation sans séléction, renvoie sur la page courante avec même langage. Manque le texte du bouton valider. Voir la méthode checkLang comme sur les autres vues.
+
+GENERAL / 
+
+1. manque Bind au click bouton plan. (utiliser this.controller.setCurrent(MAP_ID) lors du bind);
+
+
+
 
 ============= A FAIRE ================
 
-MAP / 
-1. lister les hotspot provenant du json, via la méthod initcoordonates, via le parcours dans cookie
 
 WORKS /
 
@@ -18,17 +29,11 @@ DETAIL /
  - DataUpdated : qui renvoie vers la fiche des nouveaux projets, ou qui renvoie sur la même page si un seul projet à montrer sur le nouveau lifi
  - onCurrentUpdated : données depuis l'item cliqué sur la vue Works, ou depuis le lifi si un seul projet ....
 
-TOOLS /
-
-1. Couleur sur le langage courant. Si validation sans séléction, renvoie sur la page courante avec même langage. Manque le texte du bouton valider. Voir la méthode checkLang comme sur les autres vues.
-
 NAVIGATION BAR / 
 
 1. bouton back du navigation bar d'android pas géré. Lors de la récupération de l'événement, utiliser goprevious du contrôleur général
 
-GENERAL / 
 
-1. manque Bind au click bouton plan. (utiliser this.controller.setCurrent(MAP_ID) lors du bind);
 
 ============ A VERIFIER ==============
 
@@ -37,21 +42,27 @@ MAP /
 1. vérifier fonctionnement des click sur ancien lifi, et conséquences. 
 2. vérifier le fonctionnement de l'arrivée sur la map sans idLifi reçu. Si bug, voir addspotlight
 
+
+
 ============== FEATURES ==============
-
-DETAIL / 
-
-1. Vue "3D"
+ 
+1. Images "3D"
 2. Différentes parcours clients selon type de parcours
 3. Transition autre entre les pages, voir mainContentTransitionView et son parent MainContentView
 4. Autres il me semble
+
+
 
 ============= REMARQUES ==============
 
 IMPORTANT : Ne pas oublier de modifier l'url utilisé dans scripts.js pour ce qui est de la récupération du code lifi. + Ajouter Lib Oledcom
 (Si problème de build, ajouter la lib dans android après avoir build l'appli, pas avant ... a voir ahah)
 
+
+
+
 =========== PERFORMANCES =============
 
 1. Revoir MVC peut être, par exemple, hotSpot et Main sont sensiblement les mêmes controleurs, peut être les unifier, ou voir ce qui est réellement utile.
-3. Différentes tailles d'images pour la détail view ? Une petite, et une grande chargé dynamiquement en modifiant l'url du src lors du zoom ?
+2. Différentes tailles d'images pour la détail view ? Une petite, et une grande chargé dynamiquement en modifiant l'url du src lors du zoom ?
+3. Pour l'internationalization; apparemment la fonction eval() est evil ..... peut être voir si il n'y a pas quelque chose de plus simple

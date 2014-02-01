@@ -53,5 +53,5 @@ ContentWorksView.prototype.checkLang = function(){
 };
 
 ContentWorksView.prototype.onBackToMap = function() {
-    window.location = 'map.html';
+    this.controller.setCurrent(Repository.MAP_ID);
 };
