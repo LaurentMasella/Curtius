@@ -22,6 +22,7 @@ GENERAL /
 WORKS /
 
 1.récupérer les data en oncurrentupdated, mais aussi en ondataupdated( détection changement de spot quand on est sur cette page).
++ enregister la data d'une oeuvre voulue dans item de hotspotcontroller au click d'une oeuvre
 
 DETAIL /
 
