@@ -1,4 +1,3 @@
-
 function ContentMapView(){
 
 }
@@ -109,7 +108,7 @@ ContentMapView.prototype.checkStage = function(){
 ContentMapView.prototype.populateMapRDC = function(){
 	// console.info('ContentMapView.prototype.populateMapRDC');
     for (var i = 1; i < this.coordRDC.length; i++) {
-        jQuery('.landmarks').append('<div class="item mark"data-position="'+this.coordRDC[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+        jQuery('.landmarks').append('<div class="item mark"data-position="'+this.coordRDC[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
     }
 };
 
@@ -118,7 +117,7 @@ ContentMapView.prototype.populateMap1 = function(){
 	var floor1Num = "";
     for (var i = 1; i < this.coord1.length; i++) {
         floor1Num = i+parseInt(this.coordRDC.length)-1;
-        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord1[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
+        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord1[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
     }
 };
 
@@ -127,7 +126,7 @@ ContentMapView.prototype.populateMap2 = function(){
 	var floor2Num = "";
     for (var i = 1; i < this.coord2.length; i++) {
         floor2Num = i+parseInt(this.coordRDC.length)+parseInt(this.coord1.length)-1;
-        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord2[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
+        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord2[ i ]+'" data-show-at-zoom="0"><div class="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
     }
 };
 
@@ -374,4 +373,4 @@ ContentMapView.prototype.checkLang = function(){
     $('#legend7 span').html(eval('Internationalization.MapLegend7'+lang));
     $('#legend8 span').html(eval('Internationalization.MapLegend8'+lang));
     $('#legendBlock6 p').html(eval('Internationalization.MapLegendBlock'+lang));
-}; 
+};
