@@ -56,8 +56,8 @@ ContentVisitView.prototype.onClickBack = function(){
 
 ContentVisitView.prototype.checkLang = function(){
 	var lang = Cookie.getCookie('lang.curtius.com');
-	jQuery('#free').html(eval('Internationalization.VisitBtnFree'+lang));
-    jQuery('#fast').html(eval('Internationalization.VisitBtnFast'+lang));
-    jQuery('#per').html(eval('Internationalization.VisitBtnPer'+lang));
-    jQuery('#scol').html(eval('Internationalization.VisitBtnScol'+lang));	
+	$('#free').html(eval('Internationalization.VisitBtnFree'+lang));
+    $('#fast').html(eval('Internationalization.VisitBtnFast'+lang));
+    $('#per').html(eval('Internationalization.VisitBtnPer'+lang));
+    $('#scol').html(eval('Internationalization.VisitBtnScol'+lang));	
 };

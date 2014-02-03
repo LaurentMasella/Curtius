@@ -112,8 +112,10 @@ ContentDetailView.prototype.onClickedDetail = function(){
         jQuery('.si-icon-hamburger-cross').removeClass('si-icon-unselected');
         jQuery('.si-icon-hamburger-cross').addClass('si-icon-selected');
         // Fenêtres à droite
-        jQuery('#artworkZoomHolder').removeClass('goLeft');
-        jQuery('#artworkZoomHolder').addClass('goRight');
+        jQuery('#artworkZoomHolder').removeClass('goLeftZoom');
+        jQuery('#artworkZoomHolder').addClass('goRightZoom');
+        jQuery('#artworkChapoHolder').removeClass('goLeftZoom');
+        jQuery('#artworkChapoHolder').addClass('goRightZoom');
         jQuery('#artworkDetail').removeClass('goLeft').css('opacity','1');
         jQuery('#artworkDetail').addClass('goRight');
         // Autre bouton blanc
@@ -126,8 +128,10 @@ ContentDetailView.prototype.onClickedDetail = function(){
             jQuery('#linkedArtworksButton').css('color','#000');
             jQuery('#artworkLinks').removeClass('goRight').css('opacity','0');;
             jQuery('#artworkLinks').addClass('goLeft');
-            jQuery('#artworkZoomHolder').removeClass('goLeft');
-            jQuery('#artworkZoomHolder').addClass('goRight');
+            jQuery('#artworkZoomHolder').removeClass('goLeftZoom');
+            jQuery('#artworkZoomHolder').addClass('goRightZoom');
+            jQuery('#artworkChapoHolder').removeClass('goLeftZoom');
+            jQuery('#artworkChapoHolder').addClass('goRightZoom');
         }
     }
     else {
@@ -138,8 +142,10 @@ ContentDetailView.prototype.onClickedDetail = function(){
         jQuery('.si-icon-hamburger-cross').removeClass('si-icon-selected');
         jQuery('.si-icon-hamburger-cross').addClass('si-icon-unselected');
         // Fenêtres à gauche
-        jQuery('#artworkZoomHolder').removeClass('goRight');
-        jQuery('#artworkZoomHolder').addClass('goLeft');
+        jQuery('#artworkZoomHolder').removeClass('goRightZoom');
+        jQuery('#artworkZoomHolder').addClass('goLeftZoom');
+        jQuery('#artworkChapoHolder').removeClass('goRightZoom');
+        jQuery('#artworkChapoHolder').addClass('goLeftZoom');
         jQuery('#artworkDetail').removeClass('goRight').css('opacity','0');
         jQuery('#artworkDetail').addClass('goLeft');
     };
@@ -155,8 +161,10 @@ ContentDetailView.prototype.onClickedLinkedArt = function(){
         jQuery('.si-icon-hamburger-cross2').removeClass('si-icon-unselected');
         jQuery('.si-icon-hamburger-cross2').addClass('si-icon-selected');
         // Fenêtre à droite
-        jQuery('#artworkZoomHolder').removeClass('goLeft');
-        jQuery('#artworkZoomHolder').addClass('goRight');
+        jQuery('#artworkZoomHolder').removeClass('goLeftZoom');
+        jQuery('#artworkZoomHolder').addClass('goRightZoom');
+        jQuery('#artworkChapoHolder').removeClass('goLeftZoom');
+        jQuery('#artworkChapoHolder').addClass('goRightZoom');
         jQuery('#artworkLinks').removeClass('goLeft').css('opacity','1');
         jQuery('#artworkLinks').addClass('goRight');
         // Autre bouton blanc
@@ -169,8 +177,10 @@ ContentDetailView.prototype.onClickedLinkedArt = function(){
             jQuery('#detailButton').css('color','#000');
             jQuery('#artworkDetail').removeClass('goRight').css('opacity','0');;
             jQuery('#artworkDetail').addClass('goLeft');
-            jQuery('#artworkZoomHolder').removeClass('goLeft');
-            jQuery('#artworkZoomHolder').addClass('goRight');
+            jQuery('#artworkZoomHolder').removeClass('goLeftZoom');
+            jQuery('#artworkZoomHolder').addClass('goRightZoom');
+            jQuery('#artworkChapoHolder').removeClass('goLeftZoom');
+            jQuery('#artworkChapoHolder').addClass('goRightZoom');
         }
     }
     else {
@@ -181,8 +191,10 @@ ContentDetailView.prototype.onClickedLinkedArt = function(){
         jQuery('.si-icon-hamburger-cross2').removeClass('si-icon-selected');
         jQuery('.si-icon-hamburger-cross2').addClass('si-icon-unselected');
         // Fenêtres à gauche
-        jQuery('#artworkZoomHolder').removeClass('goRight');
-        jQuery('#artworkZoomHolder').addClass('goLeft');
+        jQuery('#artworkZoomHolder').removeClass('goRightZoom');
+        jQuery('#artworkZoomHolder').addClass('goLeftZoom');
+        jQuery('#artworkChapoHolder').removeClass('goRightZoom');
+        jQuery('#artworkChapoHolder').addClass('goLeftZoom');
         jQuery('#artworkLinks').removeClass('goRight').css('opacity','0');
         jQuery('#artworkLinks').addClass('goLeft');
     };
@@ -221,8 +233,9 @@ ContentDetailView.prototype.onZoomLauncher = function() {
     jQuery('#artworkLinks').css('opacity','0');
     jQuery('#artworkDetail').css('opacity','0');
     jQuery('#artworkLeft').css('opacity','0');
+    jQuery('#artworkChapoHolder').css({'opacity':'0','display':'none'});
     jQuery('#zoomBack').css('display','block');
-    jQuery('#planButton').css('display','none');    
+    jQuery('#planButton').css('display','none!important');    
     jQuery(this).css('display','none');
     jQuery('.si-icon-maximize-rotate').click();
     jQuery('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -249,10 +262,11 @@ ContentDetailView.prototype.onZoomBack = function() {
         jQuery('#artworkLinks').css('opacity','1');
     }
     jQuery('#artworkLeft').css('opacity','1');
-    jQuery('#artworkZoomHolder').css({'width':'-=600px','height':'-=100px','top':'+=50px','left':'440px'});
+    jQuery('#artworkChapoHolder').css({'opacity':'1','display':'block'});
+    jQuery('#artworkZoomHolder').css({'width':'-=600px','height':'-=100px','top':'+=50px','left':'320px'});
     jQuery('#artworkZoom').css({'width':'-=600px','height':'-=100px'});
     jQuery('#zoomBack').css('display','none');
-    jQuery('#planButton').css('display','block');
+    jQuery('#planButton').css('display','block!important'); 
     jQuery('#zoomLauncher').css('display','block');
     jQuery('.si-icon-maximize-rotate').click();
     jQuery('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -277,4 +291,10 @@ ContentDetailView.prototype.onClickIcon = function(e){
 
 ContentDetailView.prototype.onBackToMap = function() {
     this.controller.setCurrent(Repository.MAP_ID);
+};
+
+ContentDetailView.prototype.checkLang = function(){
+    var lang = Cookie.getCookie('lang.curtius.com');
+    $('#detailButton .buttonText').html(eval('Internationalization.DetailBtnText'+lang));
+    $('#linkedArtworksButton .buttonText').html(eval('Internationalization.ArtLinkBtn'+lang));
 };

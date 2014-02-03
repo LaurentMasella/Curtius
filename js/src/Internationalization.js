@@ -13,7 +13,7 @@ Internationalization.choicevisiteng = 'Select your tour';
 Internationalization.choicevisitned = 'Kies uw bezoek';
 Internationalization.choicevisitdeu = 'Wählen Sie Ihren Besichtigung';
 
-Internationalization.visitBtnFreefr = 'Visite libre';
+Internationalization.visitBtnFreefr = 'bidule';
 Internationalization.VisitBtnFreeeng = 'Self-guided tours';
 Internationalization.VisitBtnFreened = 'Vrij bezoek';
 Internationalization.VisitBtnFreedeu = 'Freie Besichtigung';
@@ -146,6 +146,7 @@ Internationalization.MapLegendBlockfr = 'Ma position';
 Internationalization.MapLegendBlockeng = 'My position';
 Internationalization.MapLegendBlockned = 'Mijn positie';
 Internationalization.MapLegendBlockdeu = 'Meine Position';
+//
 /* ---- Artworks ---- */
 //
 Internationalization.PlanBtnfr = 'plan';
@@ -169,6 +170,7 @@ Internationalization.DetailBtnTextfr = 'Détails';
 Internationalization.DetailBtnTexteng = 'Details';
 Internationalization.DetailBtnTextned = 'Detail';
 Internationalization.DetailBtnTextdeu = 'Detail';
+
 /* ---- Tools ---- */
 //
 Internationalization.ToolsHeadbandfr = 'Changer de langue';

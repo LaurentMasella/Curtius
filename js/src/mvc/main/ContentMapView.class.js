@@ -374,4 +374,4 @@ ContentMapView.prototype.checkLang = function(){
     $('#legend7 span').html(eval('Internationalization.MapLegend7'+lang));
     $('#legend8 span').html(eval('Internationalization.MapLegend8'+lang));
     $('#legendBlock6 p').html(eval('Internationalization.MapLegendBlock'+lang));
-}; 
+};

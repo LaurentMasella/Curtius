@@ -62,4 +62,5 @@ ContentToolsView.prototype.onClickValidate = function(e){
 ContentToolsView.prototype.checkLang = function(){
 	var lang = Cookie.getCookie('lang.curtius.com');
 	jQuery('#toolsValidate .validate').html(eval('Internationalization.ToolsBtnValidate'+lang));
+	jQuery('#toolsHeadband').html(eval('Internationalization.ToolsChooseLang'+lang));
 };
