@@ -276,7 +276,8 @@ border-bottom-right-radius: 5px; }
 #artWorkHeadBand #artworkLogo { float: left; width: 127px; height: 66px; margin-top: 15px; background-size: 127px !IMPORTANT; background: url('../img/logoSmallBlack.png') no-repeat; }
 #artWorkHeadBand #artworkTitle { float: left; width: 1049px; text-align: center; }
 #artWorkHeadBand #artworkTitle #titleBold { display: inline-block; margin-right: 5px; font-family: 'playfair'; font-size: 24px; font-weight: bold; text-transform: uppercase; }
-#artWorkHeadBand #planButton, 
+#artWorkHeadBand #planButton,
+#artWorkHeadBand #planButton2,  
 #artWorkHeadBand #zoomBack { float: right; width: 70px; height: 70px; line-height: 65px; margin-top: 15px; font-family: 'robotoCondlight'; font-size: 20px; text-align: center; text-transform: uppercase; background: #f4f4f4; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, -webkit-transition: all .4s linear;
 -moz-transition: all .4s ease-in-out;
 -ms-transition: all .4s ease-in-out;

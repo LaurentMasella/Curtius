@@ -21,6 +21,7 @@ ContentDetailView.prototype.init = function(tag){
 ContentDetailView.prototype.onCurrentUpdated = function(){
     MainContentView.prototype.onCurrentUpdated.call(this);
     if(this.controller.model.current == this.id){
+        this.checkLang();
         this.enableView();
     }else{
         this.disableView();
@@ -34,7 +35,7 @@ ContentDetailView.prototype.enableView = function(){
     jQuery('#zoomLauncher').bind('mousedown', jQuery.proxy(this.onZoomLauncher,this));
     jQuery('#zoomBack, .si-icon-maximize-rotate svg').bind('mousedown', jQuery.proxy(this.onZoomBack,this));
     jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').bind('mousedown', jQuery.proxy(this.onClickIcon, this));
-    jQuery('#planButton').bind('mousedown', jQuery.proxy(this.onBackToMap,this));
+    jQuery('#planButton2').bind('mousedown', jQuery.proxy(this.onBackToMap,this));
     jQuery('#artworkinfos').bind('mousedown', jQuery.proxy(this.onClickTools, this));
     //on écoute le changement de données du lifi que quand on est sur cette vue
     jQuery(this.hotSpotController.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));
@@ -49,7 +50,7 @@ ContentDetailView.prototype.disableView = function(){
     jQuery('#zoomLauncher').unbind('mousedown', jQuery.proxy(this.onZoomLauncher,this));
     jQuery('#zoomBack, .si-icon-maximize-rotate svg').unbind('mousedown', jQuery.proxy(this.onZoomBack,this));
     jQuery('.si-icon-hamburger-cross, .si-icon-hamburger-cross2').unbind('mousedown', jQuery.proxy(this.onClickIcon, this));
-    jQuery('#planButton').unbind('mousedown', jQuery.proxy(this.onBackToMap,this));
+    jQuery('#planButton2').unbind('mousedown', jQuery.proxy(this.onBackToMap,this));
     jQuery('#artworkinfos').unbind('mousedown', jQuery.proxy(this.onClickTools, this));    
     jQuery(this.hotSpotController.model).unbind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));
     //this.initData();
@@ -67,6 +68,8 @@ ContentDetailView.prototype.onDataUpdated = function(){
 ContentDetailView.prototype.displayItem = function(){
     // Ici on ne récupère les données que de item de hotsSpotController. Si enregistré dans les vues précedentes, il devrait être
     // récupéré ici
+    //$('monTag').html($(this.hotSpotController.model.item['sousOeuvres']));
+
     
 };
 
@@ -235,7 +238,7 @@ ContentDetailView.prototype.onZoomLauncher = function() {
     jQuery('#artworkLeft').css('opacity','0');
     jQuery('#artworkChapoHolder').css({'opacity':'0','display':'none'});
     jQuery('#zoomBack').css('display','block');
-    jQuery('#planButton').css('display','none!important');    
+    jQuery('#planButton2').css('display','none');    
     jQuery(this).css('display','none');
     jQuery('.si-icon-maximize-rotate').click();
     jQuery('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
@@ -266,7 +269,7 @@ ContentDetailView.prototype.onZoomBack = function() {
     jQuery('#artworkZoomHolder').css({'width':'-=600px','height':'-=100px','top':'+=50px','left':'320px'});
     jQuery('#artworkZoom').css({'width':'-=600px','height':'-=100px'});
     jQuery('#zoomBack').css('display','none');
-    jQuery('#planButton').css('display','block!important'); 
+    jQuery('#planButton2').css('display','block'); 
     jQuery('#zoomLauncher').css('display','block');
     jQuery('.si-icon-maximize-rotate').click();
     jQuery('#artworkZoom').smoothZoom('destroy').css('background-image', 'url(zoom_assets/preloader.gif)').smoothZoom({ 
