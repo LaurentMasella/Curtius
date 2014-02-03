@@ -68,7 +68,30 @@ ContentDetailView.prototype.onDataUpdated = function(){
 ContentDetailView.prototype.displayItem = function(){
     // Ici on ne récupère les données que de item de hotsSpotController. Si enregistré dans les vues précedentes, il devrait être
     // récupéré ici
-    //$('monTag').html($(this.hotSpotController.model.item['sousOeuvres']));
+    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['chapeauOeuvre']);
+    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['legendeImage']);
+    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['titreOeuvre']);
+    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['DescriptionOeuvre']);
+
+    var lang = Cookie.getCookie('lang.curtius.com');
+    if(lang=="fr"){
+        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['titreOeuvre']);
+        $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['DescriptionOeuvre']);
+    }
+    if(lang=="eng"){
+        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['EN']['titreOeuvre']);
+        $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['EN']['DescriptionOeuvre']);
+    }
+    if(lang=="ned"){
+        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['NED']['titreOeuvre']);
+        $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['NED']['DescriptionOeuvre']);
+    }
+    if(lang=="deu"){
+        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['titreOeuvre']);
+        $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['DescriptionOeuvre']);
+    }
+    
+
 
     
 };

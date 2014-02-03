@@ -20,50 +20,50 @@
 				"FR" : {
 			  		"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
-	          		"titreOeuvre" : "Ttitre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"titreOeuvre" : "Titre 1",
+	          		"DescriptionOeuvre" : "Description 1"
 				},
 	      		"EN" : {
 					"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
 	          		"titreOeuvre" : "Titre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"DescriptionOeuvre" : "Description 1"
 	          	},
 	          	"NED" : {
 					"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
 	          		"titreOeuvre" : "Titre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"DescriptionOeuvre" : "Description 1"
 	          	},
 	          	"DEU" : {
 					"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
 	          		"titreOeuvre" : "Titre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"DescriptionOeuvre" : "Description 1"
 	          	},
 	          	"FR-CHILD" : {
 			  		"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
 	          		"titreOeuvre" : "Ttitre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"DescriptionOeuvre" : "Description 1"
 				},
 	      		"EN-CHILD" : {
 					"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
 	          		"titreOeuvre" : "Titre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"DescriptionOeuvre" : "Description 1"
 	          	},
 	          	"NED-CHILD" : {
 					"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
 	          		"titreOeuvre" : "Titre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"DescriptionOeuvre" : "Description 1"
 	          	},
 	          	"DEU-CHILD" : {
 					"chapeauOeuvre" : "Chapo 1",
 	          		"legendeImage" : "Legende 1",
 	          		"titreOeuvre" : "Titre 1",
-	          		"DescriptionOeuvre" : "Desrcripion 1"
+	          		"DescriptionOeuvre" : "Description 1"
 	          	}
 			},
 			"sousOeuvres": [
@@ -129,49 +129,49 @@
 			  		"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Ttitre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 				},
 	      		"EN" : {
 					"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Titre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 	          	},
 	          	"NED" : {
 					"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Titre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 	          	},
 	          	"DEU" : {
 					"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Titre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 	          	},
 	          	"FR-CHILD" : {
 			  		"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Ttitre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 				},
 	      		"EN-CHILD" : {
 					"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Titre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 	          	},
 	          	"NED-CHILD" : {
 					"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Titre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 	          	},
 	          	"DEU-CHILD" : {
 					"chapeauOeuvre" : "Chapo 2",
 	          		"legendeImage" : "Legende 2",
 	          		"titreOeuvre" : "Titre 2",
-	          		"DescriptionOeuvre" : "Desrcripion 2"
+	          		"DescriptionOeuvre" : "Description 2"
 	          	}
 			},
 			"sousOeuvres": [
@@ -208,49 +208,49 @@
 			  		"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Ttitre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 				},
 	      		"EN" : {
 					"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Titre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 	          	},
 	          	"NED" : {
 					"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Titre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 	          	},
 	          	"DEU" : {
 					"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Titre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 	          	},
 	          	"FR-CHILD" : {
 			  		"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Ttitre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 				},
 	      		"EN-CHILD" : {
 					"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Titre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 	          	},
 	          	"NED-CHILD" : {
 					"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Titre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 	          	},
 	          	"DEU-CHILD" : {
 					"chapeauOeuvre" : "Chapo 3",
 	          		"legendeImage" : "Legende 3",
 	          		"titreOeuvre" : "Titre 3",
-	          		"DescriptionOeuvre" : "Desrcripion 3"
+	          		"DescriptionOeuvre" : "Description 3"
 	          	}
 			},
 			"sousOeuvres": [
