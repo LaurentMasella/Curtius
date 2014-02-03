@@ -111,7 +111,8 @@ ContentMapView.prototype.checkStage = function(){
 ContentMapView.prototype.populateMapRDC = function(){
 	if(this.coordRDC.length != 0){
 	    for (var i = 1; i < this.coordRDC.length; i++) {
-	        jQuery('.landmarks').append('<div class="item mark"data-position="'+this.coordRDC[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+	        //jQuery('.landmarks').append('<div class="item mark"data-position="'+this.coordRDC[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+	        jQuery('.landmarks').append('<div class="item mark"data-position="'+this.coordRDC[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint"></div></div></div>');
 	    }
 	}else{
 		jQuery('.landmarks').append('<div class="item mark"data-position="500,500" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe0"><div class="lifiPoint">0</div></div></div>');
@@ -124,8 +125,8 @@ ContentMapView.prototype.populateMap1 = function(){
 	if(this.coord1.length != 0){
 	    for (var i = 1; i < this.coord1.length; i++) {
 	        floor1Num = i+parseInt(this.coordRDC.length)-1;
-	        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord1[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
-	    }
+	        //jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord1[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
+	    }	jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord1[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint"></div></div></div>');
     }else{
 		jQuery('.landmarks').append('<div class="item mark"data-position="500,500" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe0"><div class="lifiPoint">0</div></div></div>');
 	}
@@ -137,7 +138,8 @@ ContentMapView.prototype.populateMap2 = function(){
 	if(this.coord2.length != 0){
 	    for (var i = 1; i < this.coord2.length; i++) {
 	        floor2Num = i+parseInt(this.coordRDC.length)+parseInt(this.coord1.length)-1;
-	        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord2[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
+	        //jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord2[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
+	        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord2[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint"></div></div></div>');
 	    }
     }else{
 		jQuery('.landmarks').append('<div class="item mark"data-position="500,500" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe0"><div class="lifiPoint">0</div></div></div>');
