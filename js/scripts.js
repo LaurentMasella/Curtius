@@ -1,6 +1,6 @@
 (function(jQuery) {
 
-	var urlToJson = 'detailData.json';
+	var urlToJson = 'data_proj.json';
 
 	// MAIN CONTROLLER
 	// Controller général qui va permettre de définir quelle vue est à afficher, 
@@ -27,7 +27,7 @@
     	format:'json',
     })
       .done(function(data){
-    	jQuery(data['Lifi']).each(jQuery.proxy(function(index,element){
+    	jQuery(data).each(jQuery.proxy(function(index,element){
 			hotSpotController.model.scope[element['mapNumber']] = element;
     	},this));
     	// TEST EN CURRENT = 1
@@ -55,10 +55,12 @@
 	                    //Recherche du code lifi correspondant dans notre tableau (scope), et mise à jour de la
 	                    //data courante de notre controleur
 	                    for (var i = 1; i < jQuery(hotSpotController.model.scope).length; i++){
-	                    	if(hotSpotController.model.scope[i]['idLifi'] == currentValue){
-	                    		//console.info(currentValue);
-	                    		hotSpotController.setCurrent(hotSpotController.model.scope[i]);
+	                    	if(hotSpotController.model.scope[i] != undefined){
+		                    	if(hotSpotController.model.scope[i].idLifi == currentValue){
+		                    		hotSpotController.setCurrent(hotSpotController.model.scope[i]);
+		                    	}	                    		
 	                    	}
+
 	                    }
 	                    
 	                }

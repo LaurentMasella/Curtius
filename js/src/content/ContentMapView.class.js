@@ -25,7 +25,6 @@ ContentMapView.prototype.init = function(tag){
     this.lastPositionData = "";
     this.floorHeadBand = jQuery('#floorHeadBand');
 	//this.displayingMap();
-
 	jQuery(this.hotSpotController.model).bind(HotSpotEvent.ON_CURRENT_UPDATED, jQuery.proxy(this.onDataUpdated, this));	
 };
 
@@ -47,7 +46,7 @@ ContentMapView.prototype.enableView = function(){
 	window.setTimeout(jQuery.proxy(this.addingSpotLights, this), 100);
 	this.addingClicksFeatures();
 	this.checkStage();
-	window.setTimeout(jQuery.proxy(this.localize,this), 250);
+	//window.setTimeout(jQuery.proxy(this.localize,this), 250);
 	window.setTimeout(jQuery.proxy(this.addingSpotInteraction,this), 100);
 };
 
@@ -66,7 +65,6 @@ ContentMapView.prototype.disableView = function(){
 ContentMapView.prototype.onDataUpdated = function(){
 	//Récupération de la data courante pour évaluer la position courante
 	this.currentPositionData = this.hotSpotController.model.current;
-
 	//Si nous sommes actuellement sur la vue map et seulement dans ce cas alors
 	//Renvoie sur une page selon le type de contenu
 	if(this.controller.model.current == this.id){
@@ -84,76 +82,89 @@ ContentMapView.prototype.onDataUpdated = function(){
 
 	//Evaluation de la data pour donner la dernière position courante	
 	if(this.currentPositionData != "" && this.currentPositionData != null && this.currentPositionData != undefined){
-		this.lastPositionData = this.currentPositionData;
+		for(var i = 1; i< jQuery(this.hotSpotController.model.scope).length; i++){
+			if(this.hotSpotController.model.scope[i] != undefined){
+				if(this.currentPositionData['mapNumber'] == this.hotSpotController.model.scope[i].mapNumber){
+					console.info(this.currentPositionData);
+					this.lastPositionData = this.currentPositionData;
+				}
+			}
+		}
 	}
 	this.checkStage();
 };
 
 ContentMapView.prototype.checkStage = function(){
-
 	if(this.lastPositionData != ""){
-		switch(this.lastPositionData["etage"]){
-			case 0:
-				jQuery("#level1").mousedown();
-			break;
-			case 1:
-				jQuery("#level2").mousedown();
-			break;
-			case 2:
-				jQuery("#level3").mousedown();
-			break;
+		if(this.lastPositionData["etage"] == 0){
+			jQuery("#level1").mousedown();
+		}else if(this.lastPositionData["etage"] == 1){
+			jQuery("#level2").mousedown();
+		}else if(this.lastPositionData["etage"] == 2){
+			jQuery("#level3").mousedown();
 		}
+	}else{
+		jQuery("#level1").mousedown();
 	}
 };
 
 ContentMapView.prototype.populateMapRDC = function(){
-	// console.info('ContentMapView.prototype.populateMapRDC');
-    for (var i = 1; i < this.coordRDC.length; i++) {
-        jQuery('.landmarks').append('<div class="item mark"data-position="'+this.coordRDC[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
-    }
+	if(this.coordRDC.length != 0){
+	    for (var i = 1; i < this.coordRDC.length; i++) {
+	        jQuery('.landmarks').append('<div class="item mark"data-position="'+this.coordRDC[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+i+'"><div class="lifiPoint">'+i+'</div></div></div>');
+	    }
+	}else{
+		jQuery('.landmarks').append('<div class="item mark"data-position="500,500" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe0"><div class="lifiPoint">0</div></div></div>');
+	}
 };
 
 ContentMapView.prototype.populateMap1 = function(){
-	// console.info('ContentMapView.prototype.populateMap1');
+	console.info('ContentMapView.prototype.populateMap1');
 	var floor1Num = "";
-    for (var i = 1; i < this.coord1.length; i++) {
-        floor1Num = i+parseInt(this.coordRDC.length)-1;
-        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord1[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
-    }
+	if(this.coord1.length != 0){
+	    for (var i = 1; i < this.coord1.length; i++) {
+	        floor1Num = i+parseInt(this.coordRDC.length)-1;
+	        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord1[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor1Num+'"><div class="lifiPoint">'+floor1Num+'</div></div></div>');
+	    }
+    }else{
+		jQuery('.landmarks').append('<div class="item mark"data-position="500,500" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe0"><div class="lifiPoint">0</div></div></div>');
+	}
 };
 
 ContentMapView.prototype.populateMap2 = function(){
-	// console.info('ContentMapView.prototype.populateMap2');
+	console.info('ContentMapView.prototype.populateMap2');
 	var floor2Num = "";
-    for (var i = 1; i < this.coord2.length; i++) {
-        floor2Num = i+parseInt(this.coordRDC.length)+parseInt(this.coord1.length)-1;
-        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord2[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
-    }
+	if(this.coord2.length != 0){
+	    for (var i = 1; i < this.coord2.length; i++) {
+	        floor2Num = i+parseInt(this.coordRDC.length)+parseInt(this.coord1.length)-1;
+	        jQuery('.landmarks').append('<div class="item mark" data-position="'+this.coord2[ i ]+'" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe'+floor2Num+'"><div class="lifiPoint">'+floor2Num+'</div></div></div>');
+	    }
+    }else{
+		jQuery('.landmarks').append('<div class="item mark"data-position="500,500" data-show-at-zoom="0"><div lass="lifiPointHolder" id="Lampe0"><div class="lifiPoint">0</div></div></div>');
+	}
 };
 
 ContentMapView.prototype.addingSpotLights = function() {
 	var markcount = jQuery('.landmarks').find(".mark").length;
     //Si il y a plusieurs marks, alors on affiche et positionne
-    if(markcount > 2) {
+    if(markcount.length =! 0) {
         if(this.lastPositionData != ""){
         	jQuery('.landmarks').find(".mark:nth-child("+this.lastPositionData['mapNumber']+")").addClass("currentLifiPoint");
+	        jQuery('.currentLifiPoint').css('z-index','10000000000000');
+	        jQuery('.currentLifiPoint').prevAll('.mark').addClass('visitedLifiPoint');
+	        // Position de la prochaine borne (.nextLifiPoint)
+	        jQuery('.currentLifiPoint').next().addClass('nextLifiPoint');
+	     // Position de la dernière borne consultée (.currentLifiPoint)
+	        this.position = (jQuery('.currentLifiPoint').attr('data-position'));
+	        this.positionArray = this.position.split(',');
         }else{
         	//nécessaire ?
-        	jQuery('.landmarks').find(".mark:nth-child("+0+")").addClass("currentLifiPoint");
+        	jQuery('.landmarks').find(".mark:nth-child("+1+")").addClass("currentLifiPoint");
         }
         
-        jQuery('.currentLifiPoint').css('z-index','10000000000000');
-        jQuery('.currentLifiPoint').prevAll('.mark').addClass('visitedLifiPoint');
-        // Position de la prochaine borne (.nextLifiPoint)
-        jQuery('.currentLifiPoint').next().addClass('nextLifiPoint');
-    }
-    else {
-        jQuery('.landmarks').find(".mark:last-child").addClass("currentLifiPoint");
 
     }
-     // Position de la dernière borne consultée (.currentLifiPoint)
-        this.position = (jQuery('.currentLifiPoint').attr('data-position'));
-        this.positionArray = this.position.split(',');
+
 
 };
 
@@ -328,29 +339,45 @@ ContentMapView.prototype.initCoordonates = function(){
 
 	//Cookie.setCookie('visit.curtius.com','per','365');
 	var visit = Cookie.getCookie('visit.curtius.com');
+	switch(visit){
+		case 'free':
+			visit = 'libre';
+		break;
+		case 'fast':
+			visit = 'rapide';
+		break;
+		case 'scol':
+			visit = 'scolaire';
+		break;
+		case 'per':
+			visit = 'chrolologique';
+		break;
+	};
 	var itemCoordRDC = 0;
 	var itemCoord1 = 0;
 	var itemCoord2 = 0;
 	for(var i = 1; i< jQuery(this.hotSpotController.model.scope).length; i++){
-		for(var j = 0; j < this.hotSpotController.model.scope[i].parcours.length; j++){
-			if(this.hotSpotController.model.scope[i].parcours[j].parcoursType == visit){
-				switch(this.hotSpotController.model.scope[i].etage){
-					case 0:
-						itemCoordRDC ++;
-						this.coordRDC[itemCoordRDC] = this.hotSpotController.model.scope[i].coordinates;
-					break;
-					case 1:
-						itemCoord1 ++;
-						this.coord1[itemCoord1] = this.hotSpotController.model.scope[i].coordinates;
-					break;
-					case 2:
-						itemCoord2 ++;
-						this.coord2[itemCoord2] = this.hotSpotController.model.scope[i].coordinates;
-					break;
+		if(this.hotSpotController.model.scope[i] != undefined){
+			for(var j = 0; j < this.hotSpotController.model.scope[i].parcours.length; j++){
+				if(this.hotSpotController.model.scope[i].parcours[j].parcoursType == visit){
+					if(this.hotSpotController.model.scope[i].etage == 0){
+							itemCoordRDC ++;
+							this.coordRDC[itemCoordRDC] = this.hotSpotController.model.scope[i].coordinates;
+					}
+					else if(this.hotSpotController.model.scope[i].etage == 1){
+							itemCoord1 ++;
+							this.coord1[itemCoord1] = this.hotSpotController.model.scope[i].coordinates;
+					}
+					else if(this.hotSpotController.model.scope[i].etage == 2){
+							itemCoord2 ++;
+							this.coord2[itemCoord2] = this.hotSpotController.model.scope[i].coordinates;
+					}
 				}
-			}
+			}			
 		}
+
 	}
+	
 };
 
 ContentMapView.prototype.checkLang = function(){
