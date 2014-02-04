@@ -167,64 +167,32 @@ body {
 transition: all .4s ease-in-out; background: #5e5e5e url('../img/homeIcon.png') center center no-repeat; background-size: 60px; }
 #homeButton:hover { background-color: #7e7e7e; background-size: 55px; cursor: pointer; }
 
-.white-popup {
-  position: relative;
-  background: rgba(255,255,255,0.9);
-  padding: 20px;
-  width: auto;
-  max-width: 500px;
-  margin: 20px auto;
-  padding-top: 30px;
-  font-size: 16px;
-  -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;
-}
+/* === POP-UP ============================================= */
 
-.white-popup .warning { font-size: 18px; font-weight: bold; }
-
-/* overlay at start */
-.mfp-fade.mfp-bg {
-  opacity: 0;
-
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-}
-/* overlay animate in */
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
-}
-/* overlay animate out */
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-
-/* content at start */
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-
-  -webkit-transition: all 0.4s ease-out;
-  -moz-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-}
-/* content animate it */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
-}
-/* content animate out */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
-}
-
-
-.resetCancel,
-.resetApp { position: relative!important; float: left!important; width: auto!important; height: 35px!important; margin: 15px 0 10px 0!important; padding: 0 20px!important; line-height: 35px!important; font-size: 18px!important; font-weight: normal!important; color: #fff!important; text-align: center!important; text-transform: uppercase!important; background: #ad0d69!important; -webkit-border-radius: 5px!important; -o-border-radius: 5px!important; -ms-border-radius: 5px!important; border-radius: 5px!important; box-shadow: 0 1px 0 #efefef!important; -webkit-transition: all .4s linear!important;
+.white-popup { position: relative; width: auto; max-width: 500px; margin: 20px auto; padding: 30px 20px 20px 20px; font-size: 16px; background: rgba(255,255,255,0.9); -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px; }
+.white-popup .resetTitle { font-size: 18px; font-weight: bold; }
+.white-popup .resetCancel,
+.white-popup .resetApp { position: relative!important; float: left!important; width: auto!important; height: 35px!important; margin: 15px 0 10px 0!important; padding: 0 20px!important; line-height: 35px!important; font-size: 18px!important; font-weight: normal!important; color: #fff!important; text-align: center!important; text-transform: uppercase!important; background: #ad0d69!important; -webkit-border-radius: 5px!important; -o-border-radius: 5px!important; -ms-border-radius: 5px!important; border-radius: 5px!important; box-shadow: 0 1px 0 #efefef!important; -webkit-transition: all .4s linear!important;
 -moz-transition: all .4s ease-in-out!important;
 -ms-transition: all .4s ease-in-out!important;
 -o-transition: all .4s ease-in-out!important;
 transition: all .4s ease-in-out!important; }
-.resetCancel:hover { background: #d83693!important; cursor: pointer!important; }
-.resetApp { float: right!important; background: #5e5e5e!important; }
-.resetApp:hover { background: #7e7e7e!important; cursor: pointer!important; }
+.white-popup .resetCancel:hover { background: #d83693!important; cursor: pointer!important; }
+.white-popup .resetApp { float: right!important; background: #5e5e5e!important; }
+.white-popup .resetApp:hover { background: #7e7e7e!important; cursor: pointer!important; }
+
+/* overlay at start */
+.mfp-fade.mfp-bg { opacity: 0; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; transition: all 0.4s ease-out; }
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready { opacity: 0.8; }
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing { opacity: 0; }
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content { opacity: 0; -webkit-transition: all 0.4s ease-out; -moz-transition: all 0.4s ease-out; transition: all 0.4s ease-out; }
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content { opacity: 1; }
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content { opacity: 0; }
 
 /* ================================================================================ */
 /* === PLAN ======================================================================= */
@@ -481,9 +449,9 @@ box-shadow: -5px 0 8px 1px #DBDBDB; }
 
 /* ---- INIT ---- */
 #wrapper{
-    overflow:hidden;
-    width:1280px;
-    height:800px;
+    overflow: hidden;
+    width: 1280px;
+    height: 800px;
 }
 #contentLanding,#howItWork,#mapView, #oeuvresView,#contentDetail,#tools,#langage,#visit{ 
     display:none;
