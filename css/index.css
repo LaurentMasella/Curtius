@@ -190,9 +190,9 @@ transition: all .8s ease-in-out; }
 #legend3 .mapIcon { height: 50px; background-position: 0 -58px; }
 #legend4 .mapIcon { height: 50px; background-position: 0 -108px; }
 #legend5 .mapIcon { height: 50px; background-position: 0 -208px; }
-#legend6 .mapIcon { height: 50px; background-position: 0 -158px; }
+#legend6 .mapIcon { height: 50px; background: url('../img/wc.png') 0 0 no-repeat; }
 #legend7 .mapIcon { height: 50px; background-position: 0 -258px; }
-#legend8 .mapIcon { height: 50px; background-position: 0 -308px; }
+#legend8 .mapIcon { height: 50px; background: url('../img/elevator.png') 0 0 no-repeat; }
 #legendBlock3 div#legend3,
 .langDEU #legendBlock2 div#legend2,
 .langNED #legendBlock2 div#legend2,
