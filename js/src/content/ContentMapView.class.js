@@ -352,7 +352,7 @@ ContentMapView.prototype.initCoordonates = function(){
 			visit = 'scolaire';
 		break;
 		case 'per':
-			visit = 'chrolologique';
+			visit = 'chronologique';
 		break;
 	};
 	var itemCoordRDC = 0;
@@ -379,7 +379,9 @@ ContentMapView.prototype.initCoordonates = function(){
 		}
 
 	}
-	
+	console.log(itemCoordRDC);
+	console.log(itemCoord1);
+	console.log(itemCoord2);	
 };
 
 ContentMapView.prototype.checkLang = function(){

@@ -160,6 +160,72 @@ body {
 #toolsValidate .cancel:hover, 
 #toolsValidate .validate:hover { cursor: pointer; color: #fff; background: rgba(147,19,92,1); }
 
+#homeButton { display: block; position: absolute; top: 15px; left: 15px; width: 70px; height: 70px; text-decoration: none; font-size: 0; color: transparent; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, -webkit-transition: all .4s linear;
+-moz-transition: all .4s ease-in-out;
+-ms-transition: all .4s ease-in-out;
+-o-transition: all .4s ease-in-out;
+transition: all .4s ease-in-out; background: #5e5e5e url('../img/homeIcon.png') center center no-repeat; background-size: 60px; }
+#homeButton:hover { background-color: #7e7e7e; background-size: 55px; cursor: pointer; }
+
+.white-popup {
+  position: relative;
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+  padding-top: 30px;
+  font-size: 16px;
+  -webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;
+}
+
+.white-popup .warning { font-size: 18px; font-weight: bold; }
+
+/* overlay at start */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
+}
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+
+.resetCancel,
+.resetApp { position: relative!important; float: left!important; width: auto!important; height: 35px!important; margin: 15px 0 10px 0!important; padding: 0 20px!important; line-height: 35px!important; font-size: 18px!important; font-weight: normal!important; color: #fff!important; text-align: center!important; text-transform: uppercase!important; background: #ad0d69!important; -webkit-border-radius: 5px!important; -o-border-radius: 5px!important; -ms-border-radius: 5px!important; border-radius: 5px!important; box-shadow: 0 1px 0 #efefef!important; -webkit-transition: all .4s linear!important;
+-moz-transition: all .4s ease-in-out!important;
+-ms-transition: all .4s ease-in-out!important;
+-o-transition: all .4s ease-in-out!important;
+transition: all .4s ease-in-out!important; }
+.resetCancel:hover { background: #d83693!important; cursor: pointer!important; }
+.resetApp { float: right!important; background: #5e5e5e!important; }
+.resetApp:hover { background: #7e7e7e!important; cursor: pointer!important; }
+
 /* ================================================================================ */
 /* === PLAN ======================================================================= */
 /* ================================================================================ */
@@ -272,10 +338,9 @@ border-bottom-right-radius: 5px; }
 /* ================================================================================ */
 
 #slideBGArtworks { width: 1280px; height: 800px; background: url('../img/lifiTextureLeft.png') repeat; }
-#artWorkHeadBand { width: 1250px; height: 100px; line-height: 100px; margin-left: 15px; border-bottom: 1px solid #aaa; }
+#artWorkHeadBand { width: 1250px; height: 100px; margin-left: 15px; border-bottom: 1px solid #aaa; }
 #artWorkHeadBand #artworkLogo { float: left; width: 127px; height: 66px; margin-top: 15px; background-size: 127px !IMPORTANT; background: url('../img/logoSmallBlack.png') no-repeat; }
-#artWorkHeadBand #artworkTitle { float: left; width: 1049px; text-align: center; }
-#artWorkHeadBand #artworkTitle #titleBold { display: inline-block; margin-right: 5px; font-family: 'playfair'; font-size: 24px; font-weight: bold; text-transform: uppercase; }
+#artWorkHeadBand #artworkTitle { float: left; width: 1049px; height: 70px; padding-top: 30px; text-align: center; font-family: 'playfair'; font-size: 24px; font-weight: bold; text-transform: uppercase; }
 #artWorkHeadBand #planButton,
 #artWorkHeadBand #planButton2,  
 #artWorkHeadBand #zoomBack { float: right; width: 70px; height: 70px; line-height: 65px; margin-top: 15px; font-family: 'robotoCondlight'; font-size: 20px; text-align: center; text-transform: uppercase; background: #f4f4f4; -webkit-border-radius: 100%; -o-border-radius: 100%; -ms-border-radius: 100%; border-radius: 100%; box-shadow: 0 1px 0 #efefef, -webkit-transition: all .4s linear;

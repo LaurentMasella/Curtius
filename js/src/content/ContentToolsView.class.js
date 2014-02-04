@@ -63,4 +63,18 @@ ContentToolsView.prototype.checkLang = function(){
 	var lang = Cookie.getCookie('lang.curtius.com');
 	jQuery('#toolsValidate .validate').html(eval('Internationalization.ToolsBtnValidate'+lang));
 	jQuery('#toolsHeadband').html(eval('Internationalization.ToolsChooseLang'+lang));
+	jQuery('.resetCancel').html(eval('Internationalization.ToolsResetCancel'+lang));
+	jQuery('.resetApp').html(eval('Internationalization.ToolsResetApp'+lang));
+	jQuery('.resetTitle').html(eval('Internationalization.ToolsResetTitle'+lang));
+	jQuery('.resetText').html(eval('Internationalization.ToolsResetText'+lang));
 };
+
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  removalDelay: 300,
+
+  // Class that is added to popup wrapper and background
+  // make it unique to apply your CSS animations just to this exact popup
+  mainClass: 'mfp-fade',
+  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+});

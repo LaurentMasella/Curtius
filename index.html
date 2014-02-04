@@ -6,6 +6,7 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" />
         <title>Curtius</title>
         <script src="js/snap.svg-min.js"></script>
     </head>
@@ -164,7 +165,7 @@
                 <div id="slideBGArtworks">
                     <div id="artWorkHeadBand">
                         <div id="artworkLogo"></div>
-                        <div id="artworkTitle"><span id="titleBold">fragments d'un diplôme militaire</span>( 98 ap.J-C )</div>
+                        <div id="artworkTitle"></div>
                         <div id="planButton2"></div>
                         <div id="zoomBack"></div>
                         <div class="clear"></div>
@@ -195,6 +196,7 @@
             </section>
             <section class="content contentIsHiddenOnRight" id="tools">
                 <div id="toolBG"> 
+                    <a href="#test-popup" class="open-popup-link" id="homeButton"></a>
                     <div id="toolsHeadband"></div>
                     <div id="toolsRight">
                         <div id="chooseLang"></div>
@@ -224,14 +226,26 @@
                         <div class="clear"></div>
                     </div>
                 </div>
+
+                <div id="test-popup" class="white-popup mfp-hide">
+                    <div class="resetPopupText">
+                        <div class="resetTitle"></div>
+                        <div class="resetText"></div>
+                    </div>
+                    <div class="resetCancel mfp-close"></div>
+                    <div class="resetApp"></div>
+                    <div class="clear"></div>
+                </div>
+
+
             </section>
         </section>
 
         <!-- etxernals -->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-        <script type="text/javascript" src="js/jquery-ui.js"></script>
         <script type="text/javascript" src="js/jquery.smoothZoom.min.js"></script>
+        <script type="text/javascript" src="js/magnific-popup.js"></script>
         <script src="js/svgicons-config.js"></script>
         <script src="js/svgicons.js"></script>
         <!-- custom -->

@@ -3,17 +3,18 @@ function Internationalization(){
 }
 
 /* ---- PARCOURS ---- */
+//
 Internationalization.chooseLangfr = 'Choisissez votre langue';
 Internationalization.chooseLangeng = 'Select your language';
 Internationalization.chooseLangned = '';
 Internationalization.chooseLangdeu = '';
-
+//
 Internationalization.choicevisitfr = 'Choisissez votre visite';
 Internationalization.choicevisiteng = 'Select your tour';
 Internationalization.choicevisitned = 'Kies uw bezoek';
 Internationalization.choicevisitdeu = 'Wählen Sie Ihren Besichtigung';
-
-Internationalization.visitBtnFreefr = 'bidule';
+//
+Internationalization.VisitBtnFreefr = 'Visite libre';
 Internationalization.VisitBtnFreeeng = 'Self-guided tours';
 Internationalization.VisitBtnFreened = 'Vrij bezoek';
 Internationalization.VisitBtnFreedeu = 'Freie Besichtigung';
@@ -172,6 +173,26 @@ Internationalization.DetailBtnTextned = 'Detail';
 Internationalization.DetailBtnTextdeu = 'Detail';
 
 /* ---- Tools ---- */
+//
+Internationalization.ToolsResetCancelfr = 'Annuler';
+Internationalization.ToolsResetCanceleng = 'Cancel';
+Internationalization.ToolsResetCancelned = '';
+Internationalization.ToolsResetCanceldeu = '';
+//
+Internationalization.ToolsResetAppfr = 'Réinitialiser';
+Internationalization.ToolsResetAppeng = 'Reset';
+Internationalization.ToolsResetAppned = '';
+Internationalization.ToolsResetAppdeu = '';
+//
+Internationalization.ToolsResetTitlefr = 'Attention !';
+Internationalization.ToolsResetTitleeng = 'Warning!';
+Internationalization.ToolsResetTitlened = '';
+Internationalization.ToolsResetTitledeu = '';
+//
+Internationalization.ToolsResetTextfr = 'Si vous continuez, l\'application va être réinitialisée, touchez l\'écran à coté de la fenêtre ou bien appuyez sur le bouton <b>annuler</b> pour revenir à votre visite.';
+Internationalization.ToolsResetTexteng = '';
+Internationalization.ToolsResetTextned = '';
+Internationalization.ToolsResetTextdeu = '';
 //
 Internationalization.ToolsHeadbandfr = 'Changer de langue';
 Internationalization.ToolsHeadbandeng = 'Change language';

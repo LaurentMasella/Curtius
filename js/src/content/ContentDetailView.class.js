@@ -75,19 +75,19 @@ ContentDetailView.prototype.displayItem = function(){
 
     var lang = Cookie.getCookie('lang.curtius.com');
     if(lang=="fr"){
-        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['titreOeuvre']);
+        $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['titreOeuvre']);
         $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['DescriptionOeuvre']);
     }
     if(lang=="eng"){
-        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['EN']['titreOeuvre']);
+        $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['EN']['titreOeuvre']);
         $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['EN']['DescriptionOeuvre']);
     }
     if(lang=="ned"){
-        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['NED']['titreOeuvre']);
+        $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['NED']['titreOeuvre']);
         $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['NED']['DescriptionOeuvre']);
     }
     if(lang=="deu"){
-        $('#titleBold').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['titreOeuvre']);
+        $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['titreOeuvre']);
         $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['DescriptionOeuvre']);
     }
     
