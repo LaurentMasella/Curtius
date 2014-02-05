@@ -23,6 +23,8 @@ ContentDetailView.prototype.onCurrentUpdated = function(){
     if(this.controller.model.current == this.id){
         this.checkLang();
         this.enableView();
+        this.keyWords();
+        window.setTimeout(this.popUp, 200);
     }else{
         this.disableView();
     }
@@ -68,15 +70,11 @@ ContentDetailView.prototype.onDataUpdated = function(){
 ContentDetailView.prototype.displayItem = function(){
     // Ici on ne récupère les données que de item de hotsSpotController. Si enregistré dans les vues précedentes, il devrait être
     // récupéré ici
-    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['chapeauOeuvre']);
-    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['legendeImage']);
-    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['titreOeuvre']);
-    console.log(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['DescriptionOeuvre']);
-
+    this.checkLang();
     var lang = Cookie.getCookie('lang.curtius.com');
-    if(lang=="fr"){
+    /*if(lang=="fr"){
         $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['titreOeuvre']);
-        $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['DescriptionOeuvre']);
+        $('#artworkLinks').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['DescriptionOeuvre']);
     }
     if(lang=="eng"){
         $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['EN']['titreOeuvre']);
@@ -89,11 +87,7 @@ ContentDetailView.prototype.displayItem = function(){
     if(lang=="deu"){
         $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['titreOeuvre']);
         $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['DescriptionOeuvre']);
-    }
-    
-
-
-    
+    }    */
 };
 
 ContentDetailView.prototype.onClickTools = function(){
@@ -118,6 +112,7 @@ ContentDetailView.prototype.displayingSVG = function(){
         size : { w : 50, h : 50 }
     } );
 };
+
 /* ================================================================================ */
 /* === DETAIL VIEW ================================================================ */
 /* ================================================================================ */
@@ -324,3 +319,39 @@ ContentDetailView.prototype.checkLang = function(){
     $('#detailButton .buttonText').html(eval('Internationalization.DetailBtnText'+lang));
     $('#linkedArtworksButton .buttonText').html(eval('Internationalization.ArtLinkBtn'+lang));
 };
+
+ContentDetailView.prototype.keyWords = function(){
+    var lang = Cookie.getCookie('lang.curtius.com');
+    $.ajax({    
+        url: 'keyword'+lang+'.json',
+        dataType: 'json',
+        timeout: 5000,
+        success: function(data, status) {
+            $.each(data, function(i, item) { 
+                if($('#wrapper:contains('+item.keyword+')')){
+                    $('.keywordPopup').remove();
+                    $("em").highlight(''+item.keyword+'', { element: 'a', className: 'open-popup-link keyword '+item.keyword+'', wordsOnly: true});
+                    $('body a.'+item.keyword+'').attr({ href: '#'+item.keyword+'' });
+                    $('#wrapper').append('<div class="keywordPopup white-popup mfp-hide" id="'+item.keyword+'">'+item.keytext+'</div>');
+                }
+            });
+        },
+        error: function() {
+            console.log('There was an error loading the data.');
+        }
+    });
+
+};
+
+ContentDetailView.prototype.popUp = function(){
+    $('.open-popup-link').magnificPopup({
+      type:'inline',
+      removalDelay: 300,
+
+      // Class that is added to popup wrapper and background
+      // make it unique to apply your CSS animations just to this exact popup
+      mainClass: 'mfp-fade',
+      midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });
+};
+

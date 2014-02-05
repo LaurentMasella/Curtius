@@ -349,7 +349,7 @@
      ]
 },
 {
-     "idLifi" : "9000000",
+     "idLifi" : "8872",
      "mapNumber" : "04",
      "coordinates" : "277,858",
      "etage" : "2",
@@ -857,6 +857,17 @@
      ]
 },
 {
+     "idLifi" : "16193",
+     "mapNumber" : "10",
+     "coordinates" : "",
+     "etage" : "1",
+     "parcours" : [
+          { "parcoursType" : "scolaire" }
+     ],
+     "oeuvre" : [
+     ]
+},
+{
      "idLifi" : "3230",
      "mapNumber" : "11",
      "coordinates" : "953,511",
@@ -989,20 +1000,6 @@
      "etage" : "N/A",
      "parcours" : [
 
-     ],
-     "oeuvre" : [
-     ]
-},
-{
-     "idLifi" : "9000003",
-     "mapNumber" : "14",
-     "coordinates" : "N/A",
-     "etage" : "2",
-     "parcours" : [
-          { "parcoursType" : "chrolologique" },
-          { "parcoursType" : "rapide" },
-          { "parcoursType" : "libre" },
-          { "parcoursType" : "scolaire" }
      ],
      "oeuvre" : [
      ]
@@ -1353,6 +1350,20 @@
                     }
                ]
           }
+     ]
+},
+{
+     "idLifi" : "15676",
+     "mapNumber" : "18",
+     "coordinates" : "",
+     "etage" : "1",
+     "parcours" : [
+          { "parcoursType" : "chrolologique" },
+          { "parcoursType" : "rapide" },
+          { "parcoursType" : "libre" },
+          { "parcoursType" : "scolaire" }
+     ],
+     "oeuvre" : [
      ]
 },
 {
@@ -2730,7 +2741,7 @@
      ]
 },
 {
-     "idLifi" : "14083",
+     "idLifi" : "3575",
      "mapNumber" : "29",
      "coordinates" : "288,553",
      "etage" : "2",
@@ -2845,7 +2856,7 @@
      ]
 },
 {
-     "idLifi" : "9000004",
+     "idLifi" : "560",
      "mapNumber" : "30",
      "coordinates" : "378,496",
      "etage" : "2",
@@ -2859,7 +2870,7 @@
      ]
 },
 {
-     "idLifi" : "17571",
+     "idLifi" : "517",
      "mapNumber" : "31",
      "coordinates" : "449,512",
      "etage" : "2",
@@ -3093,7 +3104,7 @@
      ]
 },
 {
-     "idLifi" : "13006",
+     "idLifi" : "3273",
      "mapNumber" : "33",
      "coordinates" : "385,605",
      "etage" : "2",
@@ -3209,7 +3220,7 @@
      ]
 },
 {
-     "idLifi" : "9000005",
+     "idLifi" : "2584",
      "mapNumber" : "34",
      "coordinates" : "315,506",
      "etage" : "2",
@@ -3223,7 +3234,7 @@
      ]
 },
 {
-     "idLifi" : "10551",
+     "idLifi" : "3015",
      "mapNumber" : "35",
      "coordinates" : "449,613",
      "etage" : "2",
@@ -3339,7 +3350,7 @@
      ]
 },
 {
-     "idLifi" : "9000006",
+     "idLifi" : "21878",
      "mapNumber" : "36",
      "coordinates" : "289,1219",
      "etage" : "2",
@@ -4986,7 +4997,7 @@
      ]
 },
 {
-     "idLifi" : "9000008",
+     "idLifi" : "991",
      "mapNumber" : "51",
      "coordinates" : "1449,314",
      "etage" : "2",
@@ -5000,7 +5011,7 @@
      ]
 },
 {
-     "idLifi" : "9000009",
+     "idLifi" : "904",
      "mapNumber" : "52",
      "coordinates" : "1521,304",
      "etage" : "2",
@@ -5014,7 +5025,7 @@
      ]
 },
 {
-     "idLifi" : "16408",
+     "idLifi" : "10121",
      "mapNumber" : "53",
      "coordinates" : "1592,295",
      "etage" : "2",

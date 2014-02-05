@@ -18,7 +18,7 @@ ContentLandingPageView.prototype.init = function(tag){
 	this.tag = jQuery(tag);
 	//functions init
 	this.destroy();
-	jQuery('#launch').bind('mousedown', jQuery.proxy(this.onClick, this));
+	jQuery('#contentLanding').bind('mousedown', jQuery.proxy(this.onClick, this));
 };
 
 ContentLandingPageView.prototype.killCookie = function(cname,exdays){

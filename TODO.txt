@@ -1,3 +1,24 @@
+================ BORNES LIFI ================
+
+CHANGEMENTS /
+
+. La borne 4 à un ID
+. La borne 10 existe et a un ID
+. La borne 14 (étage 1) est supprimée.
+. La borne 18 existe et a un ID
+. La borne 30 a un ID
+. La borne 29 a 2 ID possibles : '14083' ou '3575' ?
+. Les bornes 31, 33, 35, 53 on changé d'ID
+. La borne 34 a un ID
+. La borne 36 a un ID
+. Les bornes 51 et 52 on un ID
+. Les bornes 64, 65, 66, 67, 68, 69, 70 et 71 n'existent pas ?
+
+
+MANQUES /
+
+. Les bornes 39, 55
+
 
 ================ FAIT ================
 MAP / 

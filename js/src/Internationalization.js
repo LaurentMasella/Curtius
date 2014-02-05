@@ -46,30 +46,30 @@ Internationalization.LifiExpSubTitleeng = 'Easy!';
 Internationalization.LifiExpSubTitlened = 'Heel eenvoudig!';
 Internationalization.LifiExpSubTitledeu = 'So einfach !';
 //
-Internationalization.LifiExpStep1fr = 'Etape <span>1</span> :';
-Internationalization.LifiExpStep1eng = 'Stage <span>1</span> :';
-Internationalization.LifiExpStep1ned = 'Stap <span>1</span> :';
-Internationalization.LifiExpStep1deu = 'Schritt <span>1</span> :';
+Internationalization.LifiExpStep1fr = 'Etape <span>1</span>';
+Internationalization.LifiExpStep1eng = 'Stage <span>1</span>';
+Internationalization.LifiExpStep1ned = 'Stap <span>1</span>';
+Internationalization.LifiExpStep1deu = 'Schritt <span>1</span>';
 //
-Internationalization.LifiExpStep2fr = 'Etape <span>2</span> :';
-Internationalization.LifiExpStep2eng = 'Stage <span>2</span> :';
-Internationalization.LifiExpStep2ned = 'Stap <span>2</span> :';
-Internationalization.LifiExpStep2deu = 'Schritt <span>2</span> :';
+Internationalization.LifiExpStep2fr = 'Etape <span>2</span>';
+Internationalization.LifiExpStep2eng = 'Stage <span>2</span>';
+Internationalization.LifiExpStep2ned = 'Stap <span>2</span>';
+Internationalization.LifiExpStep2deu = 'Schritt <span>2</span>';
 //
-Internationalization.LifiTxt1fr = 'La technologie Lifi utilise la lumière<br/> pour transmettre des données en haut débit.';
-Internationalization.LifiTxt1eng = 'Li-Fi uses light to transmit data at high speed.';
-Internationalization.LifiTxt1ned = 'De Lifi-technologie maakt gebruik van het licht voor een datatransmissie op hoge snelheid.';
-Internationalization.LifiTxt1deu = 'Die Lifi-Technologie nutzt das Licht, um Daten im hohen Volumen zu versenden.';
+Internationalization.LifiTxt1fr = 'La technologie <em>Lifi</em> utilise la lumière<br/> pour transmettre des données en haut débit.';
+Internationalization.LifiTxt1eng = '<em>Li-Fi</em> uses light to transmit data at high speed.';
+Internationalization.LifiTxt1ned = 'De <em>Lifi</em>-technologie maakt gebruik van het licht voor een datatransmissie op hoge snelheid.';
+Internationalization.LifiTxt1deu = 'Die <em>Lifi</em>-Technologie nutzt das Licht, um Daten im hohen Volumen zu versenden.';
 //
-Internationalization.LifiTxt2fr = 'Placez-vous sous une source lumineuse.';
-Internationalization.LifiTxt2eng = 'Go and stand under a light source.';
-Internationalization.LifiTxt2ned = 'Neem plaats onder een lichtbron.';
-Internationalization.LifiTxt2deu = 'Stellen Sie sich unter eine Lichtquelle.';
+Internationalization.LifiTxt2fr = 'Placez-vous sous une <em>source</em> lumineuse.';
+Internationalization.LifiTxt2eng = 'Go and stand under a light <em>source</em>.';
+Internationalization.LifiTxt2ned = 'Neem plaats onder een <em>lichtbron</em>.';
+Internationalization.LifiTxt2deu = 'Stellen Sie sich unter eine <em>Lichtquelle</em>.';
 //
-Internationalization.LifiTxt3fr = 'Lorsque vous êtes devant une borne<br/> elle vous localise et affiche automatiquement<br/> sur votre tablette les informations sur l\'oeuvre<br/> qui est devant vous.';
-Internationalization.LifiTxt3eng = 'When you are standing in front of a terminal, the light source will find you and automatically display the information about the work in front of you on your tablet.';
-Internationalization.LifiTxt3ned = 'Als u voor een terminal gaat staan, dan lokaliseert hij u en geeft hij op uw tablet automatisch informatie weer over het kunstwerk voor u.';
-Internationalization.LifiTxt3deu = 'Wenn Sie vor einer Markierung stehen, werden sie automatisch entdeckt, und auf Ihrem Tablet erscheinen die Informationen des Kunstwerkes, vor dem Sie stehen.';
+Internationalization.LifiTxt3fr = 'Lorsque vous êtes devant une <em>borne</em><br/> elle vous <em>localise</em> et affiche automatiquement<br/> sur votre <em>tablette</em> les informations sur l\'<em>oeuvre</em><br/> qui est devant vous.';
+Internationalization.LifiTxt3eng = 'When you are standing in front of a <em>terminal</em>, the light source will <em>find</em> you and automatically display the information about the <em>work</em> in front of you on your <em>tablet</em>.';
+Internationalization.LifiTxt3ned = 'Als u voor een <em>terminal</em> gaat staan, dan <em>lokaliseert</em> hij u en geeft hij op uw <em>tablet</em> automatisch informatie weer over het <em>kunstwerk</em> voor u.';
+Internationalization.LifiTxt3deu = 'Wenn Sie vor einer <em>Markierung</em> stehen, werden sie automatisch <em>entdeckt</em>, und auf Ihrem <em>Tablet</em> erscheinen die Informationen des <em>Kunstwerkes</em>, vor dem Sie stehen.';
 //
 Internationalization.LifiBtnNextfr = 'Suivant';
 Internationalization.LifiBtnNexteng = 'Next';

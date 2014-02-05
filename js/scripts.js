@@ -58,11 +58,9 @@
 	                    	if(hotSpotController.model.scope[i] != undefined){
 		                    	if(hotSpotController.model.scope[i].idLifi == currentValue){
 		                    		hotSpotController.setCurrent(hotSpotController.model.scope[i]);
-		                    	}	                    		
+		                    	}	
 	                    	}
-
 	                    }
-	                    
 	                }
 	            }
 	        }

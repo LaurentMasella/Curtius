@@ -6,6 +6,7 @@
 
 html { width: 1280px; height: 800px;}
 
+em { font-style: normal!important; }
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -289,7 +290,7 @@ border-bottom-right-radius: 5px; }
 #lifiLeft #lifiSubtitle { margin: 0 0 30px 60px; font-family: 'robotoBold'; font-size: 26px; color: #000; text-transform: uppercase; } 
 #lifiLeft #lifiTxt1 { margin: 20px 20px 40px 60px; }
 #lifiLeft #lifiTxt2,
-#lifiLeft #lifiTxt3 { margin: 20px 20px 20px 60px; }
+#lifiLeft #lifiTxt3 { margin: 10px 20px 40px 60px; }
 #lifiLeft #lifiStep1, 
 #lifiLeft #lifiStep2 { margin-left: 60px; font-family: 'robotoBold'; font-size: 24px; color: #ad0d69; }
 
@@ -481,3 +482,10 @@ section.right{
     -ms-transform:translate3D(100%, 0, 0);
     -webkit-transform:translate3D(100%, 0, 0);
 }
+
+
+
+.keyword { color: #f1008b; text-decoration: none; -webkit-transition: all 2s ease; -moz-transition: all 2s ease; -o-transition: all 2s ease; }
+.keyword:hover { text-decoration: underline; color: #000; }
+
+
