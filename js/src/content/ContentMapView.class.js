@@ -388,22 +388,87 @@ ContentMapView.prototype.initCoordonates = function(){
 ContentMapView.prototype.checkLang = function(){
 	//var lang = Cookie.getCookie('lang.curtius.com');
 	var lang = globalLangVar;
-    jQuery('.legendBlock p').html(eval('Internationalization.MapLegend'+lang));
-    if(jQuery('#level1').hasClass('levelSelected')){
-    	$('#legend2 span').html(eval('Internationalization.MapLvl1Legend2'+lang));
-        $('#legend3 span').html(eval('Internationalization.MapLvl1Legend3'+lang));
-        $('#legend4 span').html(eval('Internationalization.MapLvl1Legend4'+lang));
-        $('#legend5 span').html(eval('Internationalization.MapLvl1Legend5'+lang));
+    if(lang == "fr") {
+	    jQuery('.legendBlock p').html(Internationalization.MapLegendfr);
+
+	   if(jQuery('#level1').hasClass('levelSelected')){
+	    	$('#legend2 span').html(Internationalization.MapLvl1Legend2fr);
+	        $('#legend3 span').html(Internationalization.MapLvl1Legend3fr);
+	        $('#legend4 span').html(Internationalization.MapLvl1Legend4fr);
+	        $('#legend5 span').html(Internationalization.MapLvl1Legend5fr);
+	    }
+	    else{
+	    	$('#legend2 span').html(Internationalization.MapLvlDefLegend2fr);
+	        $('#legend3 span').html(Internationalization.MapLvlDefLegend3fr);
+	        $('#legend4 span').html(Internationalization.MapLvlDefLegend4fr);
+	        $('#legend5 span').html(Internationalization.MapLvlDefLegend5fr);
+	    }
+	    $('#legend1 span').html(Internationalization.MapLegend1fr);
+	    $('#legend6 span').html(Internationalization.MapLegend6fr);
+	    $('#legend7 span').html(Internationalization.MapLegend7fr);
+	    $('#legend8 span').html(Internationalization.MapLegend8fr);
+	    $('#legendBlock6 p').html(Internationalization.MapLegendBlockfr);
+ 
+    } else if(lang == "eng") {
+	    jQuery('.legendBlock p').html(Internationalization.MapLegendeng));
+
+	   if(jQuery('#level1').hasClass('levelSelected')){
+	    	$('#legend2 span').html(Internationalization.MapLvl1Legend2eng);
+	        $('#legend3 span').html(Internationalization.MapLvl1Legend3eng);
+	        $('#legend4 span').html(Internationalization.MapLvl1Legend4eng);
+	        $('#legend5 span').html(Internationalization.MapLvl1Legend5eng);
+	    }
+	    else{
+	    	$('#legend2 span').html(Internationalization.MapLvlDefLegend2eng);
+	        $('#legend3 span').html(Internationalization.MapLvlDefLegend3eng);
+	        $('#legend4 span').html(Internationalization.MapLvlDefLegend4eng);
+	        $('#legend5 span').html(Internationalization.MapLvlDefLegend5eng);
+	    }
+	    $('#legend1 span').html(Internationalization.MapLegend1eng);
+	    $('#legend6 span').html(Internationalization.MapLegend6eng);
+	    $('#legend7 span').html(Internationalization.MapLegend7eng);
+	    $('#legend8 span').html(Internationalization.MapLegend8eng);
+	    $('#legendBlock6 p').html(Internationalization.MapLegendBlockeng);
+   
+    } else if(lang == "ned") {
+	    jQuery('.legendBlock p').html(Internationalization.MapLegendned);
+  
+	   if(jQuery('#level1').hasClass('levelSelected')){
+	    	$('#legend2 span').html(Internationalization.MapLvl1Legend2ned);
+	        $('#legend3 span').html(Internationalization.MapLvl1Legend3ned);
+	        $('#legend4 span').html(Internationalization.MapLvl1Legend4ned);
+	        $('#legend5 span').html(Internationalization.MapLvl1Legend5ned);
+	    }
+	    else{
+	    	$('#legend2 span').html(Internationalization.MapLvlDefLegend2ned);
+	        $('#legend3 span').html(Internationalization.MapLvlDefLegend3ned);
+	        $('#legend4 span').html(Internationalization.MapLvlDefLegend4ned);
+	        $('#legend5 span').html(Internationalization.MapLvlDefLegend5ned);
+	    }
+	    $('#legend1 span').html(Internationalization.MapLegend1ned);
+	    $('#legend6 span').html(Internationalization.MapLegend6ned);
+	    $('#legend7 span').html(Internationalization.MapLegend7ned);
+	    $('#legend8 span').html(Internationalization.MapLegend8ned);
+	    $('#legendBlock6 p').html(Internationalization.MapLegendBlockned);
+
+    } else if(lang == "deu") {
+	    jQuery('.legendBlock p').html(Internationalization.MapLegenddeu));
+	   if(jQuery('#level1').hasClass('levelSelected')){
+	    	$('#legend2 span').html(Internationalization.MapLvl1Legend2deu);
+	        $('#legend3 span').html(Internationalization.MapLvl1Legend3deu);
+	        $('#legend4 span').html(Internationalization.MapLvl1Legend4deu);
+	        $('#legend5 span').html(Internationalization.MapLvl1Legend5deu);
+	    }
+	    else{
+	    	$('#legend2 span').html(Internationalization.MapLvlDefLegend2deu);
+	        $('#legend3 span').html(Internationalization.MapLvlDefLegend3deu);
+	        $('#legend4 span').html(Internationalization.MapLvlDefLegend4deu);
+	        $('#legend5 span').html(Internationalization.MapLvlDefLegend5deu);
+	    }
+	    $('#legend1 span').html(Internationalization.MapLegend1deu);
+	    $('#legend6 span').html(Internationalization.MapLegend6deu);
+	    $('#legend7 span').html(Internationalization.MapLegend7deu);
+	    $('#legend8 span').html(Internationalization.MapLegend8deu);
+	    $('#legendBlock6 p').html(Internationalization.MapLegendBlockdeu);
     }
-    else{
-    	$('#legend2 span').html(eval('Internationalization.MapLvlDefLegend2'+lang));
-        $('#legend3 span').html(eval('Internationalization.MapLvlDefLegend3'+lang));
-        $('#legend4 span').html(eval('Internationalization.MapLvlDefLegend4'+lang));
-        $('#legend5 span').html(eval('Internationalization.MapLvlDefLegend5'+lang));
-    }
-    $('#legend1 span').html(eval('Internationalization.MapLegend1'+lang));
-    $('#legend6 span').html(eval('Internationalization.MapLegend6'+lang));
-    $('#legend7 span').html(eval('Internationalization.MapLegend7'+lang));
-    $('#legend8 span').html(eval('Internationalization.MapLegend8'+lang));
-    $('#legendBlock6 p').html(eval('Internationalization.MapLegendBlock'+lang));
 }; 

@@ -134,7 +134,7 @@ body {
 #visits #per { background: url('../img/visitPer.png') no-repeat 30px center; }
 #visits #scol { background: url('../img/visitScol.png') no-repeat 30px center; }
 
-#backBtn { display: block; position: absolute; top: 330px; left: 0; width: 71px; height: 143px; background: url('../img/backBtn.png') no-repeat; opacity: 0.8; -webkit-transition: opacity .4s ease-in; -moz-transition: opacity .4s ease-in; -o-transition: opacity .4s ease-in; transition: opacity .4s ease-in; }
+#backBtn { display: block; position: fixed; top: 330px; left: 0; width: 71px; height: 143px; background: url('../img/backBtn.png') no-repeat; opacity: 0.8; -webkit-transition: opacity .4s ease-in; -moz-transition: opacity .4s ease-in; -o-transition: opacity .4s ease-in; transition: opacity .4s ease-in; }
 #backBtn:hover { opacity: 1; }
 
 /* ================================================================================ */
@@ -349,13 +349,13 @@ transition: all .4s ease-in-out; z-index: 2000; }
 #artworksinfosMap:hover { cursor: pointer; background-color: #fff; }
 
 #artworkView #artworkDetail,
-#artworkView #artworkLinks { opacity: 0; position: absolute; top: 140px; left: -165px; width: 500px; height: 570px; padding: 30px; font-size: 20px; font-family: 'roboto'; overflow: auto; color: #404040; background: #fff; -moz-transition: all .3s ease-in-out;
+#artworkView #artworkLinks { opacity: 0; position: fixed; top: 140px; left: -165px; width: 500px; height: 570px; padding: 30px; font-size: 20px; font-family: 'roboto'; overflow: auto; color: #404040; background: #fff; -moz-transition: all .3s ease-in-out;
 -ms-transition: all .3s ease-in-out;
 -o-transition: all .3s ease-in-out;
 transition: all .3s ease-in-out; -webkit-box-shadow: -5px 0 8px 1px #DBDBDB;
 box-shadow: -5px 0 8px 1px #DBDBDB; }
 
-#artworkView #artworkZoomHolder { position: absolute; top: 190px; left: 320px; width: 400px; height: 525px; background: #1f1f27!important; -moz-transition: all .3s ease-in-out;
+#artworkView #artworkZoomHolder { position: fixed; top: 190px; left: 320px; width: 400px; height: 525px; background: #1f1f27!important; -moz-transition: all .3s ease-in-out;
 -ms-transition: all .3s ease-in-out;
 -o-transition: all .3s ease-in-out;
 transition: all .3s ease-in-out; -webkit-box-shadow: 0 9px 8px -4px #a2a2a2;
@@ -373,7 +373,7 @@ transition: all .4s ease-in-out; z-index: 1000; }
 #artworkView #artworkZoomHolder #resize:hover { opacity: 1; cursor: pointer; }
 #artworkView #artworkZoomHolder #resize svg { width: 34px; height: 34px; margin: 8px; }
 
-#artworkView #artworkChapoHolder { position: absolute; top: 190px; left: 800px; width: 340px; height: 465px; padding: 30px; font-size: 20px; font-family: 'roboto'; overflow: auto; color: #404040; background: #fff; -moz-transition: all .3s ease-in-out;
+#artworkView #artworkChapoHolder { position: fixed; top: 190px; left: 800px; width: 340px; height: 465px; padding: 30px; font-size: 20px; font-family: 'roboto'; overflow: auto; color: #404040; background: #fff; -moz-transition: all .3s ease-in-out;
 -ms-transition: all .3s ease-in-out;
 -o-transition: all .3s ease-in-out;
 transition: all .3s ease-in-out; -webkit-box-shadow: -5px 0 8px 1px #DBDBDB;

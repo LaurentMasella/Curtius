@@ -102,10 +102,8 @@ ContentWorksView.prototype.onBackToMap = function() {
 };
 
 ContentWorksView.prototype.keyWords = function(){
-	$('.keywordPopup').remove();
     //var lang = Cookie.getCookie('lang.curtius.com');
     var lang = globalLangVar;
-
     $.ajax({    
         url: 'keyword'+lang+'.json',
         dataType: 'json',
@@ -113,6 +111,7 @@ ContentWorksView.prototype.keyWords = function(){
         success: function(data, status) {
             $.each(data, function(i, item) { 
                 if($('#wrapper:contains('+item.keyword+')')){
+                	$('.keywordPopup').remove();
                     $("em").highlight(''+item.keyword+'', { element: 'a', className: 'open-popup-link keyword '+item.keyword+'', wordsOnly: true});
                     $('body a.'+item.keyword+'').attr({ href: '#'+item.keyword+'' });
                     $('#wrapper').append('<div class="keywordPopup white-popup mfp-hide" id="'+item.keyword+'">'+item.keytext+'</div>');

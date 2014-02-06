@@ -318,16 +318,25 @@ ContentDetailView.prototype.onBackToMap = function() {
 ContentDetailView.prototype.checkLang = function(){
     //var lang = Cookie.getCookie('lang.curtius.com');
     var lang  = globalLangVar;
-    $('#detailButton .buttonText').html(eval('Internationalization.DetailBtnText'+lang));
-    $('#linkedArtworksButton .buttonText').html(eval('Internationalization.ArtLinkBtn'+lang));
+
+    if(lang == "fr") {
+        $('#detailButton .buttonText').html(Internationalization.DetailBtnTextfr);
+        $('#linkedArtworksButton .buttonText').html(Internationalization.ArtLinkBtnfr);
+    } else if (lang == "eng") {
+        $('#detailButton .buttonText').html(Internationalization.DetailBtnTexteng);
+        $('#linkedArtworksButton .buttonText').html(Internationalization.ArtLinkBtneng);
+    } else if (lang == "ned") {
+        $('#detailButton .buttonText').html(Internationalization.DetailBtnTextned);
+        $('#linkedArtworksButton .buttonText').html(Internationalization.ArtLinkBtnned);     
+    } else if (lang == "deu") {
+        $('#detailButton .buttonText').html(Internationalization.DetailBtnTextdeu);
+        $('#linkedArtworksButton .buttonText').html(Internationalization.ArtLinkBtndeu);     
+    }
 };
 
 ContentDetailView.prototype.keyWords = function(){
-
-    $('.keywordPopup').remove();
     //var lang = Cookie.getCookie('lang.curtius.com');
     var lang = globalLangVar;
-
     $.ajax({    
         url: 'keyword'+lang+'.json',
         dataType: 'json',
@@ -335,6 +344,7 @@ ContentDetailView.prototype.keyWords = function(){
         success: function(data, status) {
             $.each(data, function(i, item) { 
                 if($('#wrapper:contains('+item.keyword+')')){
+                    $('.keywordPopup').remove();
                     $("em").highlight(''+item.keyword+'', { element: 'a', className: 'open-popup-link keyword '+item.keyword+'', wordsOnly: true});
                     $('body a.'+item.keyword+'').attr({ href: '#'+item.keyword+'' });
                     $('#wrapper').append('<div class="keywordPopup white-popup mfp-hide" id="'+item.keyword+'">'+item.keytext+'</div>');

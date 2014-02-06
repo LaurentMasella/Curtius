@@ -66,20 +66,40 @@ ContentToolsView.prototype.onClickValidate = function(e){
 ContentToolsView.prototype.checkLang = function(){
 	//var lang = Cookie.getCookie('lang.curtius.com');
 	var lang = globalLangVar;
-	jQuery('#toolsValidate .validate').html(eval('Internationalization.ToolsBtnValidate'+lang));
-	jQuery('#toolsHeadband').html(eval('Internationalization.ToolsChooseLang'+lang));
-	jQuery('.resetCancel').html(eval('Internationalization.ToolsResetCancel'+lang));
-	jQuery('.resetApp').html(eval('Internationalization.ToolsResetApp'+lang));
-	jQuery('.resetTitle').html(eval('Internationalization.ToolsResetTitle'+lang));
-	jQuery('.resetText').html(eval('Internationalization.ToolsResetText'+lang));
+	if(lang == "fr") {
+		jQuery('#toolsValidate .validate').html(Internationalization.ToolsBtnValidatefr);
+		jQuery('#toolsHeadband').html(Internationalization.ToolsChooseLangfr);
+		jQuery('.resetCancel').html(Internationalization.ToolsResetCancelfr);
+		jQuery('.resetApp').html(Internationalization.ToolsResetAppfr);
+		jQuery('.resetTitle').html(Internationalization.ToolsResetTitlefr);
+		jQuery('.resetText').html(Internationalization.ToolsResetTextfr);
+	} else if (lang == "eng") {
+		jQuery('#toolsValidate .validate').html(Internationalization.ToolsBtnValidateeng);
+		jQuery('#toolsHeadband').html(Internationalization.ToolsChooseLangeng);
+		jQuery('.resetCancel').html(Internationalization.ToolsResetCanceleng);
+		jQuery('.resetApp').html(Internationalization.ToolsResetAppeng);
+		jQuery('.resetTitle').html(Internationalization.ToolsResetTitleeng);
+		jQuery('.resetText').html(Internationalization.ToolsResetTexteng);
+	} else if (lang == "ned") {
+		jQuery('#toolsValidate .validate').html(Internationalization.ToolsBtnValidatened);
+		jQuery('#toolsHeadband').html(Internationalization.ToolsChooseLangned);
+		jQuery('.resetCancel').html(Internationalization.ToolsResetCancelned);
+		jQuery('.resetApp').html(Internationalization.ToolsResetAppned);
+		jQuery('.resetTitle').html(Internationalization.ToolsResetTitlened);
+		jQuery('.resetText').html(Internationalization.ToolsResetTextned);		
+	} else if (lang == "deu") {
+		jQuery('#toolsValidate .validate').html(Internationalization.ToolsBtnValidatedeu);
+		jQuery('#toolsHeadband').html(Internationalization.ToolsChooseLangdeu);
+		jQuery('.resetCancel').html(Internationalization.ToolsResetCanceldeu);
+		jQuery('.resetApp').html(Internationalization.ToolsResetAppdeu);
+		jQuery('.resetTitle').html(Internationalization.ToolsResetTitledeu);
+		jQuery('.resetText').html(Internationalization.ToolsResetTextdeu);		
+	}
 };
 
 ContentToolsView.prototype.keyWords = function(){
-
-	$('.keywordPopup').remove();
     //var lang = Cookie.getCookie('lang.curtius.com');
     var lang = globalLangVar;
-
     $.ajax({    
         url: 'keyword'+lang+'.json',
         dataType: 'json',
@@ -87,6 +107,7 @@ ContentToolsView.prototype.keyWords = function(){
         success: function(data, status) {
             $.each(data, function(i, item) { 
                 if($('#wrapper:contains('+item.keyword+')')){
+                	$('.keywordPopup').remove();
                     $("em").highlight(''+item.keyword+'', { element: 'a', className: 'open-popup-link keyword '+item.keyword+'', wordsOnly: true});
                     $('body a.'+item.keyword+'').attr({ href: '#'+item.keyword+'' });
                     $('#wrapper').append('<div class="keywordPopup white-popup mfp-hide" id="'+item.keyword+'">'+item.keytext+'</div>');
