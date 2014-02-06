@@ -1,6 +1,6 @@
 ================ BORNES LIFI ================
 
-CHANGEMENTS /
+CHANGEMENTS /////
 
 . La borne 4 à un ID
 . La borne 10 existe et a un ID
