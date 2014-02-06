@@ -72,7 +72,8 @@ ContentDetailView.prototype.displayItem = function(){
     // récupéré ici
     this.checkLang();
     var lang = Cookie.getCookie('lang.curtius.com');
-    /*if(lang=="fr"){
+    var lang = globalLangVar;
+    if(lang=="fr"){
         $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['titreOeuvre']);
         $('#artworkLinks').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['FR']['DescriptionOeuvre']);
     }
@@ -87,7 +88,7 @@ ContentDetailView.prototype.displayItem = function(){
     if(lang=="deu"){
         $('#artworkTitle').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['titreOeuvre']);
         $('#artworkDetail').html(this.hotSpotController.model.current['oeuvre'][0]['textes']['DEU']['DescriptionOeuvre']);
-    }    */
+    } 
 };
 
 ContentDetailView.prototype.onClickTools = function(){
@@ -315,13 +316,15 @@ ContentDetailView.prototype.onBackToMap = function() {
 };
 
 ContentDetailView.prototype.checkLang = function(){
-    var lang = Cookie.getCookie('lang.curtius.com');
+    //var lang = Cookie.getCookie('lang.curtius.com');
+    var lang  = globalLangVar;
     $('#detailButton .buttonText').html(eval('Internationalization.DetailBtnText'+lang));
     $('#linkedArtworksButton .buttonText').html(eval('Internationalization.ArtLinkBtn'+lang));
 };
 
 ContentDetailView.prototype.keyWords = function(){
-    var lang = Cookie.getCookie('lang.curtius.com');
+    //var lang = Cookie.getCookie('lang.curtius.com');
+    var lang = globalLangVar;
     $.ajax({    
         url: 'keyword'+lang+'.json',
         dataType: 'json',

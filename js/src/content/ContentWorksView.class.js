@@ -74,9 +74,26 @@ ContentWorksView.prototype.onClickWork = function(tag){
 };
 
 ContentWorksView.prototype.checkLang = function(){
-	var lang = Cookie.getCookie('lang.curtius.com');
+	//var lang = Cookie.getCookie('lang.curtius.com');
+	var lang = globalLangVar;
+
+    if(lang == "fr") {
+		jQuery('#planButton').html(Internationalization.PlanBtnfr);
+	    jQuery('#artItemsTitle').html(Internationalization.ArtItemTitlefr);    
+    } else if(lang == "eng") {
+		jQuery('#planButton').html(Internationalization.PlanBtneng);
+	    jQuery('#artItemsTitle').html(Internationalization.ArtItemTitleeng);       
+    } else if(lang == "ned") {
+		jQuery('#planButton').html(Internationalization.PlanBtnned);
+	    jQuery('#artItemsTitle').html(Internationalization.ArtItemTitlened);  
+    } else if(lang == "deu") {
+		jQuery('#planButton').html(Internationalization.PlanBtndeu);
+	    jQuery('#artItemsTitle').html(Internationalization.ArtItemTitledeu);
+    }
+    /* 	
     jQuery('#planButton').html(eval('Internationalization.PlanBtn'+lang));
     jQuery('#artItemsTitle').html(eval('Internationalization.ArtItemTitle'+lang));
+    */
 
 };
 
@@ -85,7 +102,8 @@ ContentWorksView.prototype.onBackToMap = function() {
 };
 
 ContentWorksView.prototype.keyWords = function(){
-    var lang = Cookie.getCookie('lang.curtius.com');
+    //var lang = Cookie.getCookie('lang.curtius.com');
+    var lang = globalLangVar;
     $.ajax({    
         url: 'keyword'+lang+'.json',
         dataType: 'json',

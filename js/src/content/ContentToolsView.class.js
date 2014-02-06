@@ -17,7 +17,8 @@ ContentToolsView.prototype.onCurrentUpdated = function(e){
 
 	if(this.controller.model.current == this.id){
 
-		this.currentLangage = Cookie.getCookie('lang.curtius.com');
+		//this.currentLangage = Cookie.getCookie('lang.curtius.com');
+		this.currentLangage = globalLangVar;
 		jQuery('.lang').parent().removeClass('paramSelected');
 		jQuery('.lang').each(jQuery.proxy(function(index,element){
 			if(jQuery(element).attr('id') == this.currentLangage){
@@ -55,14 +56,16 @@ ContentToolsView.prototype.onClickParam = function(e){
 };
 
 ContentToolsView.prototype.onClickValidate = function(e){
-		Cookie.setCookie('lang.curtius.com',this.newLangage,'365');
+		//Cookie.setCookie('lang.curtius.com',this.newLangage,'365');
+		globalLangVar = this.newLangage;
 		var redirectBack = this.controller.model.historyId;
 		this.controller.model.setHistoryId(null);
 		this.controller.setCurrent(redirectBack);
 };
 
 ContentToolsView.prototype.checkLang = function(){
-	var lang = Cookie.getCookie('lang.curtius.com');
+	//var lang = Cookie.getCookie('lang.curtius.com');
+	var lang = globalLangVar;
 	jQuery('#toolsValidate .validate').html(eval('Internationalization.ToolsBtnValidate'+lang));
 	jQuery('#toolsHeadband').html(eval('Internationalization.ToolsChooseLang'+lang));
 	jQuery('.resetCancel').html(eval('Internationalization.ToolsResetCancel'+lang));
@@ -72,7 +75,8 @@ ContentToolsView.prototype.checkLang = function(){
 };
 
 ContentToolsView.prototype.keyWords = function(){
-    var lang = Cookie.getCookie('lang.curtius.com');
+    //var lang = Cookie.getCookie('lang.curtius.com');
+    var lang = globalLangVar;
     $.ajax({    
         url: 'keyword'+lang+'.json',
         dataType: 'json',

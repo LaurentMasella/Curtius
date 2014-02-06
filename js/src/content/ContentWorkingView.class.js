@@ -36,8 +36,48 @@ ContentWorkingView.prototype.onClick = function(){
 };
 
 ContentWorkingView.prototype.checkLang = function(){
-    var lang = Cookie.getCookie('lang.curtius.com');
+//    var lang = Cookie.getCookie('lang.curtius.com');
+    var lang = globalLangVar;
     // Lifi Explanation
+
+    if(lang == "fr") {
+        jQuery('#lifiTitle').html(Internationalization.LifiExpTitlefr);
+        jQuery('#lifiSubtitle').html(Internationalization.LifiExpSubTitlefr);
+        jQuery('#lifiStep1').html(Internationalization.LifiExpStep1fr);
+        jQuery('#lifiStep2').html(Internationalization.LifiExpStep2fr);
+        jQuery('#lifiTxt1').html(Internationalization.LifiTxt1fr);
+        jQuery('#lifiTxt2').html(Internationalization.LifiTxt2fr);
+        jQuery('#lifiTxt3').html(Internationalization.LifiTxt3fr);
+        jQuery('#lifiNext').html(Internationalization.LifiBtnNextfr);      
+    } else if(lang == "eng") {
+        jQuery('#lifiTitle').html(Internationalization.LifiExpTitleeng);
+        jQuery('#lifiSubtitle').html(Internationalization.LifiExpSubTitleeng);
+        jQuery('#lifiStep1').html(Internationalization.LifiExpStep1eng);
+        jQuery('#lifiStep2').html(Internationalization.LifiExpStep2eng);
+        jQuery('#lifiTxt1').html(Internationalization.LifiTxt1eng);
+        jQuery('#lifiTxt2').html(Internationalization.LifiTxt2eng);
+        jQuery('#lifiTxt3').html(Internationalization.LifiTxt3eng);
+        jQuery('#lifiNext').html(Internationalization.LifiBtnNexteng);         
+    } else if(lang == "ned") {
+        jQuery('#lifiTitle').html(Internationalization.LifiExpTitlened);
+        jQuery('#lifiSubtitle').html(Internationalization.LifiExpSubTitlened);
+        jQuery('#lifiStep1').html(Internationalization.LifiExpStep1ned);
+        jQuery('#lifiStep2').html(Internationalization.LifiExpStep2ned);
+        jQuery('#lifiTxt1').html(Internationalization.LifiTxt1ned);
+        jQuery('#lifiTxt2').html(Internationalization.LifiTxt2ned);
+        jQuery('#lifiTxt3').html(Internationalization.LifiTxt3ned);
+        jQuery('#lifiNext').html(Internationalization.LifiBtnNextned);   
+    } else if(lang == "deu") {
+        jQuery('#lifiTitle').html(Internationalization.LifiExpTitledeu);
+        jQuery('#lifiSubtitle').html(Internationalization.LifiExpSubTitledeu);
+        jQuery('#lifiStep1').html(Internationalization.LifiExpStep1deu);
+        jQuery('#lifiStep2').html(Internationalization.LifiExpStep2deu);
+        jQuery('#lifiTxt1').html(Internationalization.LifiTxt1deu);
+        jQuery('#lifiTxt2').html(Internationalization.LifiTxt2deu);
+        jQuery('#lifiTxt3').html(Internationalization.LifiTxt3deu);
+        jQuery('#lifiNext').html(Internationalization.LifiBtnNextdeu); 
+    } 
+    /*   
     jQuery('#lifiTitle').html(eval('Internationalization.LifiExpTitle'+lang));
     jQuery('#lifiSubtitle').html(eval('Internationalization.LifiExpSubTitle'+lang));
     jQuery('#lifiStep1').html(eval('Internationalization.LifiExpStep1'+lang));
@@ -46,10 +86,12 @@ ContentWorkingView.prototype.checkLang = function(){
     jQuery('#lifiTxt2').html(eval('Internationalization.LifiTxt2'+lang));
     jQuery('#lifiTxt3').html(eval('Internationalization.LifiTxt3'+lang));
     jQuery('#lifiNext').html(eval('Internationalization.LifiBtnNext'+lang));
+    */
 };
 
 ContentWorkingView.prototype.keyWords = function(){
-    var lang = Cookie.getCookie('lang.curtius.com');
+    //var lang = Cookie.getCookie('lang.curtius.com');
+    var lang = globalLangVar;
     $.ajax({    
         url: 'keyword'+lang+'.json',
         dataType: 'json',

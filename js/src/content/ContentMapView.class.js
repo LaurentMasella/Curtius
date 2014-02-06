@@ -340,7 +340,8 @@ ContentMapView.prototype.destroyCoordonates = function(){
 ContentMapView.prototype.initCoordonates = function(){
 
 	//Cookie.setCookie('visit.curtius.com','per','365');
-	var visit = Cookie.getCookie('visit.curtius.com');
+//	var visit = Cookie.getCookie('visit.curtius.com');
+	var visit = globalVisitVar;
 	switch(visit){
 		case 'free':
 			visit = 'libre';
@@ -385,8 +386,8 @@ ContentMapView.prototype.initCoordonates = function(){
 };
 
 ContentMapView.prototype.checkLang = function(){
-	var lang = Cookie.getCookie('lang.curtius.com');
-
+	//var lang = Cookie.getCookie('lang.curtius.com');
+	var lang = globalLangVar;
     jQuery('.legendBlock p').html(eval('Internationalization.MapLegend'+lang));
     if(jQuery('#level1').hasClass('levelSelected')){
     	$('#legend2 span').html(eval('Internationalization.MapLvl1Legend2'+lang));

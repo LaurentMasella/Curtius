@@ -15,16 +15,20 @@ ContentVisitView.prototype.init = function(tag){
 ContentVisitView.prototype.onClick = function(e){
 	switch(jQuery(e.currentTarget).attr('id')){
 		case 'free':
-			Cookie.setCookie('visit.curtius.com','free','365');
+			globalVisitVar = "free";
+			//Cookie.setCookie('visit.curtius.com','free','365');
 		break;
 		case 'fast':
-			Cookie.setCookie('visit.curtius.com','fast','365');
+			globalVisitVar = "fast";		
+			//Cookie.setCookie('visit.curtius.com','fast','365');
 		break;
 		case 'per':
-			Cookie.setCookie('visit.curtius.com','per','365');
+			globalVisitVar = "per";		
+			//Cookie.setCookie('visit.curtius.com','per','365');
 		break;
 		case 'scol':
-			Cookie.setCookie('visit.curtius.com','scol','365');
+			globalVisitVar = "scol";	
+			//Cookie.setCookie('visit.curtius.com','scol','365');
 		break;
 	}
 	this.controller.setCurrent(Repository.PAGE3_ID);
@@ -55,9 +59,32 @@ ContentVisitView.prototype.onClickBack = function(){
 };
 
 ContentVisitView.prototype.checkLang = function(){
-	var lang = Cookie.getCookie('lang.curtius.com');
-	$('#free').html(eval('Internationalization.VisitBtnFree'+lang));
+	//var lang = Cookie.getCookie('lang.curtius.com');
+	/*$('#free').html(eval('Internationalization.VisitBtnFree'+lang));
     $('#fast').html(eval('Internationalization.VisitBtnFast'+lang));
     $('#per').html(eval('Internationalization.VisitBtnPer'+lang));
-    $('#scol').html(eval('Internationalization.VisitBtnScol'+lang));	
+    $('#scol').html(eval('Internationalization.VisitBtnScol'+lang));	*/
+
+    var lang = globalLangVar;
+    if(lang == "fr") {
+		$('#free').html(Internationalization.VisitBtnFreefr);
+	    $('#fast').html(Internationalization.VisitBtnFastfr);
+	    $('#per').html(Internationalization.VisitBtnPerfr);
+	    $('#scol').html(Internationalization.VisitBtnScolfr);      	
+    } else if(lang == "eng") {
+		$('#free').html(Internationalization.VisitBtnFreeeng);
+	    $('#fast').html(Internationalization.VisitBtnFasteng);
+	    $('#per').html(Internationalization.VisitBtnPereng);
+	    $('#scol').html(Internationalization.VisitBtnScoleng);      	
+    } else if(lang == "ned") {
+		$('#free').html(Internationalization.VisitBtnFreened);
+	    $('#fast').html(Internationalization.VisitBtnFastned);
+	    $('#per').html(Internationalization.VisitBtnPerned);
+	    $('#scol').html(Internationalization.VisitBtnScolned);      
+	} else if(lang == "deu") {
+		$('#free').html(Internationalization.VisitBtnFreedeu);
+	    $('#fast').html(Internationalization.VisitBtnFastdeu);
+	    $('#per').html(Internationalization.VisitBtnPerdeu);
+	    $('#scol').html(Internationalization.VisitBtnScoldeu);
+	}
 };
